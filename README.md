@@ -1,6 +1,6 @@
 # 0xMarkets — FX Perp DEX, secured by Cartha (SN35)
 
-**What it is:** A Forex (FX) perpetual futures DEX where traders can get exposure with high leverage, while liquidity is sourced from the Cartha Subnet (SN35) — miners act as LPs through USDC vaults (one per market) for risk isolation. :contentReference[oaicite:1]{index=1}
+**What it is:** A Forex (FX) perpetual futures DEX where traders can get exposure with high leverage, while liquidity is sourced from the Cartha Subnet (SN35) — miners act as LPs through USDC vaults (one per market) for risk isolation.
 
 **Why it matters**
 - Deep, programmatic liquidity from miners (LPs) on Cartha SN35. :contentReference[oaicite:2]{index=2}
