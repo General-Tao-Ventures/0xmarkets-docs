@@ -54,7 +54,7 @@ export CARTHA_NETUID=78       # Testnet subnet UID
 
    ```
    Network Name: Base Sepolia
-   RPC URL: https://base-sepolia.g.alchemy.com/v2/tmVGLC0DvW956sjrIjXuf
+   RPC URL: https://sepolia.base.org
    Chain ID: 84532
    Currency Symbol: ETH
    Block Explorer URL: https://sepolia.basescan.org
@@ -62,7 +62,7 @@ export CARTHA_NETUID=78       # Testnet subnet UID
 
 4. Click "Save" and switch to Base Sepolia network
 
-**Note**: We're using Alchemy's paid tier RPC endpoint for better performance and reliability. The free public endpoint (`https://sepolia.base.org`) is rate-limited and may experience delays.
+**Note**: This uses the public Base Sepolia RPC endpoint. For better performance and reliability, you can use a paid RPC provider like Alchemy or Infura by getting your own API key and configuring it in your wallet.
 
 **Quick Add (MetaMask):**
 
