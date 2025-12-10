@@ -23,7 +23,9 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
 - **Test liquidity provision** without risking real funds
 - **Practice registration** and hotkey management
 - **Experiment with different pools** (BTC/USD, ETH/USD, EUR/USD)
-- **Learn the lock/unlock flow** before mainnet deployment
+- **Use the Cartha Lock UI** for a streamlined lock/unlock experience (no BaseScan needed!)
+- **View and manage positions** through the web interface
+- **Extend locks and top up** existing positions (currently in testing)
 - **Understand reward mechanisms** and epoch cycles
 - **Test multi-pool strategies** with testnet USDC
 
@@ -38,6 +40,7 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
 ### For Developers
 
 - **Test smart contract interactions** with real vault contracts
+- **Use the Cartha Lock UI** for testing the frontend lock flow
 - **Develop integration tools** and automation scripts
 - **Test API endpoints** and verifier functionality
 - **Build monitoring dashboards** and analytics tools
@@ -51,6 +54,7 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
 - **Subnet UID**: `78` (Cartha testnet subnet)
 - **EVM Chain**: Base Sepolia (Chain ID: `84532`)
 - **Verifier URL**: `https://cartha-verifier-826542474079.us-central1.run.app`
+- **Lock UI URL**: `https://cartha-lock.vercel.app` (for managing locks and positions)
 
 ### Testnet Tokens
 
@@ -60,6 +64,7 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
   - Faucet: https://console.optimism.io/faucet (select Base Sepolia)
 - **Testnet USDC**: Required for liquidity provision
   - Contact: Cartha team via Discord here: https://discord.gg/7DXG57B6
+  - **Coming Soon**: Automated faucet will be available on the Cartha Lock UI at https://cartha-lock.vercel.app/faucet
 
 
 ## Getting Started
@@ -68,6 +73,7 @@ Choose your path:
 
 - **[Miner Guide](miner-guide.md)** - Learn how to run miners on Cartha testnet
 - **[Validator Guide](validator-guide.md)** - Learn how to run validators on Cartha testnet
+- **[Cartha Lock UI](cartha-lock-ui.md)** - Learn about the web interface for managing lock positions
 
 ## Testnet vs Mainnet
 
@@ -108,10 +114,12 @@ Contact Cartha team for testnet USDC and support
 
 ### Common Issues
 
-- **Need testnet USDC**: Contact Cartha team via Discord/Telegram
+- **Need testnet USDC**: Contact Cartha team via Discord/Telegram (automated faucet coming soon)
 - **Validator not whitelisted**: Contact subnet owner
 - **Transaction failures**: Check network (Base Sepolia), gas (testnet ETH), and balances
 - **Registration issues**: Verify testnet TAO balance and network settings
+- **Wallet address mismatch**: Ensure the wallet connected in the Cartha Lock UI matches the `--owner-evm` address specified in the CLI
+- **Extend/Top Up not working**: These features are currently in testing - contact support if you encounter issues
 
 ## Next Steps
 

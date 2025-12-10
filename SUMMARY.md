@@ -13,6 +13,7 @@
 * [Cartha Testnet](testnet/README.md)
   * [Miner Guide](testnet/miner-guide.md)
   * [Validator Guide](testnet/validator-guide.md)
+  * [Cartha Lock UI](testnet/cartha-lock-ui.md)
 * [Diagrams](diagrams/README.md)
   * [Big picture](diagrams/big-picture.md)
   * [Fees snapshot](diagrams/fees-snapshot.md)
