@@ -64,7 +64,7 @@ Navigate to **"My Positions"** (or visit `/manage`) to see all your active lock 
 **Features**:
 - **All Positions at a Glance**: See all your pools in one dashboard
 - **Position Details**: For each position, view:
-  - Pool name (e.g., BTC/USD, ETH/USD, EUR/USD)
+  - Pool name (e.g., BTCUSD, ETH/USD, EUR/USD)
   - Amount locked (USDC)
   - Lock duration (days)
   - Expiration date with countdown
@@ -132,7 +132,7 @@ The Cartha Lock UI is designed to work seamlessly with the Cartha CLI:
 cartha vault lock \
   --coldkey my-coldkey \
   --hotkey my-hotkey \
-  --pool-id BTC/USD \
+  --pool-id BTCUSD \
   --amount 100.0 \
   --lock-days 30 \
   --owner-evm 0xYourEVMAddress

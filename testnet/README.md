@@ -22,7 +22,7 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
 
 - **Test liquidity provision** without risking real funds
 - **Practice registration** and hotkey management
-- **Experiment with different pools** (BTC/USD, ETH/USD, EUR/USD)
+- **Experiment with different pools** (BTCUSD, ETH/USD, EUR/USD)
 - **Use the Cartha Lock UI** for a streamlined lock/unlock experience (no BaseScan needed!)
 - **View and manage positions** through the web interface
 - **Extend locks and top up** existing positions (currently in testing)
