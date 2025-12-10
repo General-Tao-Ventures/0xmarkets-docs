@@ -2,7 +2,7 @@
 
 **A modern web interface for managing your Cartha lock positions.** The Cartha Lock UI replaces the need to manually interact with smart contracts on BaseScan, providing a streamlined, user-friendly experience for liquidity providers.
 
-**URL**: https://cartha-lock.vercel.app
+**URL**: https://cartha.finance
 
 ## What is Cartha Lock UI?
 
@@ -104,16 +104,23 @@ Add more USDC to an existing lock position:
 
 **Note**: Top Up feature is currently in testing and may not work properly yet. If you encounter issues, contact support on Discord.
 
-### 5. Testnet Faucet (Coming Soon)
+### 5. Testnet Faucet
 
 A built-in faucet for claiming testnet tokens:
 
-- **Claim Testnet USDC**: Get testnet USDC for testing
-- **Claim Testnet ETH**: Get testnet ETH for gas fees
+- **Claim Testnet USDC**: Get 1,000,000 testnet USDC per claim
+- **24-Hour Cooldown**: One claim per wallet address every 24 hours
 - **Cooldown Management**: See when you can claim again
 - **Balance Display**: View your current testnet token balances
+- **ETH Faucet Links**: Quick access to external ETH faucets (Optimism and Alchemy)
 
-**Status**: The faucet is currently under construction and will be available soon. For now, contact the Cartha team via Discord to request testnet tokens.
+**How to Use**:
+1. Navigate to https://cartha.finance/faucet
+2. Connect your wallet (must be on Base Sepolia network)
+3. Click "Claim USDC" to receive 1,000,000 testnet USDC
+4. Wait 24 hours before claiming again from the same wallet
+
+**Note**: For testnet ETH, use the external faucet links provided on the faucet page (Optimism or Alchemy faucets).
 
 ## How It Works with the CLI
 
@@ -144,9 +151,9 @@ cartha vault lock \
 
 You can also access the UI directly:
 
-- **Landing Page**: https://cartha-lock.vercel.app
-- **My Positions**: https://cartha-lock.vercel.app/manage
-- **Faucet**: https://cartha-lock.vercel.app/faucet (coming soon)
+- **Landing Page**: https://cartha.finance
+- **My Positions**: https://cartha.finance/manage
+- **Faucet**: https://cartha.finance/faucet
 
 When accessing directly, you'll need to:
 - Connect your wallet manually
@@ -268,7 +275,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 ### Security
 
-1. **Verify URLs**: Always use the official URL: https://cartha-lock.vercel.app
+1. **Verify URLs**: Always use the official URL: https://cartha.finance
 2. **Check Addresses**: Verify all addresses match before signing transactions
 3. **Review Parameters**: Always review transaction parameters before executing
 4. **Keep CLI Updated**: Ensure your CLI is up-to-date for best compatibility
@@ -277,7 +284,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 The Cartha Lock UI is actively being developed. Upcoming features include:
 
-- ✅ **Automated Faucet**: Self-service testnet token faucet
+- ✅ **Automated Faucet**: Self-service testnet token faucet (now available!)
 - ✅ **Improved Extend/Top Up**: Full support for extending and topping up positions
 - ✅ **Transaction History**: View history of all your lock transactions
 - ✅ **Notifications**: Alerts for expiring positions

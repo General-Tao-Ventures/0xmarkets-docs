@@ -81,11 +81,10 @@ You can also use the [Chainlist](https://chainlist.org/) website:
 - Wait a few minutes for the transaction to complete
 
 **Testnet USDC** (for liquidity):
-- Contact Cartha team via Discord/Telegram
-- Provide your Base Sepolia wallet address
-- Request testnet USDC for testing
-- Wait for the team to send you testnet USDC
-- **Coming Soon**: Automated faucet will be available on the Cartha Lock UI at https://cartha-lock.vercel.app/faucet
+- Visit: https://cartha.finance/faucet
+- Connect your wallet (must be on Base Sepolia network)
+- Click "Claim USDC" to receive 1,000,000 testnet USDC
+- **Cooldown**: 24 hours between claims (per wallet address)
 
 **Testnet TAO** (for registration):
 - Visit: https://app.minersunion.ai/testnet-faucet
@@ -144,9 +143,8 @@ This command will:
 3. Both transactions require gas fees (paid in testnet ETH)
 
 **Managing Existing Positions**:
-- Visit https://cartha-lock.vercel.app and navigate to "My Positions" to view all your locks
+- Visit https://cartha.finance/manage to view all your locks
 - Use "Extend" or "Top Up" buttons to modify existing positions
-- **Note**: Extend Lock and Top Up features are currently in testing and may not work properly yet
 
 ## Step 6: Check Your Miner Status
 
@@ -253,10 +251,9 @@ export CARTHA_VERIFIER_URL="https://cartha-verifier-826542474079.us-central1.run
 
 **Solution**:
 
-- Contact the Cartha team on Discord/Telegram
-- Provide your Base Sepolia wallet address
-- Request testnet USDC for testing
-- Wait for the team to send you testnet USDC
+- Visit the Cartha faucet at https://cartha.finance/faucet
+- Connect your wallet and claim 1,000,000 testnet USDC
+- Note: There's a 24-hour cooldown between claims
 - Verify receipt on [BaseScan Sepolia](https://sepolia.basescan.org/)
 
 ### "Wrong wallet connected" or "Wallet address mismatch"

@@ -54,7 +54,7 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
 - **Subnet UID**: `78` (Cartha testnet subnet)
 - **EVM Chain**: Base Sepolia (Chain ID: `84532`)
 - **Verifier URL**: `https://cartha-verifier-826542474079.us-central1.run.app`
-- **Lock UI URL**: `https://cartha-lock.vercel.app` (for managing locks and positions)
+- **Lock UI URL**: `https://cartha.finance` (for managing locks and positions)
 
 ### Testnet Tokens
 
@@ -62,9 +62,11 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
   - Faucet: https://app.minersunion.ai/testnet-faucet
 - **Testnet ETH**: Required for gas fees on Base Sepolia
   - Faucet: https://console.optimism.io/faucet (select Base Sepolia)
+  - Alternative: https://www.alchemy.com/faucets/base-sepolia
 - **Testnet USDC**: Required for liquidity provision
-  - Contact: Cartha team via Discord here: https://discord.gg/7DXG57B6
-  - **Coming Soon**: Automated faucet will be available on the Cartha Lock UI at https://cartha-lock.vercel.app/faucet
+  - **Faucet**: https://cartha.finance/faucet
+  - **Claim Amount**: 1,000,000 USDC per claim
+  - **Cooldown**: 24 hours between claims (per wallet address)
 
 
 ## Getting Started
@@ -114,7 +116,7 @@ Contact Cartha team for testnet USDC and support
 
 ### Common Issues
 
-- **Need testnet USDC**: Contact Cartha team via Discord/Telegram (automated faucet coming soon)
+- **Need testnet USDC**: Visit https://cartha.finance/faucet to claim 1,000,000 USDC (24-hour cooldown between claims)
 - **Validator not whitelisted**: Contact subnet owner
 - **Transaction failures**: Check network (Base Sepolia), gas (testnet ETH), and balances
 - **Registration issues**: Verify testnet TAO balance and network settings
