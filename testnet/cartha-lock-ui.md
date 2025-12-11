@@ -2,7 +2,7 @@
 
 **A modern web interface for managing your Cartha lock positions.** The Cartha Lock UI replaces the need to manually interact with smart contracts on BaseScan, providing a streamlined, user-friendly experience for liquidity providers.
 
-**URL**: https://cartha.finance
+**URL**: [https://cartha.finance](https://cartha.finance/)
 
 ## What is Cartha Lock UI?
 
@@ -10,12 +10,12 @@ The Cartha Lock UI is a web-based interface that simplifies the process of creat
 
 ### Key Benefits
 
-- ✅ **No BaseScan Required** - Execute all transactions directly in the UI
-- ✅ **Multi-Wallet Support** - Works with MetaMask, Coinbase Wallet, Talisman, and WalletConnect
-- ✅ **Automatic Validation** - Ensures you're using the correct wallet address
-- ✅ **Real-Time Status** - View transaction status and confirmations in real-time
-- ✅ **Position Management** - View all your positions in one place
-- ✅ **Modern Design** - Clean, intuitive interface with dark theme
+* ✅ **No BaseScan Required** - Execute all transactions directly in the UI
+* ✅ **Multi-Wallet Support** - Works with MetaMask, Coinbase Wallet, Talisman, and WalletConnect
+* ✅ **Automatic Validation** - Ensures you're using the correct wallet address
+* ✅ **Real-Time Status** - View transaction status and confirmations in real-time
+* ✅ **Position Management** - View all your positions in one place
+* ✅ **Modern Design** - Clean, intuitive interface with dark theme
 
 ## What Can You Do?
 
@@ -33,11 +33,12 @@ The primary use case for the Cartha Lock UI is creating new lock positions. The 
 6. **Automatic Detection**: The CLI automatically detects when approval completes
 
 **What You'll See**:
-- Required owner address vs your connected wallet address
-- USDC contract address and spender (vault) address
-- Amount to approve
-- Copy buttons for easy reference
-- Transaction status indicators
+
+* Required owner address vs your connected wallet address
+* USDC contract address and spender (vault) address
+* Amount to approve
+* Copy buttons for easy reference
+* Transaction status indicators
 
 #### Phase 2: Lock Position
 
@@ -49,35 +50,38 @@ After Phase 1 completes, you'll automatically proceed to Phase 2:
 4. **Success Confirmation**: See confirmation with a link to view your positions
 
 **What You'll See**:
-- Pool ID and name
-- Lock amount in USDC
-- Lock duration in days
-- Unlock date
-- Hotkey address
-- Required owner vs connected wallet comparison
-- Transaction status with BaseScan link
+
+* Pool ID and name
+* Lock amount in USDC
+* Lock duration in days
+* Unlock date
+* Hotkey address
+* Required owner vs connected wallet comparison
+* Transaction status with BaseScan link
 
 ### 2. View Your Positions
 
 Navigate to **"My Positions"** (or visit `/manage`) to see all your active lock positions:
 
 **Features**:
-- **All Positions at a Glance**: See all your pools in one dashboard
-- **Position Details**: For each position, view:
-  - Pool name (e.g., BTCUSD, ETH/USD, EUR/USD)
-  - Amount locked (USDC)
-  - Lock duration (days)
-  - Expiration date with countdown
-  - Status (Active, In Next Epoch, etc.)
-  - EVM address used for the lock
-- **Status Indicators**: Color-coded status badges
-- **Quick Actions**: Extend and Top Up buttons for each position
-- **Refresh Button**: Manually refresh to see latest status
+
+* **All Positions at a Glance**: See all your pools in one dashboard
+* **Position Details**: For each position, view:
+  * Pool name (e.g., BTCUSD, ETH/USD, EUR/USD)
+  * Amount locked (USDC)
+  * Lock duration (days)
+  * Expiration date with countdown
+  * Status (Active, In Next Epoch, etc.)
+  * EVM address used for the lock
+* **Status Indicators**: Color-coded status badges
+* **Quick Actions**: Extend and Top Up buttons for each position
+* **Refresh Button**: Manually refresh to see latest status
 
 **Access Methods**:
-- Click "My Positions" button on the landing page
-- Navigate to `/manage` directly
-- Click "View My Positions" after successfully creating a lock
+
+* Click "My Positions" button on the landing page
+* Navigate to `/manage` directly
+* Click "View My Positions" after successfully creating a lock
 
 ### 3. Extend Lock Duration
 
@@ -108,13 +112,14 @@ Add more USDC to an existing lock position:
 
 A built-in faucet for claiming testnet tokens:
 
-- **Claim Testnet USDC**: Get 1,000,000 testnet USDC per claim
-- **24-Hour Cooldown**: One claim per wallet address every 24 hours
-- **Cooldown Management**: See when you can claim again
-- **Balance Display**: View your current testnet token balances
-- **ETH Faucet Links**: Quick access to external ETH faucets (Optimism and Alchemy)
+* **Claim Testnet USDC**: Get 1,000,000 testnet USDC per claim
+* **24-Hour Cooldown**: One claim per wallet address every 24 hours
+* **Cooldown Management**: See when you can claim again
+* **Balance Display**: View your current testnet token balances
+* **ETH Faucet Links**: Quick access to external ETH faucets (Optimism and Alchemy)
 
 **How to Use**:
+
 1. Navigate to https://cartha.finance/faucet
 2. Connect your wallet (must be on Base Sepolia network)
 3. Click "Claim USDC" to receive 1,000,000 testnet USDC
@@ -139,6 +144,7 @@ cartha vault lock \
 ```
 
 **What Happens**:
+
 1. CLI authenticates with your Bittensor hotkey
 2. CLI requests a signature from the verifier
 3. CLI automatically opens the UI in your browser
@@ -151,23 +157,24 @@ cartha vault lock \
 
 You can also access the UI directly:
 
-- **Landing Page**: https://cartha.finance
-- **My Positions**: https://cartha.finance/manage
-- **Faucet**: https://cartha.finance/faucet
+* **Landing Page**: https://cartha.finance
+* **My Positions**: https://cartha.finance/manage
+* **Faucet**: https://cartha.finance/faucet
 
 When accessing directly, you'll need to:
-- Connect your wallet manually
-- Navigate to the feature you want to use
-- Note: Creating new locks is best done through the CLI for proper signature generation
+
+* Connect your wallet manually
+* Navigate to the feature you want to use
+* Note: Creating new locks is best done through the CLI for proper signature generation
 
 ## Supported Wallets
 
 The Cartha Lock UI supports multiple wallet types:
 
-- **MetaMask** - Most popular Ethereum wallet
-- **Coinbase Wallet** - Coinbase's official wallet
-- **Talisman** - Polkadot ecosystem wallet
-- **WalletConnect** - Connect any WalletConnect-compatible wallet
+* **MetaMask** - Most popular Ethereum wallet
+* **Coinbase Wallet** - Coinbase's official wallet
+* **Talisman** - Polkadot ecosystem wallet
+* **WalletConnect** - Connect any WalletConnect-compatible wallet
 
 **Network Requirement**: All wallets must be connected to **Base Sepolia** network (Chain ID: 84532) for testnet, or **Base Mainnet** (Chain ID: 8453) for mainnet.
 
@@ -177,33 +184,33 @@ The Cartha Lock UI supports multiple wallet types:
 
 The UI includes automatic wallet validation to prevent common mistakes:
 
-- **Required Owner Check**: Compares the connected wallet with the required owner address
-- **Visual Warnings**: Clear indicators when addresses don't match
-- **Disconnect/Reconnect**: Easy buttons to disconnect and reconnect the correct wallet
-- **Error Prevention**: Prevents transactions with the wrong wallet
+* **Required Owner Check**: Compares the connected wallet with the required owner address
+* **Visual Warnings**: Clear indicators when addresses don't match
+* **Disconnect/Reconnect**: Easy buttons to disconnect and reconnect the correct wallet
+* **Error Prevention**: Prevents transactions with the wrong wallet
 
 ### Transaction Safety
 
-- **Clear Parameter Display**: All transaction parameters are clearly displayed before execution
-- **Copy Buttons**: Easy copy buttons for addresses and values
-- **Transaction Status**: Real-time status updates with BaseScan links
-- **Error Handling**: Clear error messages if transactions fail
+* **Clear Parameter Display**: All transaction parameters are clearly displayed before execution
+* **Copy Buttons**: Easy copy buttons for addresses and values
+* **Transaction Status**: Real-time status updates with BaseScan links
+* **Error Handling**: Clear error messages if transactions fail
 
 ## User Interface
 
 ### Design
 
-- **Dark Theme**: Modern dark theme optimized for extended use
-- **Responsive Layout**: Works on desktop, tablet, and mobile devices
-- **Material Symbols**: Uses Material Symbols icons for consistent visual language
-- **Inter Font**: Clean, readable Inter font family
+* **Dark Theme**: Modern dark theme optimized for extended use
+* **Responsive Layout**: Works on desktop, tablet, and mobile devices
+* **Material Symbols**: Uses Material Symbols icons for consistent visual language
+* **Inter Font**: Clean, readable Inter font family
 
 ### Navigation
 
-- **Landing Page**: Home page with CLI command and quick access to positions
-- **Sidebar**: Persistent sidebar on dashboard pages with logo and wallet status
-- **Logo Navigation**: Click the Cartha logo to return to the landing page
-- **Breadcrumbs**: Clear navigation paths between pages
+* **Landing Page**: Home page with CLI command and quick access to positions
+* **Sidebar**: Persistent sidebar on dashboard pages with logo and wallet status
+* **Logo Navigation**: Click the Cartha logo to return to the landing page
+* **Breadcrumbs**: Clear navigation paths between pages
 
 ## Troubleshooting
 
@@ -212,6 +219,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 **Problem**: UI shows "Wrong Network" message
 
 **Solution**:
+
 1. Check your wallet is connected to Base Sepolia (Chain ID: 84532)
 2. Switch networks in your wallet
 3. Refresh the page
@@ -221,6 +229,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 **Problem**: UI shows warning that connected wallet doesn't match required owner
 
 **Solution**:
+
 1. Click "Disconnect" button
 2. Connect the correct wallet that matches the `--owner-evm` address
 3. Verify the address matches before proceeding
@@ -230,26 +239,29 @@ The UI includes automatic wallet validation to prevent common mistakes:
 **Problem**: Transaction fails when trying to execute
 
 **Solution**:
-- **Check Network**: Ensure you're on Base Sepolia
-- **Check Gas**: Ensure you have enough ETH for gas fees
-- **Check Balance**: Ensure you have enough USDC
-- **Check Approval**: For Phase 2, ensure Phase 1 approval completed successfully
-- **Check Network Congestion**: Wait a moment and retry
+
+* **Check Network**: Ensure you're on Base Sepolia
+* **Check Gas**: Ensure you have enough ETH for gas fees
+* **Check Balance**: Ensure you have enough USDC
+* **Check Approval**: For Phase 2, ensure Phase 1 approval completed successfully
+* **Check Network Congestion**: Wait a moment and retry
 
 ### "Extend" or "Top Up" Not Working
 
 **Problem**: Extend or Top Up buttons don't work
 
 **Solution**:
-- These features are currently in testing
-- Contact support on Discord if you need to extend or top up
-- Use the CLI or contact support for manual assistance
+
+* These features are currently in testing
+* Contact support on Discord if you need to extend or top up
+* Use the CLI or contact support for manual assistance
 
 ### Positions Not Showing
 
 **Problem**: "My Positions" page shows no positions
 
 **Solution**:
+
 1. Ensure your wallet is connected
 2. Verify you're using the correct wallet address
 3. Click "Refresh" button to reload positions
@@ -284,20 +296,20 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 The Cartha Lock UI is actively being developed. Upcoming features include:
 
-- ✅ **Automated Faucet**: Self-service testnet token faucet (now available!)
-- ✅ **Improved Extend/Top Up**: Full support for extending and topping up positions
-- ✅ **Transaction History**: View history of all your lock transactions
-- ✅ **Notifications**: Alerts for expiring positions
-- ✅ **Multi-Chain Support**: Support for additional chains beyond Base
-- ✅ **Advanced Analytics**: Detailed analytics and insights for your positions
+* ✅ **Automated Faucet**: Self-service testnet token faucet (now available!)
+* ✅ **Improved Extend/Top Up**: Full support for extending and topping up positions
+* ✅ **Transaction History**: View history of all your lock transactions
+* ✅ **Notifications**: Alerts for expiring positions
+* ✅ **Multi-Chain Support**: Support for additional chains beyond Base
+* ✅ **Advanced Analytics**: Detailed analytics and insights for your positions
 
 ## Getting Help
 
-- **Documentation**: See the [Miner Guide](miner-guide.md) for detailed setup instructions
-- **Discord**: Join our Discord for support: https://discord.gg/7DXG57B6
-- **CLI Help**: Run `cartha --help` or `cartha vault lock --help` for CLI assistance
-- **GitHub**: Report issues on the [cartha-lock-ui repository](https://github.com/General-Tao-Ventures/cartha-lock-ui)
+* **Documentation**: See the [Miner Guide](miner-guide.md) for detailed setup instructions
+* **Discord**: Join our Discord for support: https://discord.gg/7DXG57B6
+* **CLI Help**: Run `cartha --help` or `cartha vault lock --help` for CLI assistance
+* **GitHub**: Report issues on the [cartha-lock-ui repository](https://github.com/General-Tao-Ventures/cartha-lock-ui)
 
----
+***
 
 **Note**: The Cartha Lock UI is currently optimized for testnet use. Mainnet support will be available when the Cartha subnet launches on mainnet.
