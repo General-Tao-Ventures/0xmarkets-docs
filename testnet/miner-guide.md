@@ -92,13 +92,30 @@ You can also use the [Chainlist](https://chainlist.org/) website:
 
 ## Step 4: Register Your Hotkey
 
-Register your hotkey to the testnet subnet:
+Register your hotkey to the testnet subnet.
+
+**Interactive mode (recommended):**
 
 ```bash
-uv run cartha miner register \
-  --network test \
-  --netuid 78
+uv run cartha miner register
 ```
+
+The CLI will prompt you for your wallet names and automatically use the testnet network.
+
+**Or with arguments:**
+
+```bash
+# Using short aliases
+uv run cartha miner register -w cold -wh hot
+
+# Or full argument names
+uv run cartha miner register --wallet-name cold --wallet-hotkey hot
+```
+
+**All these also work:**
+- `--coldkey` instead of `--wallet-name`
+- `--hotkey` instead of `--wallet-hotkey`
+- `-w` and `-wh` as short forms
 
 This will:
 - Register your hotkey to subnet 78 (testnet)
@@ -109,19 +126,50 @@ This will:
 
 ## Step 5: Lock Funds
 
-Use the streamlined lock flow with the Cartha Lock UI:
+Use the streamlined lock flow with the Cartha Lock UI.
+
+**Interactive mode (recommended for beginners):**
 
 ```bash
-uv run cartha vault lock \
-  --coldkey <your-coldkey> \
-  --hotkey <your-hotkey> \
-  --pool-id BTCUSD \
-  --amount 100.0 \
-  --lock-days 30 \
-  --owner-evm 0xYourEVMAddress
+uv run cartha vault lock
 ```
 
-**Note**: Chain ID and vault address are automatically detected from the pool ID - no need to specify them manually!
+The CLI will guide you through and prompt for:
+- Coldkey wallet name
+- Hotkey name
+- Pool name (just type: **BTCUSD**, **ETHUSD**, **EURUSD**, etc.)
+- Amount in USDC
+- Lock duration in days
+- EVM address (your MetaMask wallet address)
+
+**Or provide all arguments:**
+
+```bash
+# Using short aliases (power users)
+uv run cartha vault lock -w cold -wh hot -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
+
+# Using full argument names
+uv run cartha vault lock \
+  --wallet-name cold \
+  --wallet-hotkey hot \
+  --pool BTCUSD \
+  --amount 100.0 \
+  --days 30 \
+  --owner-evm 0xYourEVMAddress
+
+# All these aliases work:
+uv run cartha vault lock \
+  --coldkey cold \
+  --hotkey hot \
+  --pool-id BTCUSD \
+  --amount 100 \
+  --lock-days 30 \
+  --owner 0xYourEVMAddress
+```
+
+**Available pools:** BTCUSD, ETHUSD, EURUSD (just type the name!)
+
+**Note**: Chain ID and vault address are automatically detected from the pool - no need to specify them manually!
 
 This command will:
 1. Check your registration on the subnet
@@ -146,14 +194,46 @@ This command will:
 - Visit https://cartha.finance/manage to view all your locks
 - Use "Extend" or "Top Up" buttons to modify existing positions
 
+### Multiple Positions
+
+You can create multiple lock positions on the same pool using different EVM addresses:
+
+**Allowed**:
+- ✅ Same hotkey + Same pool + **Different EVM address** → Creates a separate position
+- Example: Lock 1,000 USDC on BTCUSD pool from wallet A (0x1111...), then lock another 500 USDC on BTCUSD pool from wallet B (0x2222...)
+- Each position is tracked independently with its own amount, lock period, and expiration
+
+**Rejected**:
+- ❌ Same hotkey + Same pool + **Same EVM address** → Rejected with error
+- If you want to add more USDC to an existing position, use the **top-up feature** at https://cartha.finance/manage
+- If you want to extend the lock period, use the **extend lock** feature at https://cartha.finance/manage
+
+**Why multiple positions?**
+- Allows you to diversify your positions across different wallets
+- Enables gradual scaling of liquidity provision
+- Each position can have different lock periods and expiration dates
+
 ## Step 6: Check Your Miner Status
 
-Verify your miner status (no authentication required):
+Verify your miner status (no authentication required).
+
+**Interactive mode:**
 
 ```bash
-uv run cartha miner status \
-  --wallet-name <your-wallet-name> \
-  --wallet-hotkey <your-hotkey-name>
+uv run cartha miner status
+```
+
+**Or with arguments:**
+
+```bash
+# Short form
+uv run cartha m status -w cold -wh hot
+
+# Using --coldkey/--hotkey aliases
+uv run cartha miner status --coldkey cold --hotkey hot
+
+# Full names
+uv run cartha miner status --wallet-name cold --wallet-hotkey hot
 ```
 
 This shows:
