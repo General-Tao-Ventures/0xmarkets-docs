@@ -137,10 +137,14 @@ The Cartha Lock UI is designed to work seamlessly with the Cartha CLI:
 cartha vault lock \
   --coldkey my-coldkey \
   --hotkey my-hotkey \
+  --network test \
   --pool-id BTCUSD \
   --amount 100.0 \
   --lock-days 30 \
   --owner-evm 0xYourEVMAddress
+
+# Or using short aliases:
+cartha v lock -w cold -wh hot -n test -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
 ```
 
 **What Happens**:

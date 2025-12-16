@@ -100,22 +100,29 @@ Register your hotkey to the testnet subnet.
 uv run cartha miner register
 ```
 
-The CLI will prompt you for your wallet names and automatically use the testnet network.
+The CLI will prompt you for your wallet names. The network will default to finney (mainnet), but since mainnet is not available yet, you should use testnet.
 
-**Or with arguments:**
+**For testnet, use:**
 
 ```bash
-# Using short aliases
-uv run cartha miner register -w cold -wh hot
+# Interactive with network specified
+uv run cartha miner register --network test
 
-# Or full argument names
-uv run cartha miner register --wallet-name cold --wallet-hotkey hot
+# Or with all arguments
+uv run cartha miner register -w cold -wh hot -n test
+
+# Full argument names
+uv run cartha miner register --wallet-name cold --wallet-hotkey hot --network test
 ```
 
-**All these also work:**
-- `--coldkey` instead of `--wallet-name`
-- `--hotkey` instead of `--wallet-hotkey`
-- `-w` and `-wh` as short forms
+**All these aliases work:**
+- Wallet: `--wallet-name`, `--coldkey`, `-w`
+- Hotkey: `--wallet-hotkey`, `--hotkey`, `-wh`
+- Network: `--network`, `-n`
+
+**Network auto-mapping:**
+- `--network test` → Auto-uses subnet 78 (testnet)
+- `--network finney` → Shows warning (mainnet not available yet)
 
 This will:
 - Register your hotkey to subnet 78 (testnet)
@@ -146,12 +153,13 @@ The CLI will guide you through and prompt for:
 
 ```bash
 # Using short aliases (power users)
-uv run cartha vault lock -w cold -wh hot -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
+uv run cartha vault lock -w cold -wh hot -n test -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
 
 # Using full argument names
 uv run cartha vault lock \
   --wallet-name cold \
   --wallet-hotkey hot \
+  --network test \
   --pool BTCUSD \
   --amount 100.0 \
   --days 30 \
@@ -161,6 +169,7 @@ uv run cartha vault lock \
 uv run cartha vault lock \
   --coldkey cold \
   --hotkey hot \
+  --network test \
   --pool-id BTCUSD \
   --amount 100 \
   --lock-days 30 \
@@ -169,7 +178,10 @@ uv run cartha vault lock \
 
 **Available pools:** BTCUSD, ETHUSD, EURUSD (just type the name!)
 
-**Note**: Chain ID and vault address are automatically detected from the pool - no need to specify them manually!
+**Important Notes:**
+- Always use `--network test` for testnet (auto-maps to subnet 78)
+- Chain ID and vault address are automatically detected from the pool - no need to specify them manually!
+- If you try to create a duplicate position (same pool + same EVM), the CLI will reject it early and direct you to the frontend for top-ups
 
 This command will:
 1. Check your registration on the subnet
@@ -226,15 +238,17 @@ uv run cartha miner status
 **Or with arguments:**
 
 ```bash
-# Short form
-uv run cartha m status -w cold -wh hot
+# Short form (for testnet)
+uv run cartha m status -w cold -wh hot -n test
 
 # Using --coldkey/--hotkey aliases
-uv run cartha miner status --coldkey cold --hotkey hot
+uv run cartha miner status --coldkey cold --hotkey hot --network test
 
 # Full names
-uv run cartha miner status --wallet-name cold --wallet-hotkey hot
+uv run cartha miner status --wallet-name cold --wallet-hotkey hot --network test
 ```
+
+**Tip:** Always use `--network test` for testnet to ensure correct subnet (78) and verifier URL.
 
 This shows:
 - Miner state and pool information
