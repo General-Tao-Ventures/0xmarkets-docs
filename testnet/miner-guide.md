@@ -9,7 +9,6 @@ Complete guide for running miners (liquidity providers) on Cartha testnet.
 Before you begin, ensure you have:
 
 - ✅ Python 3.11 installed
-- ✅ [`uv`](https://github.com/astral-sh/uv) package manager (or `pip`)
 - ✅ Bittensor wallet set up
 - ✅ MetaMask (or other EVM wallet) installed
 - ✅ Base Sepolia network added to MetaMask
@@ -20,15 +19,13 @@ Before you begin, ensure you have:
 ## Step 1: Install Cartha CLI
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd cartha-subnet/cartha-cli
+pip install cartha-cli
+```
 
-# Install using uv (recommended)
-uv sync
+Verify the installation:
 
-# Or install using pip
-pip install -e .
+```bash
+cartha --help
 ```
 
 ## Step 2: Configure Testnet Environment
@@ -97,7 +94,7 @@ Register your hotkey to the testnet subnet.
 **Interactive mode (recommended):**
 
 ```bash
-uv run cartha miner register
+cartha miner register
 ```
 
 The CLI will prompt you for your wallet names. The network will default to finney (mainnet), but since mainnet is not available yet, you should use testnet.
@@ -106,13 +103,13 @@ The CLI will prompt you for your wallet names. The network will default to finne
 
 ```bash
 # Interactive with network specified
-uv run cartha miner register --network test
+cartha miner register --network test
 
 # Or with all arguments
-uv run cartha miner register -w cold -wh hot -n test
+cartha miner register -w cold -wh hot -n test
 
 # Full argument names
-uv run cartha miner register --wallet-name cold --wallet-hotkey hot --network test
+cartha miner register --wallet-name cold --wallet-hotkey hot --network test
 ```
 
 **All these aliases work:**
@@ -138,7 +135,7 @@ Use the streamlined lock flow with the Cartha Lock UI.
 **Interactive mode (recommended for beginners):**
 
 ```bash
-uv run cartha vault lock
+cartha vault lock
 ```
 
 The CLI will guide you through and prompt for:
@@ -153,10 +150,10 @@ The CLI will guide you through and prompt for:
 
 ```bash
 # Using short aliases (power users)
-uv run cartha vault lock -w cold -wh hot -n test -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
+cartha vault lock -w cold -wh hot -n test -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
 
 # Using full argument names
-uv run cartha vault lock \
+cartha vault lock \
   --wallet-name cold \
   --wallet-hotkey hot \
   --network test \
@@ -166,7 +163,7 @@ uv run cartha vault lock \
   --owner-evm 0xYourEVMAddress
 
 # All these aliases work:
-uv run cartha vault lock \
+cartha vault lock \
   --coldkey cold \
   --hotkey hot \
   --network test \
@@ -232,20 +229,20 @@ Verify your miner status (no authentication required).
 **Interactive mode:**
 
 ```bash
-uv run cartha miner status
+cartha miner status
 ```
 
 **Or with arguments:**
 
 ```bash
 # Short form (for testnet)
-uv run cartha m status -w cold -wh hot -n test
+cartha m status -w cold -wh hot -n test
 
 # Using --coldkey/--hotkey aliases
-uv run cartha miner status --coldkey cold --hotkey hot --network test
+cartha miner status --coldkey cold --hotkey hot --network test
 
 # Full names
-uv run cartha miner status --wallet-name cold --wallet-hotkey hot --network test
+cartha miner status --wallet-name cold --wallet-hotkey hot --network test
 ```
 
 **Tip:** Always use `--network test` for testnet to ensure correct subnet (78) and verifier URL.
@@ -274,15 +271,15 @@ You don't need to manually specify `--vault-address` or `--chain-id` unless you 
 
 ```bash
 # View available pools
-uv run cartha vault pools
+cartha vault pools
 
 # Check miner status
-uv run cartha miner status --wallet-name <name> --wallet-hotkey <hotkey>
+cartha miner status --wallet-name <name> --wallet-hotkey <hotkey>
 
 # View help
-uv run cartha --help
-uv run cartha miner register --help
-uv run cartha vault lock --help
+cartha --help
+cartha miner register --help
+cartha vault lock --help
 ```
 
 ## Troubleshooting
@@ -370,7 +367,7 @@ export CARTHA_VERIFIER_URL="https://cartha-verifier-826542474079.us-central1.run
 Before starting, make sure you have:
 
 - [ ] Python 3.11 installed
-- [ ] `uv` package manager installed
+- [ ] Cartha CLI installed (`pip install cartha-cli`)
 - [ ] Bittensor wallet set up
 - [ ] MetaMask (or other EVM wallet) installed
 - [ ] Base Sepolia network added to MetaMask
@@ -382,14 +379,14 @@ Before starting, make sure you have:
 
 ```bash
 # 1. Register your hotkey
-uv run cartha miner register --wallet-name test --wallet-hotkey test --network test --netuid 78
+cartha miner register --wallet-name test --wallet-hotkey test --network test --netuid 78
 
 # 2. Check miner status (no authentication needed)
-uv run cartha miner status --wallet-name test --wallet-hotkey test
+cartha miner status --wallet-name test --wallet-hotkey test
 
 # 3. Lock funds (interactive flow)
 # Note: Make sure you're on Base Sepolia network in MetaMask!
-uv run cartha vault lock \
+cartha vault lock \
   --coldkey test \
   --hotkey test \
   --pool-id BTCUSD \
