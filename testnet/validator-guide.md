@@ -16,7 +16,7 @@ Before you begin, ensure you have:
 
 **Note**: On testnet, all validators are allowed - no whitelist is required. Whitelist restrictions only apply to mainnet.
 
-The `install.sh` script will automatically:
+The `run.sh` script will automatically:
 - Install PM2 if not already installed
 - Install all Python dependencies
 - Configure your validator settings
@@ -32,10 +32,10 @@ git clone https://github.com/General-Tao-Ventures/cartha-validator.git
 cd cartha-validator
 
 # Run the interactive installation script
-./scripts/install.sh
+./scripts/run.sh
 ```
 
-The `install.sh` script will:
+The `run.sh` script will:
 
 1. **Install PM2** (if not already installed) - Process manager for keeping validator running
 2. **Check Python and uv** - Ensures required tools are available
@@ -55,7 +55,7 @@ The `install.sh` script will:
 
 ## Step 2: Validator is Running!
 
-Once `install.sh` completes, your validator is automatically:
+Once `run.sh` completes, your validator is automatically:
 
 - ✅ Running via PM2 (survives SSH disconnect and system restarts)
 - ✅ Auto-updating when new releases are published on GitHub
@@ -127,7 +127,7 @@ For each verified miner, the validator:
 
 ### Automatic Configuration
 
-The `install.sh` script configures everything automatically. Configuration is stored in:
+The `run.sh` script configures everything automatically. Configuration is stored in:
 
 - **PM2 Ecosystem Config**: `scripts/ecosystem.config.js` - Contains validator arguments and environment variables
 - **Auto-Updater Config**: `scripts/update_config.yaml` - Contains GitHub repo and update settings
@@ -297,7 +297,7 @@ curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miner
 
 **Solution**:
 
-- The verifier URL is automatically configured by `install.sh`
+- The verifier URL is automatically configured by `run.sh`
 - Test connectivity: `curl "https://cartha-verifier-826542474079.us-central1.run.app/health"`
 - Check validator logs: `pm2 logs cartha-validator`
 - Verify network connectivity
@@ -312,7 +312,7 @@ curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miner
 - Check validator status: `pm2 status`
 - View validator logs: `pm2 logs cartha-validator`
 - Check your wallet has sufficient testnet TAO
-- Verify you're using the correct network (`test`) and netuid (`78`) - configured during `install.sh`
+- Verify you're using the correct network (`test`) and netuid (`78`) - configured during `run.sh`
 - Verify your validator hotkey is registered on the subnet
 - Ensure validator is running: `pm2 restart cartha-validator` if needed
 
@@ -326,7 +326,7 @@ curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miner
 - Check validator logs: `pm2 logs cartha-validator`
 - Test the verifier endpoint: `curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"`
 - Check epoch version matches current epoch
-- Verify you're using the correct network (`test`) and netuid (`78`) - configured during `install.sh`
+- Verify you're using the correct network (`test`) and netuid (`78`) - configured during `run.sh`
 - Restart validator: `pm2 restart cartha-validator`
 
 ## Additional Resources
