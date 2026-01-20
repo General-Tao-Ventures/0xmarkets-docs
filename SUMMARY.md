@@ -8,6 +8,8 @@
   * [Governance (veALPHA)](how-it-works/governance-vealpha.md)
 * [Participants](participants/README.md)
   * [Miners (LPs)](participants/miners-lps.md)
+  * [Principal Miners](participants/principal-miners.md)
+  * [Federated Miners](participants/federated-miners.md)
   * [Traders](participants/traders.md)
   * [Validators](participants/validators.md)
 * [Cartha Testnet](testnet/README.md)
