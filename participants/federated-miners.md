@@ -20,10 +20,11 @@ Federated Miners enable anyone with USDC and an EVM wallet to participate in Car
 
 ### Key Considerations
 
-- ⚠️ **Emissions Go to Principal Miner** - You must negotiate profit-sharing terms
-- ⚠️ **No Cartha Enforcement** - Distribution agreements are between you and the principal miner
-- ⚠️ **LP Risk Applies** - Liquidation losses are not reimbursed
-- ⚠️ **Trust Required** - Principal miner controls emission distribution
+- ℹ️ **Emissions Go to Principal Miner** - ALPHA emissions are sent to the principal miner's Bittensor wallet, not your EVM wallet
+- ℹ️ **Profit-Sharing Agreement** - Establish distribution terms with the principal miner separately
+- ℹ️ **Your Funds Stay Yours** - Principal miner cannot access your capital; you maintain full control
+- ⚠️ **LP Risk Applies** - Liquidation losses from providing DEX liquidity may occur
+- ✅ **No CLI Required** - Everything can be done through the web interface
 
 ---
 
@@ -81,21 +82,26 @@ Find a principal miner to lock through:
 
 ### 4. Lock Your Funds
 
-**Option A: Via Lock UI** ✅ **Recommended**
+**Via Cartha Lock UI** ✅ **Fully Self-Service**
 
 Visit: https://cartha.finance/create-lock
 
 1. Connect your EVM wallet
-2. Enter principal miner's hotkey
+2. Enter principal miner's hotkey (SS58 address)
 3. Select pool (BTCUSD, ETHUSD, EURUSD)
-4. Enter amount (minimum 100,000 USDC)
-5. Set lock duration (1-1825 days)
-6. Approve USDC spending
-7. Complete lock transaction
+4. Enter amount and lock duration (1-365 days)
+5. Click "Request Lock Signature" - the system will:
+   - Verify the hotkey is registered on the subnet
+   - Generate the required signature automatically
+   - Direct you to Phase 1 (USDC approval)
+6. Complete Phase 1: Approve USDC spending
+7. Complete Phase 2: Lock position transaction
 
-**Option B: Via Shared URL**
+**That's it!** No CLI required, no coordination with the principal miner needed for the lock process.
 
-If the principal miner provides a lock URL:
+**Alternative: Via Shared URL** (Optional)
+
+If the principal miner provides a pre-filled lock URL:
 1. Click the URL (format: `https://cartha.finance/lock?phase=1&...`)
 2. Connect your wallet
 3. Verify the parameters match your agreement
@@ -141,13 +147,14 @@ Your position is secured on-chain:
 
 **What You Control:**
 - Position ownership (via your EVM wallet)
-- Principal withdrawal after expiry
+- Capital withdrawal after lock expiry
 - No principal miner approval needed to withdraw
+- Independent locking (no CLI or miner coordination required)
 
 **What You Don't Control:**
-- TAO emissions (go to principal miner's Bittensor wallet)
+- ALPHA emissions (sent to principal miner's Bittensor wallet)
 - Pool performance (managed by principal miner)
-- Liquidation events (market-driven)
+- Liquidation events (market-driven from DEX activity)
 
 ---
 
@@ -195,7 +202,7 @@ Before locking, establish clear terms with the principal miner:
 - Expiry Date: [Auto-calculated]
 
 ## Profit Split
-- Federated Miner: 75% of TAO emissions
+- Federated Miner: 75% of ALPHA emissions
 - Principal Miner: 25% management fee
 
 ## Distribution
