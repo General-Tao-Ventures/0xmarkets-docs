@@ -21,4 +21,9 @@ coverY: 0
 * Skim [How it works.](how-it-works/)
 * See the [Diagrams](diagrams/).
 
+**Get involved**
+
+* 🚀 [Trade on 0xMarkets](https://0xmarkets.io)
+* 💧 [Provide Liquidity](https://cartha.finance) — Earn ALPHA emissions by becoming a liquidity provider
+
 > This is an informational site. Nothing here is financial advice. See [Legal & risk.](legal-and-risk.md)
