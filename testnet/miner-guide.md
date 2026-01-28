@@ -149,29 +149,27 @@ Now that your hotkey is registered, you can lock USDC funds to provide liquidity
 
 ![Become an LP Navigation](../.gitbook/assets/become-an-lp-navbar.png)
 
-3. You'll see two options: **Regular LPs** and **Miner LPs**. Click "Become a Miner LP"
-
-![Become Miner LP](../.gitbook/assets/become-miner-lp.jpeg)
+3. You'll see the **Federated Miners** option with a lock flow form on the right
 
 ### Enter Your Miner Details
 
 4. **Enter your Principal Miner Hotkey** - This is the SS58 address from your registration in Step 2
 
-![Paste Hotkey](../.gitbook/assets/paste-your-or-a-principal-miner-hotkey.jpeg)
+![Paste Hotkey](../.gitbook/assets/paste-your-or-principal-miner-hotkey.png)
 
 The system will verify your hotkey is registered on the subnet (UID: 212 shown means registered).
 
-5. **Select a Pool** - Choose which trading pair you want to provide liquidity for (BTCUSD, ETHUSD, etc.)
+5. **Select a Pool** - Choose which trading pair you want to provide liquidity for (BTC/USD, ETH/USD, etc.)
 
-![Choose Pool](../.gitbook/assets/choose-a-pool.jpeg)
+![Select Pool](../.gitbook/assets/select-available-pools.png)
 
 6. **Enter Amount** - Specify how much USDC you want to lock (e.g., 100000 USDC)
 
-![Enter Amount](../.gitbook/assets/enter-amount.jpeg)
+![Enter Amount](../.gitbook/assets/input-amount.png)
 
 7. **Set Lock Duration** - Choose how many days to lock your funds (minimum 7 days, maximum 365 days)
 
-![Enter Lock Days](../.gitbook/assets/enter-lock-days.jpeg)
+![Enter Lock Days](../.gitbook/assets/input-lock-days.png)
 
 ### Connect Wallet and Execute Transaction
 
@@ -181,7 +179,7 @@ The system will verify your hotkey is registered on the subnet (UID: 212 shown m
 
 9. **Request Signature & Continue** - Click the button to proceed
 
-![Wait and Lock](../.gitbook/assets/wait-5-sec-to-redirect-here-and-lock-deposit.jpeg)
+![Continue](../.gitbook/assets/continue.png)
 
 10. **Approve USDC** - First, you need to approve the vault contract to spend your USDC
 
@@ -397,7 +395,7 @@ cartha miner --help
 
 3. **Lock Funds via Web Interface**
    - Go to https://cartha.finance
-   - Click "Become an LP" → "Become a Miner LP"
+   - Click "Become an LP"
    - Enter your hotkey SS58 address
    - Choose pool, amount, and lock duration
    - Connect wallet (Base Sepolia network)
