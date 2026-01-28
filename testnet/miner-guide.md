@@ -64,15 +64,15 @@ Visit the Cartha faucet to claim testnet USDC:
 
 1. Go to [https://cartha.finance](https://cartha.finance)
 
-![Landing Page](.gitbook/assets/landing-page.jpeg)
+![Landing Page](../.gitbook/assets/landing-page.jpeg)
 
 2. Click on "Faucet" in the navigation bar
 
-![Faucet Navigation](.gitbook/assets/faucet-navbar.jpeg)
+![Faucet Navigation](../.gitbook/assets/faucet-navbar.jpeg)
 
 3. Connect your wallet (must be on Base Sepolia network) and click "Claim USDC"
 
-![Claim USDC](.gitbook/assets/claim-USDC.jpeg)
+![Claim USDC](../.gitbook/assets/claim-USDC.jpeg)
 
 - You'll receive 1,000,000 testnet USDC per claim
 - **Cooldown**: 24 hours between claims (per wallet address)
@@ -147,51 +147,51 @@ Now that your hotkey is registered, you can lock USDC funds to provide liquidity
 1. Go to [https://cartha.finance](https://cartha.finance)
 2. Click on "Become an LP" in the navigation bar
 
-![Become an LP Navigation](.gitbook/assets/become-an-lp-navbar.png)
+![Become an LP Navigation](../.gitbook/assets/become-an-lp-navbar.png)
 
 3. You'll see two options: **Regular LPs** and **Miner LPs**. Click "Become a Miner LP"
 
-![Become Miner LP](.gitbook/assets/become-miner-lp.jpeg)
+![Become Miner LP](../.gitbook/assets/become-miner-lp.jpeg)
 
 ### Enter Your Miner Details
 
 4. **Enter your Principal Miner Hotkey** - This is the SS58 address from your registration in Step 2
 
-![Paste Hotkey](.gitbook/assets/paste-your-or-a-principal-miner-hotkey.jpeg)
+![Paste Hotkey](../.gitbook/assets/paste-your-or-a-principal-miner-hotkey.jpeg)
 
 The system will verify your hotkey is registered on the subnet (UID: 212 shown means registered).
 
 5. **Select a Pool** - Choose which trading pair you want to provide liquidity for (BTCUSD, ETHUSD, etc.)
 
-![Choose Pool](.gitbook/assets/choose-a-pool.jpeg)
+![Choose Pool](../.gitbook/assets/choose-a-pool.jpeg)
 
 6. **Enter Amount** - Specify how much USDC you want to lock (e.g., 100000 USDC)
 
-![Enter Amount](.gitbook/assets/enter-amount.jpeg)
+![Enter Amount](../.gitbook/assets/enter-amount.jpeg)
 
 7. **Set Lock Duration** - Choose how many days to lock your funds (minimum 7 days, maximum 365 days)
 
-![Enter Lock Days](.gitbook/assets/enter-lock-days.jpeg)
+![Enter Lock Days](../.gitbook/assets/enter-lock-days.jpeg)
 
 ### Connect Wallet and Execute Transaction
 
 8. **Connect your wallet** - Make sure you're connected to Base Sepolia network
 
-![Connect Wallet](.gitbook/assets/connect-wallet.jpeg)
+![Connect Wallet](../.gitbook/assets/connect-wallet.jpeg)
 
 9. **Request Signature & Continue** - Click the button to proceed
 
-![Wait and Lock](.gitbook/assets/wait-5-sec-to-redirect-here-and-lock-deposit.jpeg)
+![Wait and Lock](../.gitbook/assets/wait-5-sec-to-redirect-here-and-lock-deposit.jpeg)
 
 10. **Approve USDC** - First, you need to approve the vault contract to spend your USDC
 
-![Approve USDC](.gitbook/assets/approve-USDC-limit.jpeg)
+![Approve USDC](../.gitbook/assets/approve-USDC-limit.jpeg)
 
 Approve the transaction in your wallet (this requires gas fees in ETH).
 
 11. **Lock Position** - After approval, the second transaction will lock your USDC in the vault
 
-![Check Lock Position](.gitbook/assets/check-lock-position.jpeg)
+![Check Lock Position](../.gitbook/assets/check-lock-position.jpeg)
 
 Confirm the lock transaction in your wallet.
 
@@ -199,11 +199,11 @@ Confirm the lock transaction in your wallet.
 
 12. **Wait for confirmation** - It may take 30 seconds to 5 minutes for the position to be processed
 
-![Wait for Confirmation](.gitbook/assets/wait-30s-5m-refresh-to-check-position.jpeg)
+![Wait for Confirmation](../.gitbook/assets/wait-30s-5m-refresh-to-check-position.jpeg)
 
 13. **View your positions** - Navigate to "My Positions" to see your active locks
 
-![My Positions](.gitbook/assets/final-my-positions-page.png)
+![My Positions](../.gitbook/assets/final-my-positions-page.png)
 
 You'll see:
 - Pool ID and trading pair
