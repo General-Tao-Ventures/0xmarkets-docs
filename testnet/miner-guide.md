@@ -1,47 +1,31 @@
 # Miner Guide - Cartha Testnet
 
-Complete guide for running miners (liquidity providers) on Cartha testnet.
+Complete guide for becoming a liquidity provider (miner) on Cartha testnet using the web interface.
 
-**Repository**: [cartha-cli](https://github.com/General-Tao-Ventures/cartha-cli)
+**Web Interface**: [https://cartha.finance](https://cartha.finance)
+
+**CLI Repository** (for registration only): [cartha-cli](https://github.com/General-Tao-Ventures/cartha-cli)
+
+## Overview
+
+Becoming a miner on Cartha testnet involves two main steps:
+
+1. **Register your hotkey** to the Bittensor subnet (requires CLI)
+2. **Lock USDC funds** to provide liquidity (done via web interface)
 
 ## Prerequisites
 
 Before you begin, ensure you have:
 
-- ✅ Python 3.11 installed
-- ✅ Bittensor wallet set up
+- ✅ Bittensor wallet set up (coldkey + hotkey)
 - ✅ MetaMask (or other EVM wallet) installed
 - ✅ Base Sepolia network added to MetaMask
 - ✅ Testnet ETH in your wallet (for gas fees)
-- ✅ Testnet USDC in your wallet (contact team if needed)
+- ✅ Testnet USDC in your wallet (get from faucet)
+- ✅ Python 3.11 installed (for CLI registration only)
 - ✅ Testnet TAO in your Bittensor wallet (for registration)
 
-## Step 1: Install Cartha CLI
-
-```bash
-pip install cartha-cli
-```
-
-Verify the installation:
-
-```bash
-cartha --help
-```
-
-## Step 2: Configure Testnet Environment
-
-Set the following environment variables:
-
-```bash
-# Required: Testnet verifier URL
-export CARTHA_VERIFIER_URL="https://cartha-verifier-826542474079.us-central1.run.app"
-
-# Required: Bittensor network configuration
-export CARTHA_NETWORK="test"  # Use "test" for testnet
-export CARTHA_NETUID=78       # Testnet subnet UID
-```
-
-## Step 3: Set Up Your EVM Wallet
+## Step 1: Get Testnet Tokens
 
 ### Add Base Sepolia Network to MetaMask
 
@@ -59,8 +43,6 @@ export CARTHA_NETUID=78       # Testnet subnet UID
 
 4. Click "Save" and switch to Base Sepolia network
 
-**Note**: This uses the public Base Sepolia RPC endpoint. For better performance and reliability, you can use a paid RPC provider like Alchemy or Infura by getting your own API key and configuring it in your wallet.
-
 **Quick Add (MetaMask):**
 
 You can also use the [Chainlist](https://chainlist.org/) website:
@@ -69,260 +51,267 @@ You can also use the [Chainlist](https://chainlist.org/) website:
 3. Click "Connect Wallet" and approve the connection
 4. Click "Add to MetaMask" and confirm
 
-### Get Testnet Tokens
+### Get Testnet ETH (for gas fees)
 
-**Testnet ETH** (for gas fees):
 - Visit: https://console.optimism.io/faucet
 - Select "Base Sepolia" network
 - Connect wallet and request tokens
 - Wait a few minutes for the transaction to complete
 
-**Testnet USDC** (for liquidity):
-- Visit: https://cartha.finance/faucet
-- Connect your wallet (must be on Base Sepolia network)
-- Click "Claim USDC" to receive 1,000,000 testnet USDC
+### Get Testnet USDC (for liquidity)
+
+Visit the Cartha faucet to claim testnet USDC:
+
+1. Go to [https://cartha.finance](https://cartha.finance)
+
+![Landing Page](.gitbook/assets/landing-page.jpeg)
+
+2. Click on "Faucet" in the navigation bar
+
+![Faucet Navigation](.gitbook/assets/faucet-navbar.jpeg)
+
+3. Connect your wallet (must be on Base Sepolia network) and click "Claim USDC"
+
+![Claim USDC](.gitbook/assets/claim-USDC.jpeg)
+
+- You'll receive 1,000,000 testnet USDC per claim
 - **Cooldown**: 24 hours between claims (per wallet address)
 
-**Testnet TAO** (for registration):
+### Get Testnet TAO (for registration)
+
 - Visit: https://app.minersunion.ai/testnet-faucet
-- Request testnet TAO to your wallet
+- Request testnet TAO to your Bittensor wallet
 
-## Step 4: Register Your Hotkey
+## Step 2: Register Your Hotkey (CLI Required)
 
-Register your hotkey to the testnet subnet.
+To participate as a miner, you need to register your Bittensor hotkey to the Cartha subnet. This step requires the Cartha CLI.
+
+### Install Cartha CLI
+
+```bash
+pip install cartha-cli
+```
+
+Verify the installation:
+
+```bash
+cartha --help
+```
+
+### Configure Environment (Optional)
+
+```bash
+# Optional: Set testnet verifier URL
+export CARTHA_VERIFIER_URL="https://cartha-verifier-826542474079.us-central1.run.app"
+
+# Optional: Bittensor network configuration
+export CARTHA_NETWORK="test"
+export CARTHA_NETUID=78
+```
+
+### Register to Subnet
 
 **Interactive mode (recommended):**
 
 ```bash
-cartha miner register
+cartha miner register --network test
 ```
 
-The CLI will prompt you for your wallet names. The network will default to finney (mainnet), but since mainnet is not available yet, you should use testnet.
+The CLI will prompt you for your wallet names.
 
-**For testnet, use:**
+**Or with all arguments:**
 
 ```bash
-# Interactive with network specified
-cartha miner register --network test
-
-# Or with all arguments
-cartha miner register -w cold -wh hot -n test
-
-# Full argument names
-cartha miner register --wallet-name cold --wallet-hotkey hot --network test
+cartha miner register --wallet-name <coldkey> --wallet-hotkey <hotkey> --network test
 ```
 
-**All these aliases work:**
-- Wallet: `--wallet-name`, `--coldkey`, `-w`
-- Hotkey: `--wallet-hotkey`, `--hotkey`, `-wh`
-- Network: `--network`, `-n`
+**Example:**
 
-**Network auto-mapping:**
-- `--network test` → Auto-uses subnet 78 (testnet)
-- `--network finney` → Shows warning (mainnet not available yet)
+```bash
+cartha miner register -w cold -wh hot -n test
+```
 
 This will:
 - Register your hotkey to subnet 78 (testnet)
 - Fetch your slot UID
 - Display your registration details
 
-**Save the output** - you'll need your slot UID for future commands.
+**Important**: Save the output, especially your hotkey SS58 address - you'll need it for locking funds via the web interface.
 
-## Step 5: Lock Funds
+## Step 3: Lock Funds via Web Interface
 
-Use the streamlined lock flow with the Cartha Lock UI.
+Now that your hotkey is registered, you can lock USDC funds to provide liquidity using the Cartha web interface.
 
-**Interactive mode (recommended for beginners):**
+### Navigate to "Become an LP"
+
+1. Go to [https://cartha.finance](https://cartha.finance)
+2. Click on "Become an LP" in the navigation bar
+
+![Become an LP Navigation](.gitbook/assets/become-an-lp-navbar.png)
+
+3. You'll see two options: **Regular LPs** and **Miner LPs**. Click "Become a Miner LP"
+
+![Become Miner LP](.gitbook/assets/become-miner-lp.jpeg)
+
+### Enter Your Miner Details
+
+4. **Enter your Principal Miner Hotkey** - This is the SS58 address from your registration in Step 2
+
+![Paste Hotkey](.gitbook/assets/paste-your-or-a-principal-miner-hotkey.jpeg)
+
+The system will verify your hotkey is registered on the subnet (UID: 212 shown means registered).
+
+5. **Select a Pool** - Choose which trading pair you want to provide liquidity for (BTCUSD, ETHUSD, etc.)
+
+![Choose Pool](.gitbook/assets/choose-a-pool.jpeg)
+
+6. **Enter Amount** - Specify how much USDC you want to lock (e.g., 100000 USDC)
+
+![Enter Amount](.gitbook/assets/enter-amount.jpeg)
+
+7. **Set Lock Duration** - Choose how many days to lock your funds (minimum 7 days, maximum 365 days)
+
+![Enter Lock Days](.gitbook/assets/enter-lock-days.jpeg)
+
+### Connect Wallet and Execute Transaction
+
+8. **Connect your wallet** - Make sure you're connected to Base Sepolia network
+
+![Connect Wallet](.gitbook/assets/connect-wallet.jpeg)
+
+9. **Request Signature & Continue** - Click the button to proceed
+
+![Wait and Lock](.gitbook/assets/wait-5-sec-to-redirect-here-and-lock-deposit.jpeg)
+
+10. **Approve USDC** - First, you need to approve the vault contract to spend your USDC
+
+![Approve USDC](.gitbook/assets/approve-USDC-limit.jpeg)
+
+Approve the transaction in your wallet (this requires gas fees in ETH).
+
+11. **Lock Position** - After approval, the second transaction will lock your USDC in the vault
+
+![Check Lock Position](.gitbook/assets/check-lock-position.jpeg)
+
+Confirm the lock transaction in your wallet.
+
+### Verify Your Position
+
+12. **Wait for confirmation** - It may take 30 seconds to 5 minutes for the position to be processed
+
+![Wait for Confirmation](.gitbook/assets/wait-30s-5m-refresh-to-check-position.jpeg)
+
+13. **View your positions** - Navigate to "My Positions" to see your active locks
+
+![My Positions](.gitbook/assets/final-my-positions-page.png)
+
+You'll see:
+- Pool ID and trading pair
+- Principal Miner hotkey
+- Lock status
+- Initially locked amount
+- Total committed amount
+- Lock expiration date
+- Options to **Extend** or **Top Up** your position
+
+### Important Notes
+
+**Transaction Requirements:**
+- ✅ Must be connected to **Base Sepolia** network
+- ✅ Need testnet ETH for gas fees
+- ✅ Need testnet USDC in your wallet
+- ✅ Two transactions required: Approve + Lock
+
+**Managing Positions:**
+- Visit [My Positions](https://cartha.finance/positions) to view all your locks
+- Use "Extend" to increase lock duration
+- Use "Top Up" to add more USDC to existing position
+
+**Multiple Positions:**
+- ✅ Same hotkey + Same pool + **Different EVM wallet** → Creates separate position
+- ❌ Same hotkey + Same pool + **Same EVM wallet** → Use "Top Up" instead
+
+**Rewards:**
+- Rewards are distributed weekly based on your locked position
+- Lock before the epoch ends to be included in the next reward cycle
+- Longer lock periods may receive higher rewards
+
+## Step 4: Check Your Miner Status (Optional)
+
+You can verify your miner status using the CLI or by viewing "My Positions" on the web interface.
+
+### Via Web Interface (Recommended)
+
+Simply visit [https://cartha.finance/positions](https://cartha.finance/positions) to see all your active positions.
+
+### Via CLI
 
 ```bash
-cartha vault lock
-```
-
-The CLI will guide you through and prompt for:
-- Coldkey wallet name
-- Hotkey name
-- Pool name (just type: **BTCUSD**, **ETHUSD**, **EURUSD**, etc.)
-- Amount in USDC
-- Lock duration in days
-- EVM address (your MetaMask wallet address)
-
-**Or provide all arguments:**
-
-```bash
-# Using short aliases (power users)
-cartha vault lock -w cold -wh hot -n test -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
-
-# Using full argument names
-cartha vault lock \
-  --wallet-name cold \
-  --wallet-hotkey hot \
-  --network test \
-  --pool BTCUSD \
-  --amount 100.0 \
-  --days 30 \
-  --owner-evm 0xYourEVMAddress
-
-# All these aliases work:
-cartha vault lock \
-  --coldkey cold \
-  --hotkey hot \
-  --network test \
-  --pool-id BTCUSD \
-  --amount 100 \
-  --lock-days 30 \
-  --owner 0xYourEVMAddress
-```
-
-**Available pools:** BTCUSD, ETHUSD, EURUSD (just type the name!)
-
-**Important Notes:**
-- Always use `--network test` for testnet (auto-maps to subnet 78)
-- Chain ID and vault address are automatically detected from the pool - no need to specify them manually!
-- If you try to create a duplicate position (same pool + same EVM), the CLI will reject it early and direct you to the frontend for top-ups
-
-This command will:
-1. Check your registration on the subnet
-2. Authenticate with your Bittensor hotkey
-3. Request a signed LockRequest from the verifier
-4. Automatically open the Cartha Lock UI in your browser with all parameters pre-filled
-5. Guide you through Phase 1 (Approve USDC) and Phase 2 (Lock Position) via the web interface
-6. Automatically detect when approval completes
-7. The verifier automatically detects your lock and adds you to the upcoming epoch
-
-**Important**: 
-- Make sure you're connected to **Base Sepolia** network in your wallet (MetaMask, Coinbase Wallet, Talisman, or WalletConnect)
-- Make sure the wallet you connect matches the `--owner-evm` address specified in the CLI
-- The frontend includes wallet validation to prevent using the wrong address
-
-**Transaction Flow**:
-1. **Approve USDC**: First transaction approves the vault to spend your USDC (handled in frontend)
-2. **Lock Position**: Second transaction locks your USDC in the vault (handled in frontend)
-3. Both transactions require gas fees (paid in testnet ETH)
-
-**Managing Existing Positions**:
-- Visit https://cartha.finance/manage to view all your locks
-- Use "Extend" or "Top Up" buttons to modify existing positions
-
-### Multiple Positions
-
-You can create multiple lock positions on the same pool using different EVM addresses:
-
-**Allowed**:
-- ✅ Same hotkey + Same pool + **Different EVM address** → Creates a separate position
-- Example: Lock 1,000 USDC on BTCUSD pool from wallet A (0x1111...), then lock another 500 USDC on BTCUSD pool from wallet B (0x2222...)
-- Each position is tracked independently with its own amount, lock period, and expiration
-
-**Rejected**:
-- ❌ Same hotkey + Same pool + **Same EVM address** → Rejected with error
-- If you want to add more USDC to an existing position, use the **top-up feature** at https://cartha.finance/manage
-- If you want to extend the lock period, use the **extend lock** feature at https://cartha.finance/manage
-
-**Why multiple positions?**
-- Allows you to diversify your positions across different wallets
-- Enables gradual scaling of liquidity provision
-- Each position can have different lock periods and expiration dates
-
-## Step 6: Check Your Miner Status
-
-Verify your miner status (no authentication required).
-
-**Interactive mode:**
-
-```bash
+# Interactive mode
 cartha miner status
+
+# Or with arguments
+cartha miner status --wallet-name <coldkey> --wallet-hotkey <hotkey> --network test
 ```
-
-**Or with arguments:**
-
-```bash
-# Short form (for testnet)
-cartha m status -w cold -wh hot -n test
-
-# Using --coldkey/--hotkey aliases
-cartha miner status --coldkey cold --hotkey hot --network test
-
-# Full names
-cartha miner status --wallet-name cold --wallet-hotkey hot --network test
-```
-
-**Tip:** Always use `--network test` for testnet to ensure correct subnet (78) and verifier URL.
 
 This shows:
 - Miner state and pool information
 - All active pools with amounts and expiration dates
-- Days remaining countdown (with warnings for expiring pools)
-- Password issuance status
+- Days remaining countdown
+- Registration status
 
 ## Available Testnet Pools
 
-| Pool Name | Pool ID (hex) | Vault Address |
-|-----------|---------------|---------------|
-| BTCUSD | `0xee62665949c883f9e0f6f002eac32e00bd59dfe6c34e92a91c37d6a8322d6489` | `0x471D86764B7F99b894ee38FcD3cEFF6EAB321b69` |
-| ETH/USD | `0x0b43555ace6b39aae1b894097d0a9fc17f504c62fea598fa206cc6f5088e6e45` | `0xdB74B44957A71c95406C316f8d3c5571FA588248` |
-| EUR/USD | `0xa9226449042e36bf6865099eec57482aa55e3ad026c315a0e4a692b776c318ca` | `0x3C4dAfAC827140B8a031d994b7e06A25B9f27BAD` |
+| Pool Name | Vault Address |
+|-----------|---------------|
+| BTC/USD | `0x471D86764B7F99b894ee38FcD3cEFF6EAB321b69` |
+| ETH/USD | `0xdB74B44957A71c95406C316f8d3c5571FA588248` |
+| EUR/USD | `0x3C4dAfAC827140B8a031d994b7e06A25B9f27BAD` |
 
-**Note**: When using `cartha vault lock`, you can simply specify `--pool-id BTCUSD` and the CLI will automatically:
-- Match the correct vault address for that pool
-- Match the correct chain ID (Base Sepolia: 84532)
+**Network**: Base Sepolia (Chain ID: 84532)
 
-You don't need to manually specify `--vault-address` or `--chain-id` unless you want to override them.
+You can select any of these pools when locking funds via the web interface. The pool selection is handled automatically in the UI.
 
-## Common Miner Commands
+## Common CLI Commands (Reference)
 
 ```bash
-# View available pools
-cartha vault pools
+# Register to subnet (required once)
+cartha miner register --wallet-name <coldkey> --wallet-hotkey <hotkey> --network test
 
 # Check miner status
-cartha miner status --wallet-name <name> --wallet-hotkey <hotkey>
+cartha miner status --wallet-name <coldkey> --wallet-hotkey <hotkey> --network test
 
 # View help
 cartha --help
-cartha miner register --help
-cartha vault lock --help
+cartha miner --help
 ```
+
+**Note**: Locking funds is now done via the web interface at [https://cartha.finance](https://cartha.finance), not through CLI.
 
 ## Troubleshooting
 
-### "Verifier URL not found"
-
-**Problem**: CLI can't connect to verifier
-
-**Solution**:
-
-```bash
-# Verify environment variable is set
-echo $CARTHA_VERIFIER_URL
-
-# Test verifier connectivity
-curl "${CARTHA_VERIFIER_URL}/health"
-
-# If using a different URL, update it
-export CARTHA_VERIFIER_URL="https://cartha-verifier-826542474079.us-central1.run.app"
-```
-
-### "Hotkey not registered"
+### "Hotkey not registered" or "Invalid hotkey"
 
 **Problem**: Hotkey is not registered on the subnet
 
 **Solution**:
 
-- Register your hotkey first using `cartha miner register`
+- Register your hotkey first using `cartha miner register --network test`
 - Verify you're using the correct network (`test`) and netuid (`78`)
-- Check that you have testnet TAO in your wallet
+- Check that you have testnet TAO in your Bittensor wallet
+- Make sure you're entering the correct SS58 address in the web interface
 
-### "Transaction failed"
+### "Transaction failed" in MetaMask
 
-**Problem**: MetaMask transaction failed
+**Problem**: Approval or lock transaction failed
 
 **Solution**:
 
-- **Check Network**: Make sure you're on **Base Sepolia** network (not Mainnet or other networks)
+- **Check Network**: Make sure you're on **Base Sepolia** network (Chain ID: 84532)
 - **Check Gas**: Ensure you have enough testnet ETH for gas fees
-- **Check USDC**: Ensure you have enough testnet USDC in your wallet
-- **Check Approval**: Make sure you've approved the vault to spend USDC (first transaction)
-- **Verify Transaction Data**: Check that the transaction data matches what the CLI displayed
-- **Check Network Congestion**: Base Sepolia may be slower than mainnet - wait a bit and retry
+- **Check USDC Balance**: Ensure you have enough testnet USDC in your wallet
+- **Check Approval**: Make sure the first approval transaction completed successfully
+- **Wait and Retry**: Base Sepolia may be slower than mainnet - wait a bit and retry
 
 ### "Insufficient funds" or "Not enough ETH"
 
@@ -344,76 +333,106 @@ export CARTHA_VERIFIER_URL="https://cartha-verifier-826542474079.us-central1.run
 
 - Visit the Cartha faucet at https://cartha.finance/faucet
 - Connect your wallet and claim 1,000,000 testnet USDC
-- Note: There's a 24-hour cooldown between claims
+- **Cooldown**: 24 hours between claims per wallet
 - Verify receipt on [BaseScan Sepolia](https://sepolia.basescan.org/)
 
-### "Wrong wallet connected" or "Wallet address mismatch"
+### "Position already exists"
 
-**Problem**: The Cartha Lock UI shows a warning that the connected wallet doesn't match the required owner address
+**Problem**: You're trying to create a duplicate position with the same hotkey, pool, and wallet
 
 **Solution**:
 
-1. **Disconnect your current wallet** using the "Disconnect" button in the frontend
-2. **Connect the correct wallet** that matches the `--owner-evm` address you specified in the CLI
-3. **Verify the address** - The frontend will show "Required Owner" vs "Connected Wallet" to help you identify the mismatch
-4. If you need to use a different address, restart the CLI command with the correct `--owner-evm` address
+- Use the **Top Up** button on the "My Positions" page to add more USDC to your existing position
+- Use the **Extend** button to increase the lock duration
+- Or use a different EVM wallet address to create a separate position
 
-**Note**: The frontend includes automatic wallet validation to prevent this issue. Always ensure you connect the wallet that matches the address specified in the CLI command.
+### "Wallet not connected" or "Wrong network"
 
-## Testing Your Setup
+**Problem**: Your wallet is not connected or on the wrong network
 
-### Complete Testnet Checklist
+**Solution**:
 
-Before starting, make sure you have:
+1. Click "Connect Wallet" in the top right corner
+2. Select your wallet provider (MetaMask, Coinbase Wallet, WalletConnect, etc.)
+3. Make sure you're connected to **Base Sepolia** network
+4. If you're on the wrong network, switch to Base Sepolia in your wallet
 
+### Position not showing after locking
+
+**Problem**: Lock transaction succeeded but position doesn't appear
+
+**Solution**:
+
+- Wait 30 seconds to 5 minutes for the verifier to process your lock
+- Click the **Refresh** button on "My Positions" page
+- The verifier automatically detects your lock and adds you to the upcoming epoch
+- If it still doesn't appear after 5 minutes, check the transaction on [BaseScan](https://sepolia.basescan.org/)
+
+## Quick Start Checklist
+
+### Before You Begin
+
+- [ ] Bittensor wallet created (coldkey + hotkey)
 - [ ] Python 3.11 installed
 - [ ] Cartha CLI installed (`pip install cartha-cli`)
-- [ ] Bittensor wallet set up
 - [ ] MetaMask (or other EVM wallet) installed
 - [ ] Base Sepolia network added to MetaMask
 - [ ] Testnet ETH in your wallet (from faucet)
-- [ ] Testnet USDC in your wallet (from team)
+- [ ] Testnet USDC in your wallet (from Cartha faucet)
 - [ ] Testnet TAO in your Bittensor wallet (for registration)
 
-### Quick Test
+### Quick Setup Steps
 
-```bash
-# 1. Register your hotkey
-cartha miner register --wallet-name test --wallet-hotkey test --network test --netuid 78
+1. **Get Tokens**
+   - Get testnet ETH from https://console.optimism.io/faucet
+   - Get testnet USDC from https://cartha.finance/faucet
+   - Get testnet TAO from https://app.minersunion.ai/testnet-faucet
 
-# 2. Check miner status (no authentication needed)
-cartha miner status --wallet-name test --wallet-hotkey test
+2. **Register Your Hotkey**
+   ```bash
+   pip install cartha-cli
+   cartha miner register --wallet-name <coldkey> --wallet-hotkey <hotkey> --network test
+   ```
+   Save your hotkey SS58 address!
 
-# 3. Lock funds (interactive flow)
-# Note: Make sure you're on Base Sepolia network in MetaMask!
-cartha vault lock \
-  --coldkey test \
-  --hotkey test \
-  --pool-id BTCUSD \
-  --amount 100.0 \
-  --lock-days 30 \
-  --owner-evm 0xYourEVMAddress
-```
+3. **Lock Funds via Web Interface**
+   - Go to https://cartha.finance
+   - Click "Become an LP" → "Become a Miner LP"
+   - Enter your hotkey SS58 address
+   - Choose pool, amount, and lock duration
+   - Connect wallet (Base Sepolia network)
+   - Approve USDC transaction
+   - Confirm lock transaction
 
-**Important**: 
-- Chain ID (84532 for Base Sepolia) and vault address are **automatically detected** from the pool ID
-- You only need to specify `--pool-id BTCUSD` (or `ETH/USD`, `EUR/USD`)
-- The CLI will show you the auto-matched values before proceeding
+4. **Verify Your Position**
+   - Visit https://cartha.finance/positions
+   - Your position should appear within 30 seconds to 5 minutes
 
 ## Additional Resources
 
+- **[Cartha Lock UI](https://cartha.finance)** - Web interface for locking funds
+- **[My Positions](https://cartha.finance/positions)** - View and manage your liquidity positions
+- **[USDC Faucet](https://cartha.finance/faucet)** - Get testnet USDC
 - **[Testnet Overview](../testnet/README.md)** - Learn more about Cartha testnet
-- **[CLI Testnet Guide](https://github.com/General-Tao-Ventures/cartha-cli/tree/main/testnet)** - Detailed CLI documentation
-- **Discord**: https://discord.gg/7DXG57B6
-Contact Cartha team for testnet USDC and support 
+- **[CLI Documentation](https://github.com/General-Tao-Ventures/cartha-cli)** - Cartha CLI reference
+- **[Discord](https://discord.gg/7DXG57B6)** - Join the community for support
 
 ## Next Steps
 
-- Experiment with different pools and lock durations
-- Test multi-pool strategies
-- Monitor your miner status regularly
-- Join the community to share experiences and get help
+- 🔄 Experiment with different pools (BTC/USD, ETH/USD, EUR/USD)
+- 📊 Monitor your positions at https://cartha.finance/positions
+- 💰 Track your rewards each epoch
+- 🚀 Top up or extend your positions for higher rewards
+- 👥 Join Discord to share experiences and get help
+
+## Important Reminders
+
+- ⚠️ **Testnet Only**: All tokens are testnet tokens with no real value
+- 🔒 **Lock Duration**: Minimum 7 days, maximum 365 days
+- ⏰ **Epoch Timing**: Lock before epoch ends to be included in next reward cycle
+- 💸 **Gas Fees**: Keep some testnet ETH for transaction fees
+- 🔄 **24h Cooldown**: USDC faucet has 24-hour cooldown per wallet
 
 ---
 
-**Note**: Testnet is a testing environment. All tokens are testnet tokens with no real value. Use testnet to learn, test, and develop before deploying to mainnet.
+**Ready to become a miner?** Visit [https://cartha.finance](https://cartha.finance) and start providing liquidity today!
