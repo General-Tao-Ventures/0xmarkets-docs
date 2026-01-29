@@ -70,7 +70,11 @@ Visit the Cartha faucet to claim testnet USDC:
 
 ![Faucet Navigation](../.gitbook/assets/faucet-navbar.jpeg)
 
-3. Connect your wallet (must be on Base Sepolia network) and click "Claim USDC"
+3. **Connect your wallet** - Click "Connect Wallet" and make sure you're connected to Base Sepolia network
+
+![Connect Wallet](../.gitbook/assets/wallet-connect.png)
+
+4. Click "Claim USDC" to receive testnet tokens
 
 ![Claim USDC](../.gitbook/assets/claim-USDC.jpeg)
 
@@ -153,6 +157,8 @@ Now that your hotkey is registered, you can lock USDC funds to provide liquidity
 
 ### Enter Your Miner Details
 
+**Note:** Make sure your wallet is still connected to Base Sepolia network (you connected it earlier during the faucet step).
+
 4. **Enter your Principal Miner Hotkey** - This is the SS58 address from your registration in Step 2
 
 ![Paste Hotkey](../.gitbook/assets/paste-your-or-principal-miner-hotkey.png)
@@ -171,23 +177,19 @@ The system will verify your hotkey is registered on the subnet (UID: 212 shown m
 
 ![Enter Lock Days](../.gitbook/assets/input-lock-days.png)
 
-### Connect Wallet and Execute Transaction
+### Execute Transaction
 
-8. **Connect your wallet** - Make sure you're connected to Base Sepolia network
-
-![Connect Wallet](../.gitbook/assets/connect-wallet.jpeg)
-
-9. **Request Signature & Continue** - Click the button to proceed
+8. **Request Signature & Continue** - Click the button to proceed
 
 ![Continue](../.gitbook/assets/continue.png)
 
-10. **Approve USDC** - First, you need to approve the vault contract to spend your USDC
+9. **Approve USDC** - First, you need to approve the vault contract to spend your USDC
 
 ![Approve USDC](../.gitbook/assets/approve-USDC-limit.jpeg)
 
 Approve the transaction in your wallet (this requires gas fees in ETH).
 
-11. **Lock Position** - After approval, the second transaction will lock your USDC in the vault
+10. **Lock Position** - After approval, the second transaction will lock your USDC in the vault
 
 ![Check Lock Position](../.gitbook/assets/check-lock-position.jpeg)
 
@@ -195,11 +197,11 @@ Confirm the lock transaction in your wallet.
 
 ### Verify Your Position
 
-12. **Wait for confirmation** - It may take 30 seconds to 5 minutes for the position to be processed
+11. **Wait for confirmation** - It may take 30 seconds to 5 minutes for the position to be processed
 
 ![Wait for Confirmation](../.gitbook/assets/wait-30s-5m-refresh-to-check-position.jpeg)
 
-13. **View your positions** - Navigate to "My Positions" to see your active locks
+12. **View your positions** - Navigate to "My Positions" to see your active locks
 
 ![My Positions](../.gitbook/assets/final-my-positions-page.png)
 
