@@ -8,11 +8,18 @@ Complete guide for running validators on Cartha testnet.
 
 Before you begin, ensure you have:
 
+### Software Requirements
 - ✅ Python 3.11 installed
 - ✅ [`uv`](https://github.com/astral-sh/uv) package manager
 - ✅ Node.js installed (for PM2 process manager)
 - ✅ Bittensor wallet with registered validator hotkey
 - ✅ Git (to clone the repository)
+
+### Minimum Compute Requirements
+- ✅ **CPU**: 2 cores
+- ✅ **RAM**: 4 GB
+- ✅ **Disk**: 20 GB SSD
+- ✅ **Network**: Stable internet connection with minimal downtime
 
 **Note**: On testnet, all validators are allowed - no whitelist is required. Whitelist restrictions only apply to mainnet.
 
