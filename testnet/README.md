@@ -23,7 +23,7 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
 - **Test liquidity provision** without risking real funds
 - **Practice registration** and hotkey management
 - **Experiment with different pools** (BTCUSD, ETH/USD, EUR/USD)
-- **Use the Cartha Lock UI** for a streamlined lock/unlock experience (no BaseScan needed!)
+- **Use the Cartha Interface** for a streamlined lock/unlock experience (no BaseScan needed!)
 - **View and manage positions** through the web interface
 - **Extend locks and top up** existing positions (currently in testing)
 - **Understand reward mechanisms** and epoch cycles
@@ -40,7 +40,7 @@ Cartha Testnet is a fully functional replica of the Cartha subnet running on Bit
 ### For Developers
 
 - **Test smart contract interactions** with real vault contracts
-- **Use the Cartha Lock UI** for testing the frontend lock flow
+- **Use the Cartha Interface** for testing the frontend lock flow
 - **Develop integration tools** and automation scripts
 - **Test API endpoints** and verifier functionality
 - **Build monitoring dashboards** and analytics tools
@@ -75,7 +75,7 @@ Choose your path:
 
 - **[Miner Guide](miner-guide.md)** - Learn how to run miners on Cartha testnet
 - **[Validator Guide](validator-guide.md)** - Learn how to run validators on Cartha testnet
-- **[Cartha Lock UI](cartha-lock-ui.md)** - Learn about the web interface for managing lock positions
+- **[Cartha Interface](cartha-interface.md)** - Learn about the web interface for managing lock positions
 
 ## Testnet vs Mainnet
 
@@ -120,7 +120,7 @@ Contact Cartha team for testnet USDC and support
 - **Validator not whitelisted**: Contact subnet owner
 - **Transaction failures**: Check network (Base Sepolia), gas (testnet ETH), and balances
 - **Registration issues**: Verify testnet TAO balance and network settings
-- **Wallet address mismatch**: Ensure the wallet connected in the Cartha Lock UI matches the `--owner-evm` address specified in the CLI
+- **Wallet address mismatch**: Ensure the wallet connected in the Cartha Interface matches the `--owner-evm` address specified in the CLI
 - **Extend/Top Up not working**: These features are currently in testing - contact support if you encounter issues
 
 ## Next Steps

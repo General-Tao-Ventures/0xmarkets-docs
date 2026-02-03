@@ -1,0 +1,967 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Cartha Interface · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="testnet.html" />
+    
+    
+    <link rel="prev" href="validator-guide.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../litepaper.html">
+            
+                <a href="../litepaper.html">
+            
+                    
+                    Litepaper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../how-it-works/">
+            
+                <a href="../how-it-works/">
+            
+                    
+                    How it works
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../how-it-works/fees-and-rewards.html">
+            
+                <a href="../how-it-works/fees-and-rewards.html">
+            
+                    
+                    Fees & rewards
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../how-it-works/safety-and-liquidations.html">
+            
+                <a href="../how-it-works/safety-and-liquidations.html">
+            
+                    
+                    Safety & liquidations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../how-it-works/governance-vealpha.html">
+            
+                <a href="../how-it-works/governance-vealpha.html">
+            
+                    
+                    Governance (veALPHA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../participants/">
+            
+                <a href="../participants/">
+            
+                    
+                    Participants
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../participants/miners-lps.html">
+            
+                <a href="../participants/miners-lps.html">
+            
+                    
+                    Miners (LPs)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../participants/principal-miners.html">
+            
+                <a href="../participants/principal-miners.html">
+            
+                    
+                    Principal Miners
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../participants/federated-miners.html">
+            
+                <a href="../participants/federated-miners.html">
+            
+                    
+                    Federated Miners
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../participants/traders.html">
+            
+                <a href="../participants/traders.html">
+            
+                    
+                    Traders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../participants/validators.html">
+            
+                <a href="../participants/validators.html">
+            
+                    
+                    Validators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Cartha
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="miner-guide.html">
+            
+                <a href="miner-guide.html">
+            
+                    
+                    Miner Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="validator-guide.html">
+            
+                <a href="validator-guide.html">
+            
+                    
+                    Validator Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="cartha-interface.html">
+            
+                <a href="cartha-interface.html">
+            
+                    
+                    Cartha Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="testnet.html">
+            
+                <a href="testnet.html">
+            
+                    
+                    Testnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../testnet/">
+            
+                <a href="../testnet/">
+            
+                    
+                    Running on testnet
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../testnet/miner-guide.html">
+            
+                <a href="../testnet/miner-guide.html">
+            
+                    
+                    Miner Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../testnet/validator-guide.html">
+            
+                <a href="../testnet/validator-guide.html">
+            
+                    
+                    Validator Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../testnet/cartha-interface.html">
+            
+                <a href="../testnet/cartha-interface.html">
+            
+                    
+                    Cartha Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../diagrams/">
+            
+                <a href="../diagrams/">
+            
+                    
+                    Diagrams
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../diagrams/big-picture.html">
+            
+                <a href="../diagrams/big-picture.html">
+            
+                    
+                    Big picture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../diagrams/fees-snapshot.html">
+            
+                <a href="../diagrams/fees-snapshot.html">
+            
+                    
+                    Fees snapshot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../diagrams/safety-net.html">
+            
+                <a href="../diagrams/safety-net.html">
+            
+                    
+                    Safety net
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../diagrams/governance-map.html">
+            
+                <a href="../diagrams/governance-map.html">
+            
+                    
+                    Governance map
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../glossary.html">
+            
+                <a href="../glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../roadmap.html">
+            
+                <a href="../roadmap.html">
+            
+                    
+                    Roadmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../changelog.html">
+            
+                <a href="../changelog.html">
+            
+                    
+                    Changelog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../legal-and-risk.html">
+            
+                <a href="../legal-and-risk.html">
+            
+                    
+                    Legal & risk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../contact.html">
+            
+                <a href="../contact.html">
+            
+                    
+                    Contact
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Cartha Interface</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="cartha-interface">Cartha Interface</h1>
+<p><strong>A modern web interface for managing your Cartha lock positions.</strong> The Cartha Interface replaces the need to manually interact with smart contracts on BaseScan, providing a streamlined, user-friendly experience for liquidity providers.</p>
+<p><strong>URL</strong>: <a href="https://cartha.finance/" target="_blank">https://cartha.finance</a></p>
+<h2 id="what-is-cartha-interface">What is Cartha Interface?</h2>
+<p>The Cartha Interface is a web-based interface that simplifies the process of creating and managing lock positions on the Cartha subnet. Instead of manually copying transaction data and executing contracts on block explorers, the interface guides you through each step with clear instructions and automatic wallet integration.</p>
+<h3 id="key-benefits">Key Benefits</h3>
+<ul>
+<li>✅ <strong>No BaseScan Required</strong> - Execute all transactions directly in the UI</li>
+<li>✅ <strong>Multi-Wallet Support</strong> - Works with MetaMask, Coinbase Wallet, Talisman, and WalletConnect</li>
+<li>✅ <strong>Automatic Validation</strong> - Ensures you're using the correct wallet address</li>
+<li>✅ <strong>Real-Time Status</strong> - View transaction status and confirmations in real-time</li>
+<li>✅ <strong>Position Management</strong> - View all your positions in one place</li>
+<li>✅ <strong>Modern Design</strong> - Clean, intuitive interface with dark theme</li>
+</ul>
+<h2 id="what-can-you-do">What Can You Do?</h2>
+<h3 id="1-create-new-lock-positions">1. Create New Lock Positions</h3>
+<p>The primary use case for the Cartha Interface is creating new lock positions.</p>
+<p><img src="../.gitbook/assets/become-lp-page.png" alt="Become a Liquidity Provider"></img></p>
+<p>The process is split into two phases:</p>
+<h4 id="phase-1-approve-usdc">Phase 1: Approve USDC</h4>
+<ol>
+<li><strong>Start from CLI</strong>: Run <code>cartha vault lock</code> with your parameters</li>
+<li><strong>Browser Opens Automatically</strong>: The CLI opens the UI with all parameters pre-filled</li>
+<li><strong>Connect Your Wallet</strong>: Connect MetaMask, Coinbase Wallet, Talisman, or WalletConnect</li>
+<li><strong>Wallet Validation</strong>: The UI verifies your connected wallet matches the required owner address</li>
+<li><strong>Approve Transaction</strong>: Review the approval details and execute the transaction</li>
+<li><strong>Automatic Detection</strong>: The CLI automatically detects when approval completes</li>
+</ol>
+<p><strong>What You'll See</strong>:</p>
+<ul>
+<li>Required owner address vs your connected wallet address</li>
+<li>USDC contract address and spender (vault) address</li>
+<li>Amount to approve</li>
+<li>Copy buttons for easy reference</li>
+<li>Transaction status indicators</li>
+</ul>
+<h4 id="phase-2-lock-position">Phase 2: Lock Position</h4>
+<p>After Phase 1 completes, you'll automatically proceed to Phase 2:</p>
+<ol>
+<li><strong>Review Lock Details</strong>: See all lock parameters (pool ID, amount, lock days, hotkey, etc.)</li>
+<li><strong>Confirm Transaction</strong>: Review the lock details before executing</li>
+<li><strong>Execute Lock</strong>: Sign and submit the lock transaction</li>
+<li><strong>Success Confirmation</strong>: See confirmation with a link to view your positions</li>
+</ol>
+<p><strong>What You'll See</strong>:</p>
+<ul>
+<li>Pool ID and name</li>
+<li>Lock amount in USDC</li>
+<li>Lock duration in days</li>
+<li>Unlock date</li>
+<li>Hotkey address</li>
+<li>Required owner vs connected wallet comparison</li>
+<li>Transaction status with BaseScan link</li>
+</ul>
+<h3 id="2-view-your-positions">2. View Your Positions</h3>
+<p>Navigate to <strong>"My Positions"</strong> (or visit <code>/manage</code>) to see all your active lock positions:</p>
+<p><img src="../.gitbook/assets/my-positions-page.png" alt="My Positions"></img></p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li><strong>All Positions at a Glance</strong>: See all your pools in one dashboard</li>
+<li><strong>Position Details</strong>: For each position, view:<ul>
+<li>Pool name (e.g., BTCUSD, ETH/USD, EUR/USD)</li>
+<li>Amount locked (USDC)</li>
+<li>Lock duration (days)</li>
+<li>Expiration date with countdown</li>
+<li>Status (Active, In Next Epoch, etc.)</li>
+<li>EVM address used for the lock</li>
+</ul>
+</li>
+<li><strong>Status Indicators</strong>: Color-coded status badges</li>
+<li><strong>Quick Actions</strong>: Extend and Top Up buttons for each position</li>
+<li><strong>Refresh Button</strong>: Manually refresh to see latest status</li>
+</ul>
+<p><strong>Access Methods</strong>:</p>
+<ul>
+<li>Click "My Positions" button on the landing page</li>
+<li>Navigate to <code>/manage</code> directly</li>
+<li>Click "View My Positions" after successfully creating a lock</li>
+</ul>
+<h3 id="3-extend-lock-duration">3. Extend Lock Duration</h3>
+<p>Extend the duration of an existing lock position:</p>
+<p><img src="../.gitbook/assets/extend-days-page.png" alt="Extend Lock"></img></p>
+<ol>
+<li><strong>Go to My Positions</strong>: Navigate to the positions dashboard</li>
+<li><strong>Click "Extend"</strong>: Click the Extend button on the position you want to extend</li>
+<li><strong>Select New Duration</strong>: Choose how many additional days to add</li>
+<li><strong>Review and Confirm</strong>: Review the extension details</li>
+<li><strong>Execute Transaction</strong>: Sign and submit the extension transaction</li>
+</ol>
+<h3 id="4-top-up-existing-positions">4. Top Up Existing Positions</h3>
+<p>Add more USDC to an existing lock position:</p>
+<p><img src="../.gitbook/assets/top-up-page.png" alt="Top Up Lock"></img></p>
+<ol>
+<li><strong>Go to My Positions</strong>: Navigate to the positions dashboard</li>
+<li><strong>Click "Top Up"</strong>: Click the Top Up button on the position you want to add funds to</li>
+<li><strong>Enter Amount</strong>: Specify how much additional USDC to add</li>
+<li><strong>Approve if Needed</strong>: If you haven't approved enough USDC, approve first</li>
+<li><strong>Review and Confirm</strong>: Review the top-up details</li>
+<li><strong>Execute Transaction</strong>: Sign and submit the top-up transaction</li>
+</ol>
+<h3 id="5-withdraw-after-lock-expires">5. Withdraw (After Lock Expires)</h3>
+<p>Once your lock duration has expired, you can withdraw your USDC.</p>
+<p><strong>When a position expires</strong>, the status changes to "Expired" and the <strong>Withdraw</strong> button appears below the Extend and Top Up buttons:</p>
+<p><img src="../.gitbook/assets/what-expired-look-like.png" alt="Expired Position with Withdraw Button"></img></p>
+<p><strong>Steps to withdraw</strong>:</p>
+<ol>
+<li><strong>Go to My Positions</strong>: Navigate to the positions dashboard</li>
+<li><strong>Find Expired Position</strong>: Locate the position with the "Expired" status badge</li>
+<li><strong>Click "Withdraw"</strong>: The Withdraw button appears below the Extend and Top Up buttons</li>
+<li><strong>Review Withdrawal Details</strong>: A confirmation popup shows the total amount you will receive</li>
+</ol>
+<p><img src="../.gitbook/assets/withdraw-popup.png" alt="Confirm Withdrawal Popup"></img></p>
+<ol>
+<li><strong>Confirm Full Withdrawal</strong>: Click "Confirm Full Withdrawal" to execute the transaction</li>
+<li><strong>Sign Transaction</strong>: Approve the transaction in your wallet</li>
+</ol>
+<p><strong>Note</strong>: The Withdraw button only appears after your lock duration has fully expired. If your lock is still active, you will only see Extend and Top Up options.</p>
+<h2 id="how-it-works-with-the-cli">How It Works with the CLI</h2>
+<p>The Cartha Interface is designed to work seamlessly with the Cartha CLI:</p>
+<h3 id="starting-from-cli">Starting from CLI</h3>
+<pre><code class="lang-bash">cartha vault lock \
+  --coldkey my-coldkey \
+  --hotkey my-hotkey \
+  --pool-id BTCUSD \
+  --amount 100.0 \
+  --lock-days 30 \
+  --owner-evm 0xYourEVMAddress
+
+<span class="hljs-comment"># Or using short aliases:</span>
+cartha v lock -w cold -wh hot -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
+</code></pre>
+<p><strong>What Happens</strong>:</p>
+<ol>
+<li>CLI authenticates with your Bittensor hotkey</li>
+<li>CLI requests a signature from the verifier</li>
+<li>CLI automatically opens the UI in your browser</li>
+<li>UI is pre-filled with all transaction parameters</li>
+<li>You complete the transactions in the UI</li>
+<li>CLI monitors Phase 1 approval automatically</li>
+<li>Verifier detects Phase 2 lock automatically</li>
+</ol>
+<h3 id="direct-access">Direct Access</h3>
+<p>You can also access the UI directly:</p>
+<ul>
+<li><strong>Landing Page</strong>: <a href="https://cartha.finance" target="_blank">https://cartha.finance</a></li>
+<li><strong>My Positions</strong>: <a href="https://cartha.finance/manage" target="_blank">https://cartha.finance/manage</a></li>
+</ul>
+<p>When accessing directly, you'll need to:</p>
+<ul>
+<li>Connect your wallet manually</li>
+<li>Navigate to the feature you want to use</li>
+<li>Note: Creating new locks is best done through the CLI for proper signature generation</li>
+</ul>
+<h2 id="supported-wallets">Supported Wallets</h2>
+<p>The Cartha Interface supports multiple wallet types:</p>
+<ul>
+<li><strong>MetaMask</strong> - Most popular Ethereum wallet</li>
+<li><strong>Coinbase Wallet</strong> - Coinbase's official wallet</li>
+<li><strong>Talisman</strong> - Polkadot ecosystem wallet</li>
+<li><strong>WalletConnect</strong> - Connect any WalletConnect-compatible wallet</li>
+</ul>
+<p><strong>Network Requirement</strong>: All wallets must be connected to <strong>Base Mainnet</strong> (Chain ID: 8453).</p>
+<h2 id="security-features">Security Features</h2>
+<h3 id="wallet-address-validation">Wallet Address Validation</h3>
+<p>The UI includes automatic wallet validation to prevent common mistakes:</p>
+<ul>
+<li><strong>Required Owner Check</strong>: Compares the connected wallet with the required owner address</li>
+<li><strong>Visual Warnings</strong>: Clear indicators when addresses don't match</li>
+<li><strong>Disconnect/Reconnect</strong>: Easy buttons to disconnect and reconnect the correct wallet</li>
+<li><strong>Error Prevention</strong>: Prevents transactions with the wrong wallet</li>
+</ul>
+<h3 id="transaction-safety">Transaction Safety</h3>
+<ul>
+<li><strong>Clear Parameter Display</strong>: All transaction parameters are clearly displayed before execution</li>
+<li><strong>Copy Buttons</strong>: Easy copy buttons for addresses and values</li>
+<li><strong>Transaction Status</strong>: Real-time status updates with BaseScan links</li>
+<li><strong>Error Handling</strong>: Clear error messages if transactions fail</li>
+</ul>
+<h2 id="user-interface">User Interface</h2>
+<h3 id="design">Design</h3>
+<ul>
+<li><strong>Dark Theme</strong>: Modern dark theme optimized for extended use</li>
+<li><strong>Responsive Layout</strong>: Works on desktop, tablet, and mobile devices</li>
+<li><strong>Material Symbols</strong>: Uses Material Symbols icons for consistent visual language</li>
+<li><strong>Inter Font</strong>: Clean, readable Inter font family</li>
+</ul>
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li><strong>Landing Page</strong>: Home page with CLI command and quick access to positions</li>
+<li><strong>Sidebar</strong>: Persistent sidebar on dashboard pages with logo and wallet status</li>
+<li><strong>Logo Navigation</strong>: Click the Cartha logo to return to the landing page</li>
+<li><strong>Breadcrumbs</strong>: Clear navigation paths between pages</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="wrong-network-error">"Wrong Network" Error</h3>
+<p><strong>Problem</strong>: UI shows "Wrong Network" message</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li>Check your wallet is connected to Base Mainnet (Chain ID: 8453)</li>
+<li>Switch networks in your wallet</li>
+<li>Refresh the page</li>
+</ol>
+<h3 id="wallet-address-mismatch-warning">"Wallet Address Mismatch" Warning</h3>
+<p><strong>Problem</strong>: UI shows warning that connected wallet doesn't match required owner</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li>Click "Disconnect" button</li>
+<li>Connect the correct wallet that matches the <code>--owner-evm</code> address</li>
+<li>Verify the address matches before proceeding</li>
+</ol>
+<h3 id="transaction-failed-error">"Transaction Failed" Error</h3>
+<p><strong>Problem</strong>: Transaction fails when trying to execute</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li><strong>Check Network</strong>: Ensure you're on Base Mainnet</li>
+<li><strong>Check Gas</strong>: Ensure you have enough ETH for gas fees</li>
+<li><strong>Check Balance</strong>: Ensure you have enough USDC</li>
+<li><strong>Check Approval</strong>: For Phase 2, ensure Phase 1 approval completed successfully</li>
+<li><strong>Check Network Congestion</strong>: Wait a moment and retry</li>
+</ul>
+<h3 id="positions-not-showing">Positions Not Showing</h3>
+<p><strong>Problem</strong>: "My Positions" page shows no positions</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li>Ensure your wallet is connected</li>
+<li>Verify you're using the correct wallet address</li>
+<li>Click "Refresh" button to reload positions</li>
+<li>Check that your locks were created successfully on-chain</li>
+<li>Verify the verifier has detected your locks (check with <code>cartha miner status</code>)</li>
+</ol>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="creating-locks">Creating Locks</h3>
+<ol>
+<li><strong>Always Use CLI First</strong>: Start with <code>cartha vault lock</code> to ensure proper signature generation</li>
+<li><strong>Verify Wallet</strong>: Double-check the wallet address matches before approving</li>
+<li><strong>Check Network</strong>: Always verify you're on Base Mainnet</li>
+<li><strong>Have Gas Ready</strong>: Ensure you have enough ETH for both approval and lock transactions</li>
+<li><strong>Wait for Confirmation</strong>: Don't close the UI until transactions are confirmed</li>
+</ol>
+<h3 id="managing-positions">Managing Positions</h3>
+<ol>
+<li><strong>Regular Checks</strong>: Visit "My Positions" regularly to monitor expiration dates</li>
+<li><strong>Plan Extensions</strong>: Extend locks before they expire to avoid interruption</li>
+<li><strong>Monitor Status</strong>: Check that positions show "Active" or "In Next Epoch" status</li>
+<li><strong>Use Refresh</strong>: Click refresh if positions seem outdated</li>
+</ol>
+<h3 id="security">Security</h3>
+<ol>
+<li><strong>Verify URLs</strong>: Always use the official URL: <a href="https://cartha.finance" target="_blank">https://cartha.finance</a></li>
+<li><strong>Check Addresses</strong>: Verify all addresses match before signing transactions</li>
+<li><strong>Review Parameters</strong>: Always review transaction parameters before executing</li>
+<li><strong>Keep CLI Updated</strong>: Ensure your CLI is up-to-date for best compatibility</li>
+</ol>
+<h2 id="getting-help">Getting Help</h2>
+<ul>
+<li><strong>Documentation</strong>: See the <a href="miner-guide.html">Miner Guide</a> for detailed setup instructions</li>
+<li><strong>Discord</strong>: Join our Discord for support: <a href="https://discord.gg/7DXG57B6" target="_blank">https://discord.gg/7DXG57B6</a></li>
+<li><strong>CLI Help</strong>: Run <code>cartha --help</code> or <code>cartha vault lock --help</code> for CLI assistance</li>
+<li><strong>GitHub</strong>: Report issues on the <a href="https://github.com/General-Tao-Ventures/cartha-lock-ui" target="_blank">cartha-lock-ui repository</a></li>
+</ul>
+<hr></hr>
+<p><strong>Ready to get started?</strong> Visit <a href="https://cartha.finance" target="_blank">https://cartha.finance</a> to manage your liquidity positions!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="validator-guide.html" class="navigation navigation-prev " aria-label="Previous page: Validator Guide">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="testnet.html" class="navigation navigation-next " aria-label="Next page: Testnet">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cartha Interface","level":"1.5.3","depth":2,"next":{"title":"Testnet","level":"1.5.4","depth":2,"path":"cartha/testnet.md","ref":"cartha/testnet.md","articles":[]},"previous":{"title":"Validator Guide","level":"1.5.2","depth":2,"path":"cartha/validator-guide.md","ref":"cartha/validator-guide.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cartha/cartha-interface.md","mtime":"2026-02-03T18:36:05.268Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-02-03T18:36:25.554Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

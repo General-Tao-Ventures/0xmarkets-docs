@@ -1,8 +1,10 @@
-# Validator Guide - Cartha Testnet
+# Validator Guide
 
-Complete guide for running validators on Cartha testnet.
+Complete guide for running validators on Cartha.
 
-**Repository**: [cartha-validator](https://github.com/General-Tao-Ventures/cartha-validator)
+- **Repository**: [cartha-validator](https://github.com/General-Tao-Ventures/cartha-validator)
+- **CLI Repository**: [cartha-cli](https://github.com/General-Tao-Ventures/cartha-cli)
+- **PyPI Package**: [cartha-cli](https://pypi.org/project/cartha-cli/)
 
 ## Prerequisites
 
@@ -12,8 +14,9 @@ Before you begin, ensure you have:
 - ✅ Python 3.11 installed
 - ✅ [`uv`](https://github.com/astral-sh/uv) package manager
 - ✅ Node.js installed (for PM2 process manager)
-- ✅ Bittensor wallet with registered validator hotkey
+- ✅ [btcli](https://docs.learnbittensor.org/btcli) installed (for wallet creation and subnet registration)
 - ✅ Git (to clone the repository)
+- ✅ TAO in your Bittensor wallet (for subnet registration)
 
 ### Minimum Compute Requirements
 - ✅ **CPU**: 2 cores
@@ -21,15 +24,52 @@ Before you begin, ensure you have:
 - ✅ **Disk**: 20 GB SSD
 - ✅ **Network**: Stable internet connection with minimal downtime
 
-**Note**: On testnet, all validators are allowed - no whitelist is required. Whitelist restrictions only apply to mainnet.
+**Note**: On mainnet, validators must be whitelisted by the subnet owner. Contact the subnet owner to get your validator hotkey added to the verifier's whitelist.
+
+## Step 1: Create Bittensor Wallet & Register to Subnet
+
+Before running a validator, you need a Bittensor wallet and must register to the subnet.
+
+### Create Wallet
+
+If you don't have a Bittensor wallet, create one using btcli:
+
+```bash
+btcli wallet create
+```
+
+This will create both a coldkey and hotkey. Make sure to:
+- **Save your mnemonic phrase** securely - you cannot recover your wallet without it
+- **Fund your wallet with TAO** - required for subnet registration
+
+For more details on wallet management, see the [Bittensor CLI documentation](https://docs.learnbittensor.org/btcli).
+
+### Register to Subnet
+
+You can register to subnet 35 (Cartha mainnet) using either btcli or cartha-cli:
+
+**Option 1: Register via Cartha CLI**
+
+```bash
+pip install cartha-cli
+cartha miner register
+```
+
+**Option 2: Register via btcli**
+
+```bash
+btcli subnets register --netuid 35
+```
+
+For more btcli options, see the [Bittensor CLI documentation](https://docs.learnbittensor.org/btcli).
+
+## Step 2: Install and Configure Validator
 
 The `run.sh` script will automatically:
 - Install PM2 if not already installed
 - Install all Python dependencies
 - Configure your validator settings
 - Set up process management
-
-## Step 1: Install and Configure Validator
 
 The validator installation is now fully automated with a single interactive script:
 
@@ -56,11 +96,9 @@ The `run.sh` script will:
 5. **Setup PM2** - Configures PM2 to manage both validator and auto-updater processes
 6. **Start validator** - Optionally starts the validator immediately
 
-**Testnet Note**: On testnet, all validators are allowed to query verified miners - no whitelist is required. You can proceed directly to running your validator.
+**Important**: On mainnet, validators must be whitelisted by the subnet owner. The whitelist is managed by the verifier, not configured locally in the validator. Contact the subnet owner to get your validator hotkey added to the verifier's whitelist.
 
-**Mainnet Note**: On mainnet, validators must be whitelisted by the subnet owner. The whitelist is managed by the verifier, not configured locally in the validator. Contact the subnet owner to get your validator hotkey added to the verifier's whitelist for mainnet.
-
-## Step 2: Validator is Running!
+## Step 3: Validator is Running!
 
 Once `run.sh` completes, your validator is automatically:
 
@@ -157,8 +195,8 @@ uv run python -m cartha_validator.main --help
 
 Key options:
 
-- `--netuid`: Subnet UID (default: 35, use 78 for testnet)
-- `--subtensor.network`: Bittensor network (use `test` for testnet, `finney` for mainnet)
+- `--netuid`: Subnet UID (default: 35)
+- `--subtensor.network`: Bittensor network (use `finney` for mainnet)
 - `--wallet-name`: Coldkey wallet name (required)
 - `--wallet-hotkey`: Hotkey name (required)
 - `--epoch`: Override epoch version (defaults to current Friday 00:00 UTC)
@@ -215,18 +253,18 @@ If you need to run the validator manually for testing:
 # View help
 uv run python -m cartha_validator.main --help
 
-# Run validator manually (testnet)
+# Run validator manually (mainnet)
 uv run python -m cartha_validator.main \
-  --netuid 78 \
-  --subtensor.network test \
+  --netuid 35 \
+  --subtensor.network finney \
   --wallet-name <name> \
   --wallet-hotkey <hotkey> \
   --use-verified-amounts
 
 # Run validator with custom epoch
 uv run python -m cartha_validator.main \
-  --netuid 78 \
-  --subtensor.network test \
+  --netuid 35 \
+  --subtensor.network finney \
   --wallet-name <name> \
   --wallet-hotkey <hotkey> \
   --epoch 2025-01-17T00:00:00Z \
@@ -278,22 +316,21 @@ Test verifier connectivity:
 
 ```bash
 # Test verifier health
-curl "https://cartha-verifier-826542474079.us-central1.run.app/health"
+curl "https://cartha-verifier.0xmarkets.io/health"
 
 # Test verified miners endpoint
-curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"
+curl "https://cartha-verifier.0xmarkets.io/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"
 ```
 
 ## Troubleshooting
 
-### "Validator not whitelisted" (Mainnet Only)
+### "Validator not whitelisted"
 
-**Problem**: On mainnet, your validator hotkey is not whitelisted on the verifier
+**Problem**: Your validator hotkey is not whitelisted on the verifier
 
 **Solution**:
 
-- **Testnet**: This error should not occur on testnet as all validators are allowed
-- **Mainnet**: Contact the subnet owner to get your validator hotkey added to the verifier's whitelist
+- Contact the subnet owner to get your validator hotkey added to the verifier's whitelist
 - Provide your validator hotkey SS58 address
 - The whitelist is managed by the verifier, not configured locally in the validator
 
@@ -305,7 +342,7 @@ curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miner
 **Solution**:
 
 - The verifier URL is automatically configured by `run.sh`
-- Test connectivity: `curl "https://cartha-verifier-826542474079.us-central1.run.app/health"`
+- Test connectivity: `curl "https://cartha-verifier.0xmarkets.io/health"`
 - Check validator logs: `pm2 logs cartha-validator`
 - Verify network connectivity
 - If running manually, ensure you're using the correct verifier URL
@@ -318,15 +355,28 @@ curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miner
 
 - Check validator status: `pm2 status`
 - View validator logs: `pm2 logs cartha-validator`
-- Check your wallet has sufficient testnet TAO
-- Verify you're using the correct network (`test`) and netuid (`78`) - configured during `run.sh`
+- Check your wallet has sufficient TAO
+- Verify you're using the correct network (`finney`) and netuid (`35`) - configured during `run.sh`
 - Verify your validator hotkey is registered on the subnet
 - Ensure validator is running: `pm2 restart cartha-validator` if needed
 
+### "No verified miners found"
+
+**Problem**: Validator can't fetch verified miners
+
+**Solution**:
+
+- Check validator logs: `pm2 logs cartha-validator`
+- Test the verifier endpoint: `curl "https://cartha-verifier.0xmarkets.io/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"`
+- Check epoch version matches current epoch
+- Verify you're using the correct network (`finney`) and netuid (`35`) - configured during `run.sh`
+- Restart validator: `pm2 restart cartha-validator`
+
 ## Additional Resources
 
-- **[Testnet Overview](../testnet/README.md)** - Learn more about Cartha testnet
-- **[Validator Testnet Setup Guide](https://github.com/General-Tao-Ventures/cartha-validator/blob/main/docs/TESTNET_SETUP.md)** - Detailed validator documentation
+- **[Cartha Overview](README.md)** - Learn more about Cartha
+- **[Validator Documentation](https://github.com/General-Tao-Ventures/cartha-validator)** - Detailed validator documentation
+- **Discord**: https://discord.gg/7DXG57B6 - Join the Cartha community
 
 ## Next Steps
 
@@ -337,4 +387,4 @@ curl "https://cartha-verifier-826542474079.us-central1.run.app/v1/verified-miner
 
 ---
 
-**Note**: Testnet is a testing environment. All tokens are testnet tokens with no real value. Use testnet to learn, test, and develop before deploying to mainnet.
+**Note**: Validators must be whitelisted by the subnet owner to participate on mainnet. Contact the team via Discord for whitelist requests.

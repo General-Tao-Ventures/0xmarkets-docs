@@ -408,30 +408,6 @@ cartha miner --help
    - Visit https://cartha.finance/positions
    - Your position should appear within 30 seconds to 5 minutes
 
-## Additional Resources
-
-- **[Cartha Lock UI](https://cartha.finance)** - Web interface for locking funds
-- **[My Positions](https://cartha.finance/positions)** - View and manage your liquidity positions
-- **[USDC Faucet](https://cartha.finance/faucet)** - Get testnet USDC
-- **[Testnet Overview](../testnet/README.md)** - Learn more about Cartha testnet
-- **[CLI Documentation](https://github.com/General-Tao-Ventures/cartha-cli)** - Cartha CLI reference
-- **[Discord](https://discord.gg/7DXG57B6)** - Join the community for support
-
-## Next Steps
-
-- 🔄 Experiment with different pools (BTC/USD, ETH/USD, EUR/USD)
-- 📊 Monitor your positions at https://cartha.finance/positions
-- 💰 Track your rewards each epoch
-- 🚀 Top up or extend your positions for higher rewards
-- 👥 Join Discord to share experiences and get help
-
-## Important Reminders
-
-- ⚠️ **Testnet Only**: All tokens are testnet tokens with no real value
-- 🔒 **Lock Duration**: Minimum 7 days, maximum 365 days
-- ⏰ **Epoch Timing**: Lock before epoch ends to be included in next reward cycle
-- 💸 **Gas Fees**: Keep some testnet ETH for transaction fees
-- 🔄 **24h Cooldown**: USDC faucet has 24-hour cooldown per wallet
 
 ---
 

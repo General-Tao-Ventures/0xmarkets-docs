@@ -82,7 +82,7 @@ Find a principal miner to lock through:
 
 ### 4. Lock Your Funds
 
-**Via Cartha Lock UI** ✅ **Fully Self-Service**
+**Via Cartha Interface** ✅ **Fully Self-Service**
 
 Visit: https://cartha.finance/create-lock
 
@@ -536,7 +536,7 @@ Fees vary based on Base network congestion.
 ### Resources
 
 - **[Principal Miners Guide](principal-miners.md)** - Understanding your manager
-- **[Lock UI Guide](../testnet/cartha-lock-ui.md)** - How to use the interface
+- **[Interface Guide](../testnet/cartha-interface.md)** - How to use the interface
 - **[FAQ](../faq.md)** - Common questions
 - **[Risk Disclosure](../legal-and-risk.md)** - Full risk information
 

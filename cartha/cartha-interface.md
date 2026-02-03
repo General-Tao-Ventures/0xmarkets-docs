@@ -1,12 +1,12 @@
-# Cartha Lock UI
+# Cartha Interface
 
-**A modern web interface for managing your Cartha lock positions.** The Cartha Lock UI replaces the need to manually interact with smart contracts on BaseScan, providing a streamlined, user-friendly experience for liquidity providers.
+**A modern web interface for managing your Cartha lock positions.** The Cartha Interface replaces the need to manually interact with smart contracts on BaseScan, providing a streamlined, user-friendly experience for liquidity providers.
 
 **URL**: [https://cartha.finance](https://cartha.finance/)
 
-## What is Cartha Lock UI?
+## What is Cartha Interface?
 
-The Cartha Lock UI is a web-based interface that simplifies the process of creating and managing lock positions on the Cartha subnet. Instead of manually copying transaction data and executing contracts on block explorers, the UI guides you through each step with clear instructions and automatic wallet integration.
+The Cartha Interface is a web-based interface that simplifies the process of creating and managing lock positions on the Cartha subnet. Instead of manually copying transaction data and executing contracts on block explorers, the interface guides you through each step with clear instructions and automatic wallet integration.
 
 ### Key Benefits
 
@@ -21,7 +21,11 @@ The Cartha Lock UI is a web-based interface that simplifies the process of creat
 
 ### 1. Create New Lock Positions
 
-The primary use case for the Cartha Lock UI is creating new lock positions. The process is split into two phases:
+The primary use case for the Cartha Interface is creating new lock positions.
+
+![Become a Liquidity Provider](../.gitbook/assets/become-lp-page.png)
+
+The process is split into two phases:
 
 #### Phase 1: Approve USDC
 
@@ -63,6 +67,8 @@ After Phase 1 completes, you'll automatically proceed to Phase 2:
 
 Navigate to **"My Positions"** (or visit `/manage`) to see all your active lock positions:
 
+![My Positions](../.gitbook/assets/my-positions-page.png)
+
 **Features**:
 
 * **All Positions at a Glance**: See all your pools in one dashboard
@@ -87,17 +93,19 @@ Navigate to **"My Positions"** (or visit `/manage`) to see all your active lock 
 
 Extend the duration of an existing lock position:
 
+![Extend Lock](../.gitbook/assets/extend-days-page.png)
+
 1. **Go to My Positions**: Navigate to the positions dashboard
 2. **Click "Extend"**: Click the Extend button on the position you want to extend
 3. **Select New Duration**: Choose how many additional days to add
 4. **Review and Confirm**: Review the extension details
 5. **Execute Transaction**: Sign and submit the extension transaction
 
-**Note**: Extend Lock feature is currently in testing and may not work properly yet. If you encounter issues, contact support on Discord.
-
 ### 4. Top Up Existing Positions
 
 Add more USDC to an existing lock position:
+
+![Top Up Lock](../.gitbook/assets/top-up-page.png)
 
 1. **Go to My Positions**: Navigate to the positions dashboard
 2. **Click "Top Up"**: Click the Top Up button on the position you want to add funds to
@@ -106,30 +114,31 @@ Add more USDC to an existing lock position:
 5. **Review and Confirm**: Review the top-up details
 6. **Execute Transaction**: Sign and submit the top-up transaction
 
-**Note**: Top Up feature is currently in testing and may not work properly yet. If you encounter issues, contact support on Discord.
+### 5. Withdraw (After Lock Expires)
 
-### 5. Testnet Faucet
+Once your lock duration has expired, you can withdraw your USDC.
 
-A built-in faucet for claiming testnet tokens:
+**When a position expires**, the status changes to "Expired" and the **Withdraw** button appears below the Extend and Top Up buttons:
 
-* **Claim Testnet USDC**: Get 1,000,000 testnet USDC per claim
-* **24-Hour Cooldown**: One claim per wallet address every 24 hours
-* **Cooldown Management**: See when you can claim again
-* **Balance Display**: View your current testnet token balances
-* **ETH Faucet Links**: Quick access to external ETH faucets (Optimism and Alchemy)
+![Expired Position with Withdraw Button](../.gitbook/assets/what-expired-look-like.png)
 
-**How to Use**:
+**Steps to withdraw**:
 
-1. Navigate to https://cartha.finance/faucet
-2. Connect your wallet (must be on Base Sepolia network)
-3. Click "Claim USDC" to receive 1,000,000 testnet USDC
-4. Wait 24 hours before claiming again from the same wallet
+1. **Go to My Positions**: Navigate to the positions dashboard
+2. **Find Expired Position**: Locate the position with the "Expired" status badge
+3. **Click "Withdraw"**: The Withdraw button appears below the Extend and Top Up buttons
+4. **Review Withdrawal Details**: A confirmation popup shows the total amount you will receive
 
-**Note**: For testnet ETH, use the external faucet links provided on the faucet page (Optimism or Alchemy faucets).
+![Confirm Withdrawal Popup](../.gitbook/assets/withdraw-popup.png)
+
+5. **Confirm Full Withdrawal**: Click "Confirm Full Withdrawal" to execute the transaction
+6. **Sign Transaction**: Approve the transaction in your wallet
+
+**Note**: The Withdraw button only appears after your lock duration has fully expired. If your lock is still active, you will only see Extend and Top Up options.
 
 ## How It Works with the CLI
 
-The Cartha Lock UI is designed to work seamlessly with the Cartha CLI:
+The Cartha Interface is designed to work seamlessly with the Cartha CLI:
 
 ### Starting from CLI
 
@@ -137,14 +146,13 @@ The Cartha Lock UI is designed to work seamlessly with the Cartha CLI:
 cartha vault lock \
   --coldkey my-coldkey \
   --hotkey my-hotkey \
-  --network test \
   --pool-id BTCUSD \
   --amount 100.0 \
   --lock-days 30 \
   --owner-evm 0xYourEVMAddress
 
 # Or using short aliases:
-cartha v lock -w cold -wh hot -n test -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
+cartha v lock -w cold -wh hot -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
 ```
 
 **What Happens**:
@@ -163,7 +171,6 @@ You can also access the UI directly:
 
 * **Landing Page**: https://cartha.finance
 * **My Positions**: https://cartha.finance/manage
-* **Faucet**: https://cartha.finance/faucet
 
 When accessing directly, you'll need to:
 
@@ -173,14 +180,14 @@ When accessing directly, you'll need to:
 
 ## Supported Wallets
 
-The Cartha Lock UI supports multiple wallet types:
+The Cartha Interface supports multiple wallet types:
 
 * **MetaMask** - Most popular Ethereum wallet
 * **Coinbase Wallet** - Coinbase's official wallet
 * **Talisman** - Polkadot ecosystem wallet
 * **WalletConnect** - Connect any WalletConnect-compatible wallet
 
-**Network Requirement**: All wallets must be connected to **Base Sepolia** network (Chain ID: 84532) for testnet, or **Base Mainnet** (Chain ID: 8453) for mainnet.
+**Network Requirement**: All wallets must be connected to **Base Mainnet** (Chain ID: 8453).
 
 ## Security Features
 
@@ -224,7 +231,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 **Solution**:
 
-1. Check your wallet is connected to Base Sepolia (Chain ID: 84532)
+1. Check your wallet is connected to Base Mainnet (Chain ID: 8453)
 2. Switch networks in your wallet
 3. Refresh the page
 
@@ -244,21 +251,11 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 **Solution**:
 
-* **Check Network**: Ensure you're on Base Sepolia
+* **Check Network**: Ensure you're on Base Mainnet
 * **Check Gas**: Ensure you have enough ETH for gas fees
 * **Check Balance**: Ensure you have enough USDC
 * **Check Approval**: For Phase 2, ensure Phase 1 approval completed successfully
 * **Check Network Congestion**: Wait a moment and retry
-
-### "Extend" or "Top Up" Not Working
-
-**Problem**: Extend or Top Up buttons don't work
-
-**Solution**:
-
-* These features are currently in testing
-* Contact support on Discord if you need to extend or top up
-* Use the CLI or contact support for manual assistance
 
 ### Positions Not Showing
 
@@ -278,7 +275,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 1. **Always Use CLI First**: Start with `cartha vault lock` to ensure proper signature generation
 2. **Verify Wallet**: Double-check the wallet address matches before approving
-3. **Check Network**: Always verify you're on Base Sepolia (testnet) or Base Mainnet (mainnet)
+3. **Check Network**: Always verify you're on Base Mainnet
 4. **Have Gas Ready**: Ensure you have enough ETH for both approval and lock transactions
 5. **Wait for Confirmation**: Don't close the UI until transactions are confirmed
 
@@ -296,17 +293,6 @@ The UI includes automatic wallet validation to prevent common mistakes:
 3. **Review Parameters**: Always review transaction parameters before executing
 4. **Keep CLI Updated**: Ensure your CLI is up-to-date for best compatibility
 
-## Future Features
-
-The Cartha Lock UI is actively being developed. Upcoming features include:
-
-* ✅ **Automated Faucet**: Self-service testnet token faucet (now available!)
-* ✅ **Improved Extend/Top Up**: Full support for extending and topping up positions
-* ✅ **Transaction History**: View history of all your lock transactions
-* ✅ **Notifications**: Alerts for expiring positions
-* ✅ **Multi-Chain Support**: Support for additional chains beyond Base
-* ✅ **Advanced Analytics**: Detailed analytics and insights for your positions
-
 ## Getting Help
 
 * **Documentation**: See the [Miner Guide](miner-guide.md) for detailed setup instructions
@@ -316,4 +302,4 @@ The Cartha Lock UI is actively being developed. Upcoming features include:
 
 ***
 
-**Note**: The Cartha Lock UI is currently optimized for testnet use. Mainnet support will be available when the Cartha subnet launches on mainnet.
+**Ready to get started?** Visit [https://cartha.finance](https://cartha.finance) to manage your liquidity positions!

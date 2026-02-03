@@ -109,7 +109,7 @@ cartha vault lock \
 
 Federated miners can lock capital to your hotkey in two ways:
 
-**Option 1: Via Cartha Lock UI** ✅ **Recommended**
+**Option 1: Via Cartha Interface** ✅ **Recommended**
 1. Federated miner visits https://cartha.finance/create-lock
 2. Enters your hotkey address (SS58 format)
 3. Selects pool, amount, and lock duration
