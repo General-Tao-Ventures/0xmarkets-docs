@@ -13,7 +13,7 @@ Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** f
 
 * **USDC-only collateral** with one vault per market for risk isolation
 * **ALPHA emissions** based on deposit score (time × amount locked)
-* **60% of trading fees** distributed to miners
+* **50% of trading fees** distributed to miners
 * **Liquidation monitoring** by validators with slashing penalties
 
 ## What Can You Do on Cartha?
