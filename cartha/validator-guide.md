@@ -316,10 +316,10 @@ Test verifier connectivity:
 
 ```bash
 # Test verifier health
-curl "https://cartha-verifier-193291340038.us-central1.run.app/health"
+curl "https://api.cartha.finance/health"
 
 # Test verified miners endpoint
-curl "https://cartha-verifier-193291340038.us-central1.run.app/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"
+curl "https://api.cartha.finance/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"
 ```
 
 ## Troubleshooting
@@ -342,7 +342,7 @@ curl "https://cartha-verifier-193291340038.us-central1.run.app/v1/verified-miner
 **Solution**:
 
 - The verifier URL is automatically configured by `run.sh`
-- Test connectivity: `curl "https://cartha-verifier-193291340038.us-central1.run.app/health"`
+- Test connectivity: `curl "https://api.cartha.finance/health"`
 - Check validator logs: `pm2 logs cartha-validator`
 - Verify network connectivity
 - If running manually, ensure you're using the correct verifier URL
@@ -367,7 +367,7 @@ curl "https://cartha-verifier-193291340038.us-central1.run.app/v1/verified-miner
 **Solution**:
 
 - Check validator logs: `pm2 logs cartha-validator`
-- Test the verifier endpoint: `curl "https://cartha-verifier-193291340038.us-central1.run.app/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"`
+- Test the verifier endpoint: `curl "https://api.cartha.finance/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00:00:00Z)"`
 - Check epoch version matches current epoch
 - Verify you're using the correct network (`finney`) and netuid (`35`) - configured during `run.sh`
 - Restart validator: `pm2 restart cartha-validator`
