@@ -24,6 +24,18 @@ Miners deposit USDC into vaults specific to each market. Each vault is isolated,
 **What are the minimum requirements?**\
 Miners must maintain **$200k–$1M** USDC collateral over time and commit funds for epoch durations
 
+**What is an epoch?**\
+An epoch is a weekly reward period running from **Friday 00:00 UTC to Thursday 23:59 UTC**. Miner positions are frozen at the start of each epoch, and rewards are calculated based on this frozen snapshot. See [Weekly Epochs](how-it-works/weekly-epochs.md) for details.
+
+**When should I lock my funds?**\
+Lock by **Thursday 23:00 UTC** (or earlier) to ensure inclusion in the next epoch. The indexer needs up to 15 minutes to detect your position on Base chain, so give yourself buffer time. Positions locked after Friday 00:00 UTC won't earn rewards until the following week.
+
+**When do miners start earning rewards?**\
+After your first epoch freeze. When you lock funds, you're added to the "upcoming epoch." At the next Friday 00:00 UTC freeze, your position becomes "active" and starts earning rewards.
+
+**What if I add more funds mid-epoch?**\
+Top-ups during an epoch go into a pending state and don't count toward your current score. They'll be included in the next epoch's reward calculation.
+
 **What rewards do miners earn?**
 
 * **60% of trading fees** from the protocol

@@ -25,7 +25,7 @@ This litepaper aims to outline the architecture of 0xMarkets powered by the Cart
 
 * Deposit **USDC** into designated liquidity vaults; choose specific vaults/pairs.&#x20;
 * Maintain minimum collateral targets (**$200k–$1M over time**)
-* Commit funds by epoch durations.
+* Commit funds for weekly epochs (Friday 00:00 UTC → Thursday 23:59 UTC). Lock by **Thursday 23:00 UTC** to ensure the indexer has time to detect your position. See [Weekly Epochs](how-it-works/weekly-epochs.md).
 * **Rewards**
   * **ALPHA emissions** by deposit score (time × amount).&#x20;
   * **Trading fees:** **60%** of trading fees to miners.&#x20;

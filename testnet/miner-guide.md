@@ -231,10 +231,15 @@ You'll see:
 - ✅ Same hotkey + Same pool + **Different EVM wallet** → Creates separate position
 - ❌ Same hotkey + Same pool + **Same EVM wallet** → Use "Top Up" instead
 
-**Rewards:**
-- Rewards are distributed weekly based on your locked position
-- Lock before the epoch ends to be included in the next reward cycle
-- Longer lock periods may receive higher rewards
+**Rewards & Weekly Epochs:**
+- Rewards are distributed **weekly** based on your locked position
+- Cartha operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC
+- **Best Practice**: Lock by **Thursday 23:00 UTC** to ensure inclusion in the next epoch
+- The indexer needs up to 15 minutes to detect your position on Base chain — give yourself buffer time!
+- Positions locked after Friday 00:00 UTC go into the *following* week's epoch
+- Longer lock periods receive higher time bonuses
+
+> 📘 **Learn more**: See [Weekly Epochs](../how-it-works/weekly-epochs.md) for a complete guide on epoch timing, how rewards are calculated, and timezone references.
 
 ## Step 4: Check Your Miner Status (Optional)
 
