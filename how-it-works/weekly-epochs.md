@@ -15,26 +15,7 @@ An **epoch** is a fixed time period during which miner positions are frozen and 
 
 ## The Weekly Epoch Lifecycle
 
-```mermaid
-flowchart LR
-    subgraph week1["Week 1"]
-        U["📝 UPCOMING EPOCH<br/>(Miners can join)"]
-    end
-    
-    subgraph freeze["Friday 00:00 UTC"]
-        F["🔒 FREEZE"]
-    end
-    
-    subgraph week2["Week 2"]
-        A["❄️ FROZEN EPOCH<br/>(Earning rewards)"]
-    end
-    
-    U --> F --> A
-    
-    style U fill:#2d4a3e,stroke:#4ade80,color:#fff
-    style F fill:#854d0e,stroke:#fbbf24,color:#fff
-    style A fill:#1e3a5f,stroke:#60a5fa,color:#fff
-```
+![Weekly Epoch Lifecycle](../.gitbook/assets/weekly-epoch-lifecycle.png)
 
 ### Phase 1: Upcoming Epoch (Before Freeze)
 
@@ -69,19 +50,7 @@ At the next freeze:
 
 ## How Miners Get Rewards
 
-```mermaid
-flowchart TD
-    A["1️⃣ EPOCH FREEZES<br/>Friday 00:00 UTC"] --> B["2️⃣ VALIDATOR FETCHES<br/>Frozen miner list"]
-    B --> C["3️⃣ WEIGHT CALCULATION<br/>score = amount × time_bonus"]
-    C --> D["4️⃣ WEIGHTS PUBLISHED<br/>Every ~72 min to Bittensor"]
-    D --> E["5️⃣ EMISSIONS DISTRIBUTED<br/>TAO rewards by weight %"]
-    
-    style A fill:#7c3aed,stroke:#a78bfa,color:#fff
-    style B fill:#2563eb,stroke:#60a5fa,color:#fff
-    style C fill:#0891b2,stroke:#22d3ee,color:#fff
-    style D fill:#059669,stroke:#34d399,color:#fff
-    style E fill:#d97706,stroke:#fbbf24,color:#fff
-```
+![Reward Calculation Flow](../.gitbook/assets/rewarding-timing.png)
 
 ### Reward Factors
 
@@ -112,32 +81,7 @@ Your `scoring_amount` is fixed at the epoch freeze and doesn't change until the 
 
 The indexer needs time to detect your position on Base chain. This process can take **up to 15 minutes**. If you lock at 23:50 UTC and the indexer takes 15 minutes, your position won't be verified until 00:05 UTC Friday — **after the freeze**.
 
-```mermaid
-flowchart LR
-    subgraph safe["✅ SAFE ZONE"]
-        fri2["Fri"]
-        sat["Sat"]
-        sun["Sun"]
-        mon["Mon"]
-        tue["Tue"]
-        wed["Wed"]
-        thu["Thu<br/>before 23:00"]
-    end
-    
-    subgraph risky["⚠️ RISKY"]
-        late["Thu 23:00-23:59"]
-    end
-    
-    subgraph missed["❌ MISSED"]
-        fri["Fri 00:00+<br/>(next week)"]
-    end
-    
-    fri2 --> sat --> sun --> mon --> tue --> wed --> thu --> late --> fri
-    
-    style safe fill:#166534,stroke:#22c55e,color:#fff
-    style risky fill:#854d0e,stroke:#f59e0b,color:#fff
-    style missed fill:#991b1b,stroke:#ef4444,color:#fff
-```
+![Buffer Time - When to Lock](../.gitbook/assets/buffer-time.png)
 
 ### Timing Breakdown
 
