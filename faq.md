@@ -38,7 +38,7 @@ Top-ups during an epoch go into a pending state and don't count toward your curr
 
 **What rewards do miners earn?**
 
-* **60% of trading fees** from the protocol
+* **50% of trading fees** from the protocol
 * **ALPHA emissions**, based on a time-weighted deposit score (amount × duration)
 
 **What do validators do?**\

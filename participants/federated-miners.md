@@ -337,7 +337,7 @@ Before locking, establish clear terms with the principal miner:
 
 ### Return Components
 
-**1. Trading Fees (60% to LPs)**
+**1. Trading Fees (50% to LPs)**
 - Proportional to your locked USDC
 - Based on pool trading volume
 - Paid continuously in USDC (stays in vault)

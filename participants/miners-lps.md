@@ -9,5 +9,5 @@
 
 **Earning**
 
-* **60% of trading fees** (protocol‑wide mechanic).&#x20;
+* **50% of trading fees** (protocol‑wide mechanic).&#x20;
 * **ALPHA emissions** by deposit score = time × amount.

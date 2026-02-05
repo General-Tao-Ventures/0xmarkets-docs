@@ -353,7 +353,7 @@ Before accepting external capital, establish clear terms:
 
 ### Revenue Sources
 
-**1. Trading Fees (60% share)**
+**1. Trading Fees (50% share)**
 - Distributed proportionally to all LPs
 - Based on your pool selection
 - Paid in USDC
