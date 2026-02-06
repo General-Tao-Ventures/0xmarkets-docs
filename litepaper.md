@@ -6,7 +6,7 @@ This litepaper aims to outline the architecture of 0xMarkets powered by the Cart
 
 ## Architecture
 
-<figure><img src=".gitbook/assets/Untitled Diagram Mermaid Chart Aug 19 2025 (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/litepaper-chart.png" alt=""><figcaption></figcaption></figure>
 
 * **USDC‑only collateral** across markets; **one vault per market** for isolation.
 * **External price feeds** from multiple oracles with validator cross‑checks and fallback.
