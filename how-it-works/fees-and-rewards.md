@@ -1,8 +1,29 @@
 # Fees & rewards
 
-* **Trading fees → 50% to miners (LPs)**.&#x20;
-* **10% of trading fees → protocol treasury** (+ optional share of funding payments).&#x20;
-* **ALPHA emissions**: paid via vaults based on a **deposit score** (time × amount).&#x20;
+## Trading Fees Distribution
+
+* **50% → Miners (LPs)**: Distributed to liquidity providers based on their vault deposits
+* **40% → veALPHA stakers**: Pro-rata distribution based on veALPHA balance
+* **10% → Protocol treasury** (+ optional share of funding payments)
+
+## ALPHA Emission Distribution
+
+ALPHA emissions are distributed across participants each epoch:
+
+* **31% → Miners (LPs)**: Allocated via vaults based on **deposit score** (time × amount × pool weight)
+* **41% → Validators**: Rewards for liquidation execution and subnet maintenance
+* **10% → Traders & IBs**: Weekly leaderboard rewards and introducing broker rebates
+* **18% → Owner emissions**: Protocol development and operations
+
+### Trader Rewards
+
+Traders on 0xMarkets earn **10% of total ALPHA emissions** through:
+
+* **Weekly leaderboards**: Trade volume and activity earn points converted to ALPHA rewards
+* **IB (Introducing Broker) rebates**: Earn rewards for referred trading volume
+* **Leaderboard tracking**: View accumulated rewards at [cartha.finance/leaderboard](https://cartha.finance/leaderboard)
+
+Trader rewards are swept to trader wallets via the liquidity flow controller.
 
 ## Lock Expiration & Withdrawals
 

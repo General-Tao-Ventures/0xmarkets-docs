@@ -81,11 +81,20 @@ This litepaper aims to outline the architecture of 0xMarkets powered by the Cart
 * Access to high-leverage perps (up to 500x).
 * Permissionless onboarding.
 * Fixed trading fee structure.
+* **Earn 10% of ALPHA emissions** via weekly leaderboards and IB rebates.
 
-### Protocol Fees
+### Trading Fees Distribution
 
-* 10% of trading fees to protocol treasury.
-* Optional treasury share from funding payments.
+* **50%** to miners (LPs)
+* **40%** to veALPHA stakers (pro-rata by ve balance)
+* **10%** to protocol treasury (+ optional share of funding payments)
+
+### ALPHA Emission Distribution
+
+* **31%** to miners (LPs) - via vaults based on deposit score
+* **41%** to validators - for liquidation execution and maintenance
+* **10%** to traders & IBs - weekly leaderboard rewards and rebates
+* **18%** owner emissions - protocol development
 
 ### Staking
 

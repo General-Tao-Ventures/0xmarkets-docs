@@ -38,14 +38,20 @@ Top-ups during an epoch go into a pending state and don't count toward your curr
 
 **What rewards do miners earn?**
 
+* **31% of ALPHA emissions**, based on deposit score (amount × lock duration × pool weight)
 * **50% of trading fees** from the protocol
-* **ALPHA emissions**, based on a time-weighted deposit score (amount × duration)
 
-**What do validators do?**\
-They cross-verify external price feeds from multiple oracle providers, prevent manipulation, and act as executors for liquidations
+**What rewards do traders earn?**
 
-**How are validators incentivized?**\
-Validators earn **20% of liquidation fees** and may post ALPHA collateral to participate. They can also be slashed if they miss liquidation duties
+* **10% of ALPHA emissions** distributed via weekly leaderboards
+* Earn points based on trading volume and activity
+* IB (Introducing Broker) rebates for referred volume
+* Track rewards at [cartha.finance/leaderboard](https://cartha.finance/leaderboard)
+
+**What rewards do validators earn?**
+
+* **41% of ALPHA emissions** for subnet maintenance and liquidation execution
+* **20% of liquidation fees** (in USDC) for successful executions
 
 **When do liquidations happen?**\
 When a trader’s margin requirements are breached, their position is liquidated automatically
@@ -71,10 +77,18 @@ Lock ALPHA to receive **veALPHA**. veALPHA holders direct emissions and adjust k
 **Do longer locks matter?**\
 Yes. Longer ALPHA locks = more voting weight and a larger share of protocol fees
 
-**What funds the treasury?**
+**What do validators do?**\
+They cross-verify external price feeds from multiple oracle providers, prevent manipulation, and execute liquidations. They can be slashed if they miss liquidation duties
 
-* **10% of trading fees**
-* Optional share of funding payments
+**How are trading fees distributed?**
 
-**What is the treasury used for?**\
-Treasury allocations are governance-controlled and may fund development, growth, or ecosystem initiatives
+* **50%** to miners (LPs) - liquidity providers
+* **40%** to veALPHA stakers - pro-rata by ve balance
+* **10%** to protocol treasury
+
+**How are ALPHA emissions distributed?**
+
+* **31%** to miners (LPs)
+* **41%** to validators
+* **10%** to traders & IBs (weekly leaderboards and rebates)
+* **18%** owner emissions (protocol development)
