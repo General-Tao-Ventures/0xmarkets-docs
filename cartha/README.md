@@ -80,6 +80,10 @@ Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** f
 | cvGBP  | [`0x9Eed917485e08FdFee977629bf933E8C0B33e539`](https://basescan.org/address/0x9Eed917485e08FdFee977629bf933E8C0B33e539) |
 | cvJPY  | [`0xf2e3f581A7dE8B055c0122E3bFb445A67b485831`](https://basescan.org/address/0xf2e3f581A7dE8B055c0122E3bFb445A67b485831) |
 
+## Security
+
+Cartha's smart contracts have been audited by **Hashlock** and received a **Secure** rating. [View the full audit report](security-audit.md).
+
 ## Getting Started
 
 Choose your path:
@@ -87,6 +91,7 @@ Choose your path:
 * [**Miner Guide**](miner-guide.md) - Learn how to run miners on Cartha
 * [**Validator Guide**](validator-guide.md) - Learn how to run validators on Cartha
 * [**Cartha Interface**](cartha-interface.md) - Learn about the web interface for managing lock positions
+* [**Security Audit**](security-audit.md) - View our security audit by Hashlock
 
 ***
 

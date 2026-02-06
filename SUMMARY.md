@@ -12,6 +12,7 @@
   * [Miner Guide](cartha/miner-guide.md)
   * [Validator Guide](cartha/validator-guide.md)
   * [Cartha Interface](cartha/cartha-interface.md)
+  * [Security Audit](cartha/security-audit.md)
   * [How it works](how-it-works/README.md)
     * [Weekly Epochs](how-it-works/weekly-epochs.md)
     * [Fees & rewards](how-it-works/fees-and-rewards.md)
