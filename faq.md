@@ -41,11 +41,11 @@ Top-ups during an epoch go into a pending state and don't count toward your curr
 * **31% of ALPHA emissions**, based on deposit score (amount × lock duration × pool weight)
 * **50% of trading fees** from the protocol
 
-**What rewards do traders earn?**
+**What is the incentive pool?**
 
-* **10% of ALPHA emissions** distributed via weekly leaderboards
-* Earn points based on trading volume and activity
-* IB (Introducing Broker) rebates for referred volume
+* **10% of ALPHA emissions** allocated to an incentive pool for airdrops and rewards
+* Currently used for trader leaderboards and IB (Introducing Broker) rebates
+* Can be used to incentivize any party in the ecosystem
 * Track rewards at [cartha.finance/leaderboard](https://cartha.finance/leaderboard)
 
 **What rewards do validators earn?**
@@ -90,5 +90,5 @@ They cross-verify external price feeds from multiple oracle providers, prevent m
 
 * **31%** to miners (LPs)
 * **41%** to validators
-* **10%** to traders & IBs (weekly leaderboards and rebates)
+* **10%** to incentive pool (airdrops and ecosystem rewards)
 * **18%** owner emissions (protocol development)

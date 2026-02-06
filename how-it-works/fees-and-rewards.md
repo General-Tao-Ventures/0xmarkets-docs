@@ -12,18 +12,19 @@ ALPHA emissions are distributed across participants each epoch:
 
 * **31% → Miners (LPs)**: Allocated via vaults based on **deposit score** (time × amount × pool weight)
 * **41% → Validators**: Rewards for liquidation execution and subnet maintenance
-* **10% → Traders & IBs**: Weekly leaderboard rewards and introducing broker rebates
+* **10% → Incentive Pool**: Flexible allocation for ecosystem incentives (airdrops, rewards programs, etc.)
 * **18% → Owner emissions**: Protocol development and operations
 
-### Trader Rewards
+### Incentive Pool Distribution
 
-Traders on 0xMarkets earn **10% of total ALPHA emissions** through:
+The incentive pool receives **10% of total ALPHA emissions** and is used to incentivize various ecosystem participants:
 
-* **Weekly leaderboards**: Trade volume and activity earn points converted to ALPHA rewards
-* **IB (Introducing Broker) rebates**: Earn rewards for referred trading volume
-* **Leaderboard tracking**: View accumulated rewards at [cartha.finance/leaderboard](https://cartha.finance/leaderboard)
+* **Trading rewards**: Weekly leaderboard rewards for active traders
+* **IB (Introducing Broker) rebates**: Rewards for referred trading volume
+* **Airdrops**: Flexible allocation to incentivize any party in the ecosystem
+* **Community programs**: Future initiatives to grow and engage the community
 
-Trader rewards are swept to trader wallets via the liquidity flow controller.
+Rewards are tracked at [cartha.finance/leaderboard](https://cartha.finance/leaderboard) and swept to participant wallets via the liquidity flow controller.
 
 ## Lock Expiration & Withdrawals
 

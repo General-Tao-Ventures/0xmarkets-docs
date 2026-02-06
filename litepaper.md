@@ -81,7 +81,7 @@ This litepaper aims to outline the architecture of 0xMarkets powered by the Cart
 * Access to high-leverage perps (up to 500x).
 * Permissionless onboarding.
 * Fixed trading fee structure.
-* **Earn 10% of ALPHA emissions** via weekly leaderboards and IB rebates.
+* **Earn from incentive pool** via weekly leaderboards and IB rebates.
 
 ### Trading Fees Distribution
 
@@ -93,7 +93,7 @@ This litepaper aims to outline the architecture of 0xMarkets powered by the Cart
 
 * **31%** to miners (LPs) - via vaults based on deposit score
 * **41%** to validators - for liquidation execution and maintenance
-* **10%** to traders & IBs - weekly leaderboard rewards and rebates
+* **10%** to incentive pool - flexible allocation for ecosystem incentives (airdrops, trading rewards, IB rebates)
 * **18%** owner emissions - protocol development
 
 ### Staking

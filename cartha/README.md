@@ -12,7 +12,7 @@
 Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** for the 0xMarkets DEX. It provides:
 
 * **USDC-only collateral** with one vault per market for risk isolation
-* **ALPHA emissions** distributed across participants (31% to miners, 41% to validators, 10% to traders, 18% owner)
+* **ALPHA emissions** distributed across participants (31% to miners, 41% to validators, 10% to incentive pool, 18% owner)
 * **50% of trading fees** distributed to miners (LPs)
 * **40% of trading fees** to veALPHA stakers
 * **10% of trading fees** to protocol treasury
@@ -43,7 +43,7 @@ Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** f
 ### For Traders
 
 * **Trade on 0xMarkets** with up to 500x leverage on FX, commodities, and crypto
-* **Earn 10% of ALPHA emissions** through weekly leaderboard rewards
+* **Earn from incentive pool** through weekly leaderboard rewards
 * **Introducing Broker program** earn rebates for referred trading volume
 * **Track rewards** on the leaderboard at https://cartha.finance/leaderboard
 * **Permissionless trading** with fixed fee structure

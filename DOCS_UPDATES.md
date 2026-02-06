@@ -79,3 +79,103 @@ The frontend (cartha-lock-ui) has been updated to:
 - Combine description and lock flow into single two-column page
 - Add Important Information section to the main page
 
+---
+
+# Documentation Updates - Incentive Pool Rebranding
+
+## Summary
+Updated all documentation to rebrand the "trader pool" / "trader emissions" to "incentive pool" to reflect that this 10% ALPHA allocation can be used to incentivize any party in the ecosystem, not just traders. This makes the allocation more flexible for airdrops, community programs, and other ecosystem initiatives.
+
+## Conceptual Change
+**Before:** 10% of ALPHA emissions was specifically for traders and IBs (Introducing Brokers)
+**After:** 10% of ALPHA emissions goes to a flexible "incentive pool" that can be used for:
+- Trading rewards (weekly leaderboards)
+- IB rebates
+- Airdrops to any party
+- Community programs and ecosystem growth initiatives
+
+## Files Modified
+
+### 1. faq.md
+**Changes:**
+- Replaced FAQ question "What rewards do traders earn?" with "What is the incentive pool?"
+- Updated answer to emphasize flexibility: "Can be used to incentivize any party in the ecosystem"
+- Changed ALPHA emission distribution from "10% to traders & IBs" to "10% to incentive pool (airdrops and ecosystem rewards)"
+
+**Key Updates:**
+- Lines 44-49: New FAQ explaining the incentive pool concept
+- Lines 91-94: Updated ALPHA emissions distribution list
+
+### 2. cartha/README.md
+**Changes:**
+- Updated emissions distribution summary to use "incentive pool" instead of "traders"
+- Modified "For Traders" section to say "Earn from incentive pool" instead of "Earn 10% of ALPHA emissions"
+
+**Key Updates:**
+- Line 15: "10% to incentive pool" instead of "10% to traders"
+- Line 46: "Earn from incentive pool through weekly leaderboard rewards"
+
+### 3. how-it-works/fees-and-rewards.md
+**Changes:**
+- Renamed section from "Trader Rewards" to "Incentive Pool Distribution"
+- Completely rewrote to emphasize flexibility and multiple use cases
+- Added bullet points for trading rewards, IB rebates, airdrops, and community programs
+
+**Key Updates:**
+- Line 15: "10% → Incentive Pool: Flexible allocation for ecosystem incentives"
+- Lines 18-27: New comprehensive "Incentive Pool Distribution" section replacing trader-specific content
+
+### 4. litepaper.md
+**Changes:**
+- Updated traders section to say "Earn from incentive pool" instead of "Earn 10% of ALPHA emissions"
+- Changed ALPHA emission distribution to "incentive pool - flexible allocation for ecosystem incentives"
+
+**Key Updates:**
+- Line 84: "Earn from incentive pool via weekly leaderboards and IB rebates"
+- Line 96: "10% to incentive pool - flexible allocation for ecosystem incentives (airdrops, trading rewards, IB rebates)"
+
+### 5. participants/traders.md
+**Changes:**
+- Updated page header to say "Earn from incentive pool" instead of "Earn 10% of ALPHA emissions"
+- Changed "Traders on 0xMarkets earn" to "Traders on 0xMarkets can earn from the incentive pool"
+- Updated "trader allocation" to "incentive pool allocation"
+- Changed "trader emission pool" to "incentive pool" (appears twice)
+- Updated "Trader rewards" to "Rewards from the incentive pool"
+
+**Key Updates:**
+- Line 5: "Earn from incentive pool through weekly leaderboard rewards and IB rebates"
+- Line 9: "can earn from the **incentive pool** (10% of total subnet ALPHA emissions)"
+- Line 15: "ALPHA rewards from the incentive pool allocation"
+- Line 22: "IB rebates come from the same 10% incentive pool"
+- Lines 26-29: Updated reward flow description to use "incentive pool" terminology
+
+## Verification
+
+All references have been successfully updated:
+- [x] "trader pool" → "incentive pool" ✓
+- [x] "trader emission pool" → "incentive pool" ✓
+- [x] "reward pool" → "incentive pool" ✓
+- [x] "trader allocation" → "incentive pool allocation" ✓
+- [x] "10% to traders" → "10% to incentive pool" ✓
+- [x] No remaining references to trader-specific 10% allocation ✓
+
+## Impact
+
+This change allows the protocol to:
+1. Use the 10% allocation more flexibly for ecosystem growth
+2. Conduct airdrops to various parties (miners, validators, community members, etc.)
+3. Launch new incentive programs without being constrained to traders only
+4. Better communicate that this is a flexible incentive mechanism
+
+## Related Files NOT Changed
+
+The following files were checked but did not contain relevant references:
+- glossary.md (no trader allocation references)
+- changelog.md (empty file)
+- roadmap.md (empty file)
+- weekly-epochs.md (no trader allocation references)
+- governance-vealpha.md (no trader allocation references)
+- safety-and-liquidations.md (no trader allocation references)
+- All testnet/ files (no trader allocation references)
+- All diagrams/ files (image-only references)
+
