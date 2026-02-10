@@ -376,7 +376,7 @@ curl "https://api.cartha.finance/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00
 
 - **[Cartha Overview](README.md)** - Learn more about Cartha
 - **[Validator Documentation](https://github.com/General-Tao-Ventures/cartha-validator)** - Detailed validator documentation
-- **Discord**: https://discord.gg/7DXG57B6 - Join the Cartha community
+- **Discord**: https://discord.gg/zGkW2kTsGM - Join the Cartha community
 
 ## Next Steps
 

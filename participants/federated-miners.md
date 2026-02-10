@@ -103,7 +103,7 @@ Before locking, evaluate potential principal miners on:
 ### Where to Find Principal Miners
 
 - **Leaderboard:** Visit [cartha.finance/leaderboard](https://cartha.finance/leaderboard) to view top-performing miners
-- **Community:** [Discord](https://discord.gg/7DXG57B6) and Telegram groups
+- **Community:** [Discord](https://discord.gg/zGkW2kTsGM) and Telegram groups
 - **Direct Outreach:** Post your capital amount and preferred lock duration in community channels
 
 ### Red Flags
@@ -282,7 +282,7 @@ Your principal is still safe in the vault. You can withdraw after expiry. Howeve
 
 ### Support
 
-- **Discord**: https://discord.gg/7DXG57B6
+- **Discord**: https://discord.gg/zGkW2kTsGM
 - **Website**: https://cartha.finance
 - **Email**: support@0xmarkets.io
 

@@ -268,7 +268,7 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 ### Support
 
-- **Discord**: https://discord.gg/7DXG57B6
+- **Discord**: https://discord.gg/zGkW2kTsGM
 - **Website**: https://cartha.finance
 - **Email**: support@0xmarkets.io
 

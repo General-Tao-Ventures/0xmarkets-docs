@@ -274,6 +274,33 @@ This shows:
 - Days remaining countdown
 - Registration status
 
+## Step 6: Withdraw After Expiry
+
+Once your lock period and the mandatory 7-day cooldown have both passed, you can withdraw your USDC.
+
+### Expired Position
+
+When your position expires, it will show as **Expired** on the "My Positions" page with the withdrawable amount and a **"Ready to withdraw"** cooldown status.
+
+![Expired Position](../.gitbook/assets/what-expired-look-like.png)
+
+### Confirm Withdrawal
+
+1. Click **"Withdraw"** on your expired position
+2. A confirmation modal will appear showing:
+   - Pool and lock duration
+   - Expiration date and status
+   - Total committed and the amount you will receive
+   - Cooldown status (must show **Ready**)
+   - Position owner and connected wallet match verification
+
+![Confirm Withdrawal](../.gitbook/assets/withdraw-popup.png)
+
+3. Click **"Confirm Full Withdrawal"** and approve the transaction in your wallet
+4. Your USDC will be returned to your connected EVM wallet
+
+**Note:** The 7-day cooldown starts from lock creation, not from lock expiry. You can only withdraw after both the lock period and cooldown have passed. See [Fees & Rewards](../how-it-works/fees-and-rewards.md) for details.
+
 ## Available Pools
 
 | Pool Name | Vault Token | Address |

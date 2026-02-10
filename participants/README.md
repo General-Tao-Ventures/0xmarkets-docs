@@ -166,7 +166,7 @@ The 0xMarkets ecosystem consists of multiple participant types, each playing a c
 ## Community
 
 Join the 0xMarkets community:
-- **Discord**: https://discord.gg/7DXG57B6
+- **Discord**: https://discord.gg/zGkW2kTsGM
 - **Twitter/X**: [@0xMarkets](https://twitter.com/0xMarkets)
 - **Telegram**: [0xMarkets Community]
 

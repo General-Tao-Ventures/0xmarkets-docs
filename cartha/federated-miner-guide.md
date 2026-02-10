@@ -275,10 +275,24 @@ Extending your lock increases your deposit score, which means a larger share of 
 
 ### Withdraw After Expiry
 
-1. Wait for your lock period to end
-2. Go to **"My Positions"**
-3. Click **"Withdraw"** on your expired position
-4. Confirm the transaction to receive your USDC back (minus any liquidation losses)
+Once your lock period and cooldown have both passed, your position will show as **Expired** with a **"Ready to withdraw"** status.
+
+1. Go to **"My Positions"**
+2. Your expired position will display the status, withdrawable amount, and a **"Withdraw"** button
+
+![Expired Position](../.gitbook/assets/what-expired-look-like.png)
+
+3. Click **"Withdraw"** — a confirmation modal will appear showing:
+   - Pool and lock duration
+   - Expiration date and status
+   - Total committed and the amount you will receive
+   - Cooldown status (must show **Ready**)
+   - Position owner and connected wallet match verification
+
+![Confirm Withdrawal](../.gitbook/assets/withdraw-popup.png)
+
+4. Click **"Confirm Full Withdrawal"** and approve the transaction in your wallet
+5. Your USDC will be returned to your connected EVM wallet
 
 **Note:** There is a mandatory 7-day cooldown from the initial lock start. You can only withdraw after both the lock period and cooldown have passed. See [Fees & Rewards](../how-it-works/fees-and-rewards.md) for details.
 
@@ -378,7 +392,7 @@ Extending your lock increases your deposit score, which means a larger share of 
 
 ### Support
 
-- **Discord**: https://discord.gg/7DXG57B6
+- **Discord**: https://discord.gg/zGkW2kTsGM
 - **Website**: https://cartha.finance
 - **Email**: support@0xmarkets.io
 
