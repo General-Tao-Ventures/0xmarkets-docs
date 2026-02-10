@@ -85,7 +85,7 @@ To start as a federated miner you need:
 - **Base USDC** for your deposit
 - A **principal miner's hotkey** (SS58 address) to lock through
 
-> 📘 **Step-by-step instructions:** See the [Miner Guide](../cartha/miner-guide.md) for a complete walkthrough on setting up your wallet, obtaining tokens, and locking funds via the web interface. Federated miners can skip straight to the wallet setup and lock steps — no subnet registration needed.
+> 📘 **Step-by-step instructions:** See the [Federated Miner Guide](../cartha/federated-miner-guide.md) for a complete walkthrough on setting up your wallet, locking funds, using the Principal Miner dashboard, and claiming ALPHA rewards — no CLI required.
 
 ---
 
@@ -184,7 +184,7 @@ Once locked, you can manage your position through the [Cartha web interface](htt
 - **Extend Lock** — Increase lock duration for a higher subnet score and better emissions
 - **Withdraw** — Claim your principal after lock expiry (minus any liquidation losses)
 
-> 📘 **Detailed instructions:** See the [Miner Guide](../cartha/miner-guide.md) for step-by-step position management with screenshots.
+> 📘 **Detailed instructions:** See the [Federated Miner Guide](../cartha/federated-miner-guide.md) for step-by-step position management with screenshots.
 
 ---
 
@@ -269,12 +269,12 @@ Your principal is still safe in the vault. You can withdraw after expiry. Howeve
 
 ## Getting Started
 
-> 📘 **Ready to become a federated miner?** Follow the [Miner Guide](../cartha/miner-guide.md) for complete step-by-step instructions on wallet setup, obtaining tokens, and locking funds.
+> 📘 **Ready to become a federated miner?** Follow the [Federated Miner Guide](../cartha/federated-miner-guide.md) for complete step-by-step instructions on wallet setup, locking funds, and claiming rewards.
 
 ### Resources
 
 - **[Principal Miners Guide](principal-miners.md)** — Understanding your manager
-- **[Miner Guide](../cartha/miner-guide.md)** — Full setup and locking walkthrough
+- **[Federated Miner Guide](../cartha/federated-miner-guide.md)** — Full setup, locking, and claiming walkthrough
 - **[Interface Guide](../testnet/cartha-interface.md)** — How to use the Cartha interface
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How epoch timing and rewards work
 - **[FAQ](../faq.md)** — Common questions
