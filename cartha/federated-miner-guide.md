@@ -249,9 +249,11 @@ For more details, see the [Bittensor CLI documentation](https://docs.learnbitten
 
 6. Click **"Sign & Claim"** — you'll be prompted to sign a message with your connected EVM wallet to verify ownership
 
-7. Once the signature is confirmed, the claim is submitted. The ALPHA will be transferred to your Bittensor coldkey address.
+7. Once the signature is confirmed, you'll see a **"Claim Successful"** confirmation showing the Claim ID, amount, recipient coldkey, and transaction hash.
 
-You can track all your claims in the **Claim History** section on the dashboard.
+![Claim Successful](../.gitbook/assets/claim-successful-federated-miner.png)
+
+8. Click **"Done"** to close the modal. You can track all your claims in the **Claim History** section on the dashboard.
 
 ---
 
