@@ -135,7 +135,7 @@ Since ALPHA emissions go to the principal miner's wallet, you need a clear arran
 | Topic | Details |
 |-------|---------|
 | **Profit Split** | Percentage of emissions you receive, whether it's pro-rata, any performance fees |
-| **Distribution Schedule** | Weekly, monthly, or quarterly; minimum thresholds; method (TAO transfer, stablecoin, etc.) |
+| **Distribution Schedule** | Weekly, monthly, or quarterly; minimum thresholds; method (ALPHA transfer, stablecoin, etc.) |
 | **Lock Terms** | Preferred pool, lock duration, renewal terms |
 | **Communication** | Reporting frequency, contact method, response expectations |
 
@@ -161,7 +161,7 @@ Since ALPHA emissions go to the principal miner's wallet, you need a clear arran
 
 ## Distribution
 - Frequency: [Monthly / Weekly / etc.]
-- Method: TAO transfer to [wallet address]
+- Method: ALPHA transfer to [wallet address]
 
 ## Risks Acknowledged
 - LP liquidation may result in capital loss
@@ -219,23 +219,26 @@ Once locked, you can manage your position through the [Cartha web interface](htt
 
 ## Economics & Returns
 
-### Return Components
+### How Miners Earn
 
-| Source | How It Works |
-|--------|-------------|
+Miners on Cartha earn from two sources:
+
+| Source | Details |
+|--------|---------|
 | **Trading Fees (50% to LPs)** | Proportional to your locked USDC; based on pool trading volume; paid in USDC (stays in vault) |
-| **ALPHA Emissions** | Based on total pool capital, lock duration, and principal miner's subnet score; paid to principal miner's wallet; you receive your share per agreement |
+| **ALPHA Emissions (31% to miners)** | The subnet emits 7,200 ALPHA per day. Miners collectively receive 31% of that (~2,232 ALPHA/day). Your share is based on your **deposit score** (time × amount × pool weight) relative to all other miners. |
 
-### Return Estimates
+### How Your Share Is Calculated
 
-*These are estimates — actual returns vary based on market conditions and principal miner performance.*
+Your deposit score determines what fraction of the daily miner emissions you receive:
 
-| Scenario | Capital | Duration | Estimated APY |
-|----------|---------|----------|---------------|
-| Conservative | 100,000 USDC | 6 months | 5–10% |
-| Moderate | 250,000 USDC | 1 year | 10–20% |
-| Optimistic | 500,000+ USDC | 2 years | 20–35% |
-| Risk (liquidation) | Any | Any | -10% to -50% capital loss |
+- **Deposit score** = lock duration × locked amount × pool weight
+- Your share = your deposit score ÷ total deposit score of all miners
+- Emissions are distributed each epoch (weekly cycle: Friday 00:00 UTC → Thursday 23:59 UTC)
+
+Since you're a federated miner, ALPHA emissions go to the **principal miner's Bittensor wallet**. You receive your share per your profit-sharing agreement with them.
+
+> 📘 **Learn more:** See [Fees & Rewards](../how-it-works/fees-and-rewards.md) and [Weekly Epochs](../how-it-works/weekly-epochs.md) for full details on how emissions and fee distribution work.
 
 ---
 

@@ -86,7 +86,7 @@ Federated Miners' Wallets
 
 | Strategy | Description | Trade-off |
 |----------|-------------|-----------|
-| **Manual Distribution** | Track shares and send TAO periodically | Simple but time-intensive |
+| **Manual Distribution** | Track shares and send ALPHA periodically | Simple but time-intensive |
 | **Smart Contract Escrow** | Custom contract to auto-split emissions | Requires development |
 | **Off-Chain Agreement** | Legal contract with manual accounting | Relies on trust and legal enforcement |
 
@@ -230,37 +230,27 @@ If you accept external capital, establish clear terms before federated miners lo
 
 ## Economics & Returns
 
-### Revenue Sources
+### How Principal Miners Earn
 
-| Source | How It Works |
-|--------|-------------|
-| **Trading Fees (50% to LPs)** | Distributed proportionally to all LPs; based on pool selection; paid in USDC |
-| **ALPHA Emissions** | Based on total locked capital, lock duration, and subnet score; paid in TAO |
+| Source | Details |
+|--------|---------|
+| **Trading Fees (50% to LPs)** | Distributed proportionally to all LPs based on pool deposits; paid in USDC |
+| **ALPHA Emissions (31% to miners)** | The subnet emits 7,200 ALPHA per day. Miners collectively receive 31% of that (~2,232 ALPHA/day). Your share is based on your **deposit score** (time × amount × pool weight) relative to all other miners. |
 
-### Return Estimates
+### How Your Share Is Calculated
 
-*These are estimates — actual returns vary.*
+Your deposit score determines what fraction of the daily miner emissions you receive:
 
-| Scenario | Capital | Duration | Estimated APY |
-|----------|---------|----------|---------------|
-| Baseline | 100,000 USDC | 1 year | 5–15% |
-| Optimistic | 500,000+ USDC | 2+ years | 15–30%+ |
-| Risk (liquidation) | Any | Any | -10% to -50% capital loss |
+- **Deposit score** = lock duration × locked amount × pool weight
+- Your share = your deposit score ÷ total deposit score of all miners
+- Emissions are distributed each epoch (weekly cycle: Friday 00:00 UTC → Thursday 23:59 UTC)
+- Your score includes **all capital** under your hotkey (your own + federated miners')
 
-### Example: Public Mode Economics
+### Public Mode: The Benefit of Scale
 
-| Item | Value |
-|------|-------|
-| Your capital | 200,000 USDC |
-| Federated miner capital | 800,000 USDC |
-| **Total pool** | **1,000,000 USDC** |
-| Profit split | 80% to federated miners, 20% to you |
+In public mode, your hotkey's deposit score includes all federated miner capital locked to you. This means more total capital = larger share of the daily ~2,232 ALPHA miner emissions. You then distribute a portion to your federated miners per your agreement and keep the rest as a management fee — giving you leverage on capital you didn't provide yourself.
 
-**If annual emissions = 100,000 TAO:**
-- Federated miners receive: 80,000 TAO (split pro-rata)
-- Your management fee: 20,000 TAO
-- Your emission share on 200k capital: ~20,000 TAO
-- **Your total: ~36,000 TAO** (36% of emissions with 20% of capital)
+> 📘 **Learn more:** See [Fees & Rewards](../how-it-works/fees-and-rewards.md) and [Weekly Epochs](../how-it-works/weekly-epochs.md) for full details on how emissions and fee distribution work.
 
 ---
 
