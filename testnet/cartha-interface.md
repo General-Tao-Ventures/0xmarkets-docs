@@ -310,7 +310,7 @@ The Cartha Interface is actively being developed. Upcoming features include:
 ## Getting Help
 
 * **Documentation**: See the [Miner Guide](miner-guide.md) for detailed setup instructions
-* **Discord**: Join our Discord for support: https://discord.gg/7DXG57B6
+* **Discord**: Join our Discord for support: https://discord.gg/zGkW2kTsGM
 * **CLI Help**: Run `cartha --help` or `cartha vault lock --help` for CLI assistance
 * **GitHub**: Report issues on the [cartha-lock-ui repository](https://github.com/General-Tao-Ventures/cartha-lock-ui)
 

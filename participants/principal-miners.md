@@ -1,6 +1,6 @@
 # Principal Miners
 
-**Role:** Registered Bittensor miners who accept external capital and act as investment managers for federated liquidity providers.
+**Role:** Registered Bittensor miners who provide liquidity and can optionally accept external capital, acting as investment managers for federated liquidity providers.
 
 **Also known as:** Investment Managers, Pool Operators, Delegated Miners
 
@@ -8,98 +8,104 @@
 
 ## Overview
 
-Principal Miners are the bridge between traditional Bittensor mining and external capital markets. They maintain registered hotkeys on the Cartha subnet and can optionally accept capital from external investors (federated miners) to pool liquidity and scale their operations.
+Principal Miners are the bridge between Bittensor mining and external capital markets. They maintain registered hotkeys on the Cartha subnet (SN35) and lock USDC into market vaults to provide liquidity for [0xMarkets](https://0xmarkets.io), a decentralized perpetual futures exchange built by the same team behind Cartha. Optionally, they can accept capital from external investors (federated miners) to pool liquidity and scale their operations.
+
+### General Tensor — The In-House Principal Miner
+
+The 0xMarkets team operates **General Tensor**, a principal miner available to all federated miners. General Tensor is designed to be the default trusted option for participants who want to start earning without vetting third-party operators.
+
+| Detail | Info |
+|--------|------|
+| **Operator** | 0xMarkets team |
+| **Commission** | 3% of ALPHA emissions |
+| **Distribution** | Automated epoch-by-epoch via the Cartha rewards system |
+| **Trusted Status** | Yes — operated by the team that built the subnet and the exchange |
+| **Dashboard** | [cartha.finance/principal-miners](https://cartha.finance/principal-miners) |
+
+> General Tensor is a good starting point, but you are free to lock to any registered principal miner. Always review terms before committing.
 
 ### Two Operating Modes
 
-**1. Private Mode (Traditional)**
+**1. Private Mode (Solo Mining)**
 - Lock only your own capital
 - Manage your own USDC positions
-- Receive emissions directly to your Bittensor wallet
+- Receive 100% of your earned emissions directly
 
 **2. Public Mode (Investment Manager)**
 - Accept capital from external investors (federated miners)
 - Pool multiple capital sources under your hotkey
 - Manage investment strategy and pool selection
-- Negotiate profit-sharing arrangements
-- Receive all emissions (must distribute to federated miners per agreement)
+- Set a commission rate for your services
+- Receive all emissions and distribute to federated miners per agreement
 
 ---
 
 ## Requirements
 
-### Technical Requirements
+### Technical
 
-- ✅ Registered Bittensor hotkey on Cartha subnet (SN35)
-- ✅ Sufficient TAO for registration fees
-- ✅ EVM wallet (MetaMask, Coinbase Wallet, etc.)
-- ✅ USDC for initial liquidity position
-- ✅ Base network ETH for gas fees
+- Registered **Bittensor hotkey** on Cartha subnet (SN35)
+- Sufficient **TAO** for registration fees
+- **EVM wallet** (MetaMask, Coinbase Wallet, etc.)
+- **USDC** for liquidity positions
+- **Base ETH** for gas fees
 
-### Operational Requirements
+### Operational
 
-- 📊 Understanding of liquidity provision risks
-- 🔐 Secure wallet management practices
-- 📈 Ability to monitor positions and pool performance
-- 💼 (Optional) Business structure for accepting external capital
+- Understanding of liquidity provision risks
+- Secure wallet management practices
+- Ability to monitor positions and pool performance
+- (Optional) Business structure for accepting external capital
 
 ---
 
-## How to Become a Principal Miner
+## Becoming a Principal Miner
 
-### Step 1: Register on Cartha Subnet
+Becoming a principal miner involves three main steps:
 
-```bash
-# Install Cartha CLI
-pip install cartha-cli
+1. **Create a Bittensor wallet** (coldkey + hotkey)
+2. **Register your hotkey** to the Cartha subnet (SN35)
+3. **Lock USDC funds** to provide liquidity via the web interface
 
-# Register your hotkey
-cartha miner register \
-  --wallet-name your-coldkey \
-  --wallet-hotkey your-hotkey \
-  --network finney
+> 📘 **Step-by-step instructions:** See the [Miner Guide](../cartha/miner-guide.md) for a complete walkthrough covering wallet creation, subnet registration, and locking funds with screenshots.
+
+---
+
+## Emission Distribution
+
+### How Emissions Flow
+
+```
+Cartha Subnet Validators
+         ↓
+    Score miners based on performance
+         ↓
+ALPHA Emissions
+         ↓
+YOUR Bittensor Wallet (Principal Miner)
+         ↓
+    Distribute to federated miners (minus commission)
+         ↓
+Federated Miners' Bittensor Wallets
 ```
 
-**Testnet Registration:**
-```bash
-cartha miner register \
-  --wallet-name your-coldkey \
-  --wallet-hotkey your-hotkey \
-  --network test
-```
+### Key Points
 
-### Step 2: Create Your First Position
+- All ALPHA emissions are initially received by **your** Bittensor wallet
+- **This is the core trust assumption:** federated miners rely on you to distribute their share
+- You are responsible for distributing to federated miners (if operating in public mode)
+- Cartha does **not** enforce profit-sharing agreements on-chain
+- The distribution mechanism is up to you, but the 0xMarkets team provides tooling to automate it
 
-```bash
-# Interactive mode (recommended)
-cartha vault lock
+### Distribution Methods
 
-# Or with all parameters
-cartha vault lock \
-  --wallet-name your-coldkey \
-  --wallet-hotkey your-hotkey \
-  --pool BTCUSD \
-  --amount 100000 \
-  --lock-days 365 \
-  --owner-evm 0xYourEVMAddress
-```
+| Method | Description | Best For |
+|--------|-------------|----------|
+| **Cartha Rewards System** | Automated epoch-by-epoch distribution via the Principal Miners dashboard — federated miners claim directly | Operators who want hands-off, transparent distribution (used by General Tensor) |
+| **Manual Distribution** | Track shares and send ALPHA periodically | Small operations with few federated miners |
+| **Off-Chain Agreement** | Legal contract with manual accounting | Custom arrangements with specific investors |
 
-**Minimum Requirements:**
-- 100,000 USDC minimum lock amount
-- 1-1825 days lock duration (up to 5 years)
-
-### Step 3: Choose Your Operating Mode
-
-**Private Mode:**
-- Lock only your own capital
-- No additional setup required
-- Receive 100% of your earned emissions
-
-**Public Mode (Investment Manager):**
-- Share your hotkey with potential federated miners
-- Negotiate profit-sharing terms
-- Set up distribution mechanism
-- Monitor multiple positions under your hotkey
+> The 0xMarkets team strongly recommends using the automated Cartha Rewards System. It tracks shares, calculates commission, and lets federated miners claim directly — reducing distribution risk for everyone.
 
 ---
 
@@ -107,112 +113,18 @@ cartha vault lock \
 
 ### How Federated Miners Lock to You
 
-Federated miners can lock capital to your hotkey in two ways:
+Federated miners can lock capital to your hotkey through the [Cartha web interface](https://cartha.finance). They need your **Bittensor hotkey address** (SS58 format) — a 48-character string starting with `5`.
 
-**Option 1: Via Cartha Interface** ✅ **Recommended**
-1. Federated miner visits https://cartha.finance/create-lock
-2. Enters your hotkey address (SS58 format)
-3. Selects pool, amount, and lock duration
-4. Completes the lock transaction
-5. Position is created under their EVM wallet
-
-**Option 2: Via CLI with Your Signature**
-1. You generate a lock URL using the CLI
-2. Share the URL with the federated miner
-3. They complete the transaction in the frontend
-4. Position is created under their specified EVM address
-
-### Your Hotkey Address
-
-Your federated miners will need your **Bittensor hotkey address** (SS58 format):
-- Starts with `5` (e.g., `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`)
-- 48 characters long
-- Found in your wallet or via: `btcli wallet list`
+The process is fully self-service: federated miners enter your hotkey, choose a pool, set an amount and lock duration, and complete the transaction. No CLI or coordination from you is required for the lock itself.
 
 ### Smart Contract Architecture
 
-All positions are tracked on-chain:
-- Each federated miner's position is independent
-- They own their position via their EVM wallet
+- Each federated miner's position is **independent** and owned by their EVM wallet
 - Your hotkey is linked to all positions for emission tracking
-- **Critical**: Emissions flow to YOUR Bittensor wallet, not theirs
+- **Federated miners cannot access your funds, and you cannot access theirs**
+- Emissions flow to your Bittensor wallet based on total capital under your hotkey
 
----
-
-## Emission Distribution
-
-### How Emissions Work
-
-```
-Cartha Subnet Validators
-         ↓
-    Score miners based on performance
-         ↓
-Bittensor Emissions (TAO)
-         ↓
-YOUR Bittensor Wallet (Principal Miner)
-         ↓
-    (You must distribute to federated miners)
-         ↓
-Federated Miners' Wallets
-```
-
-### Important: YOU Control Distribution
-
-- ✅ All TAO emissions go to your Bittensor wallet
-- ✅ You are responsible for distributing to federated miners
-- ✅ Cartha does NOT enforce profit-sharing agreements
-- ✅ Distribution mechanism is entirely up to you
-
-### Distribution Strategies
-
-**Option 1: Manual Distribution**
-- Track each federated miner's share
-- Send TAO periodically from your wallet
-- Simple but time-intensive
-
-**Option 2: Smart Contract Escrow**
-- Create a custom distribution contract
-- Automatically split emissions based on capital contribution
-- Requires development work
-
-**Option 3: Off-Chain Agreement**
-- Legal contract with federated miners
-- Manual accounting and distribution
-- Relies on trust and legal enforcement
-
----
-
-## Managing Multiple Positions
-
-### Position Tracking
-
-Each position under your hotkey includes:
-- Federated miner's EVM address (position owner)
-- Pool selection (BTCUSD, ETHUSD, etc.)
-- Lock amount and duration
-- Expiration date
-
-### Viewing All Positions
-
-**Via CLI:**
-```bash
-cartha miner status \
-  --wallet-name your-coldkey \
-  --wallet-hotkey your-hotkey
-```
-
-**Via Frontend:**
-- Visit https://cartha.finance/manage
-- Connect your EVM wallet
-- View all positions owned by you
-
-**Via Verifier API:**
-```bash
-curl "https://cartha-verifier.run.app/v1/miner/status-by-hotkey?hotkey=5G..."
-```
-
-### Total Locked Capital
+### Total Locked Capital & Scoring
 
 Your subnet score is based on the **sum of all positions** under your hotkey:
 - Your own capital
@@ -224,91 +136,98 @@ Your subnet score is based on the **sum of all positions** under your hotkey:
 
 ## Profit Sharing & Agreements
 
-### Setting Terms
+If you accept external capital, establish clear terms before federated miners lock to your hotkey.
 
-Before accepting external capital, establish clear terms:
+### What to Define
 
-**Capital Contribution:**
-- Minimum investment amount
-- Maximum pool size
-- Accepted lock durations
-
-**Profit Split:**
-- What percentage of emissions goes to federated miners?
-- Is it pro-rata (based on capital contribution)?
-- Are there any performance fees?
-
-**Distribution Schedule:**
-- Weekly, monthly, or quarterly distributions?
-- Minimum distribution threshold?
-- What happens to unclaimed distributions?
-
-**Risk Disclosure:**
-- LP liquidation risks
-- Impermanent loss risks
-- Smart contract risks
-- Your own operational risks
+| Topic | Details |
+|-------|---------|
+| **Commission Rate** | The percentage you take from federated miner rewards (e.g., 3–10%) |
+| **Distribution Method** | Automated (Cartha Rewards System) or manual; frequency and process |
+| **Minimum Investment** | Capital threshold and accepted lock durations |
+| **Risk Disclosure** | LP liquidation, smart contract risks, distribution risk |
 
 ### Recommended Agreement Structure
 
 ```markdown
-# Federated Miner Agreement - [Your Name/Entity]
+# Principal Miner Terms — [Your Name/Entity]
+
+## Operator
+- Principal Miner Hotkey: 5G...
+- Operator: [Name/Entity]
+- Contact: [Discord/Telegram/Email]
 
 ## Terms
-- Principal Miner Hotkey: 5G...
-- Minimum Investment: 100,000 USDC
-- Lock Duration: 90-365 days
-- Profit Split: 70% to Federated Miner, 30% to Principal Miner
-- Distribution: Monthly, within 7 days of emission receipt
+- Commission Rate: [X]% of ALPHA emissions
+- Distribution: Automated via Cartha Rewards System (epoch-by-epoch)
+- Minimum Lock: [X] USDC for [X] days
+
+## What Federated Miners Should Know
+- ALPHA emissions go to the principal miner's Bittensor wallet first
+- Commission is deducted; remaining rewards are claimable on the Principal Miners dashboard
+- Your USDC is locked in a smart contract — the principal miner cannot access it
+- You can withdraw your USDC after your lock period expires (no approval needed)
 
 ## Risks
-- LP liquidation may result in capital loss
-- Emissions not guaranteed (depend on subnet performance)
-- Principal miner does not control market conditions
-- Smart contract risks apply
+- LP liquidation may result in capital loss (your USDC provides DEX liquidity)
+- Emissions are not guaranteed (depend on subnet performance and trading volume)
+- Smart contract risks apply (audited but not risk-free)
+- Distribution risk: you rely on the principal miner to distribute rewards
 
-## Principal Withdrawal Protection
-- Federated miners can withdraw their principal after lock expiry
+## Withdrawal
+- Federated miners can withdraw principal after lock expiry + 7-day cooldown
 - No principal miner approval required
-- Emissions belong to principal miner until distributed
-
-## Termination
-- Federated miner can choose not to re-lock after expiry
-- Principal miner cannot force withdrawal or extension
-- All agreements terminate upon position expiry
 ```
+
+---
+
+## Managing Positions
+
+### Viewing Positions
+
+- **Web Interface:** Visit [cartha.finance/positions](https://cartha.finance/positions) — see all positions, amounts, and expiry dates
+- **CLI:** `cartha miner status --wallet-name <coldkey> --wallet-hotkey <hotkey>`
+
+### Position Actions
+
+| Action | Description |
+|--------|-------------|
+| **Top Up** | Add more USDC to an existing position |
+| **Extend** | Increase lock duration for a higher subnet score |
+| **Withdraw** | Claim principal after lock expiry |
+
+> 📘 **Detailed instructions:** See the [Miner Guide](../cartha/miner-guide.md) for step-by-step position management with screenshots.
 
 ---
 
 ## Security & Best Practices
 
-### Protecting Your Hotkey
+### Protecting Your Keys
 
-- 🔐 Never share your private keys
-- 🔐 Only share your public hotkey address (SS58)
-- 🔐 Use hardware wallets for large capital amounts
-- 🔐 Keep your Bittensor coldkey offline
+- Never share your private keys — only share your **public** hotkey address (SS58)
+- Use hardware wallets for large capital amounts
+- Keep your Bittensor coldkey offline
 
-### Monitoring Positions
+### Monitoring
 
-- 📊 Check miner status regularly via CLI
-- 📊 Track emission receipts to your Bittensor wallet
-- 📊 Monitor federated miner position expirations
-- 📊 Watch for liquidation events in pools
+- Check miner status regularly via CLI or web interface
+- Track emission receipts to your Bittensor wallet
+- Monitor federated miner position expirations
+- Watch for liquidation events in pools
 
-### Communication with Federated Miners
+### Communication (Public Mode)
 
-- 📢 Maintain a communication channel (Discord, Telegram, email)
-- 📢 Provide regular performance updates
-- 📢 Alert federated miners to upcoming expirations
-- 📢 Transparent emission reporting
+- Maintain a communication channel (Discord, Telegram, email)
+- Provide regular performance updates to federated miners
+- Alert federated miners to upcoming expirations
+- Share transparent emission reporting
 
 ### Risk Management
 
-- ⚠️ Diversify across multiple pools
-- ⚠️ Don't over-leverage with borrowed capital
-- ⚠️ Understand liquidation triggers
-- ⚠️ Keep emergency reserves for distributions
+- Diversify across multiple pools
+- Don't over-leverage with borrowed capital
+- Understand liquidation triggers
+- Keep emergency reserves for distributions
 
 ---
 
@@ -316,127 +235,69 @@ Before accepting external capital, establish clear terms:
 
 ### Operational Risks
 
-**Emission Distribution Responsibility:**
-- You must manually distribute emissions
-- No automatic enforcement of agreements
-- Legal/reputational risk if you don't pay
-
-**Performance Risk:**
-- Poor pool performance = lower emissions
-- Liquidation events affect your subnet score
-- Federated miners may not re-lock if performance is poor
-
-**Regulatory Risk:**
-- Accepting external capital may trigger securities regulations
-- Consult legal counsel before operating as an investment manager
-- Know your jurisdiction's requirements
+| Risk | Details |
+|------|---------|
+| **Distribution Responsibility** | If not using the automated Cartha Rewards System, you must distribute emissions manually. Failure to distribute damages your reputation and may cause federated miners to leave. |
+| **Performance Risk** | Poor pool performance or liquidation events reduce emissions. Federated miners bear the LP risk on their capital, but poor results reflect on you as the operator. |
+| **Regulatory Risk** | Accepting external capital may trigger securities regulations depending on your jurisdiction. Consult legal counsel. |
 
 ### Technical Risks
 
-**Smart Contract Risk:**
-- Vault contract bugs (audited but not risk-free)
-- EVM chain risks (Base network)
-
-**Liquidation Risk:**
-- LP positions can be liquidated
-- Capital loss is permanent (not reimbursed by Cartha)
-- Affects your score and federated miner returns
-
-**Impermanent Loss:**
-- Liquidity provision inherently has IL risk
-- Volatile markets increase IL
-- May offset TAO emissions
+| Risk | Details |
+|------|---------|
+| **Smart Contract Risk** | Vault contracts are audited but not risk-free. Bugs or exploits could result in loss of locked funds. |
+| **Liquidation Risk** | LP positions can be liquidated during volatile markets. Capital loss from liquidation is permanent and not reimbursed. |
+| **Network Risk** | Bittensor network issues or Base chain downtime could delay emissions or transactions. |
 
 ---
 
-## Earnings & Economics
+## Economics & Returns
 
-### Revenue Sources
+### How Principal Miners Earn
 
-**1. Trading Fees (50% share)**
-- Distributed proportionally to all LPs
-- Based on your pool selection
-- Paid in USDC
+| Source | Details |
+|--------|---------|
+| **Trading Fees (50% to LPs)** | Distributed proportionally to all LPs based on pool deposits; paid in USDC |
+| **ALPHA Emissions (31% to miners)** | The subnet emits 7,200 ALPHA per day. Miners collectively receive 31% of that (~2,232 ALPHA/day). Your share is based on your **deposit score** (time × amount × pool weight) relative to all other miners. |
 
-**2. ALPHA Emissions**
-- Based on your total locked capital
-- Based on lock duration (longer = higher weight)
-- Based on subnet performance score
-- Paid in TAO
+### How Your Share Is Calculated
 
-### Expected Returns
+Your deposit score determines what fraction of the daily miner emissions you receive:
 
-*Note: These are estimates and not guarantees*
+- **Deposit score** = lock duration × locked amount × pool weight
+- Your share = your deposit score ÷ total deposit score of all miners
+- Emissions are distributed each epoch (weekly cycle: Friday 00:00 UTC → Thursday 23:59 UTC)
+- Your score includes **all capital** under your hotkey (your own + federated miners')
 
-**Baseline Scenario:**
-- 100,000 USDC locked for 1 year
-- BTCUSD pool (moderate activity)
-- Estimated: 5-15% APY from fees + emissions
+### Public Mode: The Benefit of Scale
 
-**Optimistic Scenario:**
-- 500,000+ USDC locked for 2+ years
-- Multiple pools with high trading volume
-- Top-performing miner
-- Estimated: 15-30%+ APY
+In public mode, your hotkey's deposit score includes all federated miner capital locked to you. This means more total capital = larger share of the daily ~2,232 ALPHA miner emissions. You then distribute a portion to your federated miners per your agreement and keep the rest as a management fee — giving you leverage on capital you didn't provide yourself.
 
-**Risk Scenario:**
-- Liquidation event: -10% to -50% capital loss
-- Poor subnet score: Minimal emissions
-- Low trading volume: <5% APY
-
-### Example Economics (Federated Pool)
-
-**Setup:**
-- Principal Miner: 200,000 USDC locked
-- Federated Miners: 800,000 USDC locked
-- Total Pool: 1,000,000 USDC
-- Profit Split: 80% to federated miners, 20% to principal miner
-
-**Annual Emissions Received: 100,000 TAO**
-
-**Distribution:**
-- Federated Miners: 80,000 TAO (split pro-rata by capital)
-- Principal Miner: 20,000 TAO (management fee)
-
-**Principal Miner Benefits:**
-- Emission share for 200k capital: ~20,000 TAO (10% of pool)
-- Management fee on 800k external capital: ~16,000 TAO (2% of total emissions)
-- **Total: 36,000 TAO** (36% of emissions with only 20% of capital)
+> 📘 **Learn more:** See [Fees & Rewards](../how-it-works/fees-and-rewards.md) and [Weekly Epochs](../how-it-works/weekly-epochs.md) for full details on how emissions and fee distribution work.
 
 ---
 
-## Getting Help
+## Getting Started
+
+> 📘 **Ready to become a principal miner?** Follow the [Miner Guide](../cartha/miner-guide.md) for complete step-by-step instructions on wallet creation, subnet registration, and locking funds.
+
+> 💡 **Want to lock to the in-house principal miner instead?** Visit the [General Tensor dashboard](https://cartha.finance/principal-miners) to federate under the team-operated miner, or see the [Federated Miner Guide](../cartha/federated-miner-guide.md) for a full walkthrough.
 
 ### Resources
 
-- **[Miner Guide](testnet/miner-guide.md)** - Complete setup instructions
-- **[Cartha CLI Documentation](https://github.com/General-Tao-Ventures/cartha-cli)** - Command reference
-- **[Federated Miner Flow](../FEDERATED_MINER_FLOW.md)** - Technical architecture
-- **[FAQ](faq.md)** - Common questions
+- **[Miner Guide](../cartha/miner-guide.md)** — Full setup and registration walkthrough
+- **[Federated Miners Guide](federated-miners.md)** — How external investors participate
+- **[Federated Miner Guide (Step-by-Step)](../cartha/federated-miner-guide.md)** — Complete walkthrough with screenshots
+- **[Cartha CLI](https://github.com/General-Tao-Ventures/cartha-cli)** — Command reference
+- **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How epoch timing and rewards work
+- **[FAQ](../faq.md)** — Common questions
 
-### Community & Support
+### Support
 
-- **Discord**: https://discord.gg/7DXG57B6
-- **Telegram**: [Cartha Miners Group]
+- **Discord**: https://discord.gg/zGkW2kTsGM
+- **Website**: https://cartha.finance
 - **Email**: support@0xmarkets.io
 
-### For Federated Miners
-
-If you're an external investor looking to lock capital through a principal miner:
-- **[Federated Miners Guide](federated-miners.md)** - How to participate
-- **Lock UI**: https://cartha.finance/create-lock
-- **Risk Disclosure**: Always review terms with the principal miner
-
 ---
 
-## Next Steps
-
-1. **Get Started**: Register your hotkey and create your first position
-2. **Monitor Performance**: Track your emissions and pool performance
-3. **Build Reputation**: Provide consistent returns and transparent reporting
-4. **Scale Capital**: Once established, consider accepting external capital
-5. **Optimize Strategy**: Diversify across pools and adjust lock durations
-
----
-
-**Disclaimer**: Principal miners are independent operators. Cartha provides the infrastructure but does not guarantee returns, enforce profit-sharing agreements, or assume responsibility for principal miner actions. All participants should conduct their own due diligence and consult appropriate advisors.
+**Disclaimer**: Principal miners are independent operators. Cartha provides the infrastructure but does not guarantee returns, enforce profit-sharing agreements, or assume responsibility for principal miner actions. General Tensor is operated by the 0xMarkets team and uses the automated rewards system, but the same risks (smart contract, liquidation, network) apply to all participants. Always conduct your own due diligence and consult appropriate advisors.

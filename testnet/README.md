@@ -111,7 +111,7 @@ Choose your path:
 
 - **CLI Documentation**: [Cartha CLI Testnet Guide](https://github.com/General-Tao-Ventures/cartha-cli/tree/main/testnet)
 - **Validator Documentation**: [Cartha Validator Testnet Setup](https://github.com/General-Tao-Ventures/cartha-validator/blob/main/docs/TESTNET_SETUP.md)
-- **Discord**: https://discord.gg/7DXG57B6
+- **Discord**: https://discord.gg/zGkW2kTsGM
 Contact Cartha team for testnet USDC and support 
 
 ### Common Issues

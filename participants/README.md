@@ -19,12 +19,13 @@ The 0xMarkets ecosystem consists of multiple participant types, each playing a c
 - Can operate privately or accept external capital
 - Manage pool strategies and emission distribution
 - Bridge between Bittensor and external investors
+- **General Tensor** — the in-house principal miner operated by the 0xMarkets team with automated distribution
 
 **[Federated Miners](federated-miners.md)**
 - External investors who lock capital through principal miners
 - Don't operate Bittensor infrastructure
-- Maintain full ownership of positions via EVM wallets
-- Receive profit share from principal miner's emissions
+- Maintain full ownership of positions via EVM wallets (non-custodial)
+- Earn a share of ALPHA emissions (minus commission) from the principal miner
 
 **[Traders](traders.md)**
 - Open leveraged perpetual futures positions
@@ -79,14 +80,15 @@ The 0xMarkets ecosystem consists of multiple participant types, each playing a c
 
 **Who:** Anyone with USDC and an EVM wallet
 **Requirements:**
-- 100k+ USDC minimum
+- USDC on Base chain
 - EVM wallet (MetaMask, etc.)
-- Agreement with a principal miner
+- A principal miner to lock through (General Tensor recommended for beginners)
 
 **Benefits:**
 - No Bittensor infrastructure needed
-- Access to subnet rewards
-- Full capital control via smart contracts
+- Access to subnet rewards via automated distribution
+- Full capital control via smart contracts (non-custodial)
+- Self-service claiming on the Principal Miners dashboard
 
 **Best for:** External investors wanting exposure without technical complexity
 
@@ -166,7 +168,7 @@ The 0xMarkets ecosystem consists of multiple participant types, each playing a c
 ## Community
 
 Join the 0xMarkets community:
-- **Discord**: https://discord.gg/7DXG57B6
+- **Discord**: https://discord.gg/zGkW2kTsGM
 - **Twitter/X**: [@0xMarkets](https://twitter.com/0xMarkets)
 - **Telegram**: [0xMarkets Community]
 

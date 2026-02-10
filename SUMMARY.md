@@ -10,6 +10,7 @@
   * [Validators](participants/validators.md)
 * [Cartha](cartha/README.md)
   * [Miner Guide](cartha/miner-guide.md)
+  * [Federated Miner Guide](cartha/federated-miner-guide.md)
   * [Validator Guide](cartha/validator-guide.md)
   * [Cartha Interface](cartha/cartha-interface.md)
   * [Security Audit](cartha/security-audit.md)
