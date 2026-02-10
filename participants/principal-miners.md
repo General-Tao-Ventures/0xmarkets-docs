@@ -8,11 +8,25 @@
 
 ## Overview
 
-Principal Miners are the bridge between Bittensor mining and external capital markets. They maintain registered hotkeys on the Cartha subnet and lock USDC into market vaults to provide liquidity. Optionally, they can accept capital from external investors (federated miners) to pool liquidity and scale their operations.
+Principal Miners are the bridge between Bittensor mining and external capital markets. They maintain registered hotkeys on the Cartha subnet (SN35) and lock USDC into market vaults to provide liquidity for [0xMarkets](https://0xmarkets.io), a decentralized perpetual futures exchange built by the same team behind Cartha. Optionally, they can accept capital from external investors (federated miners) to pool liquidity and scale their operations.
+
+### General Tensor — The In-House Principal Miner
+
+The 0xMarkets team operates **General Tensor**, a principal miner available to all federated miners. General Tensor is designed to be the default trusted option for participants who want to start earning without vetting third-party operators.
+
+| Detail | Info |
+|--------|------|
+| **Operator** | 0xMarkets team |
+| **Commission** | 3% of ALPHA emissions |
+| **Distribution** | Automated epoch-by-epoch via the Cartha rewards system |
+| **Trusted Status** | Yes — operated by the team that built the subnet and the exchange |
+| **Dashboard** | [cartha.finance/principal-miners](https://cartha.finance/principal-miners) |
+
+> General Tensor is a good starting point, but you are free to lock to any registered principal miner. Always review terms before committing.
 
 ### Two Operating Modes
 
-**1. Private Mode (Traditional)**
+**1. Private Mode (Solo Mining)**
 - Lock only your own capital
 - Manage your own USDC positions
 - Receive 100% of your earned emissions directly
@@ -21,7 +35,7 @@ Principal Miners are the bridge between Bittensor mining and external capital ma
 - Accept capital from external investors (federated miners)
 - Pool multiple capital sources under your hotkey
 - Manage investment strategy and pool selection
-- Negotiate profit-sharing arrangements
+- Set a commission rate for your services
 - Receive all emissions and distribute to federated miners per agreement
 
 ---
@@ -70,25 +84,28 @@ ALPHA Emissions
          ↓
 YOUR Bittensor Wallet (Principal Miner)
          ↓
-    (You distribute to federated miners, if any)
+    Distribute to federated miners (minus commission)
          ↓
-Federated Miners' Wallets
+Federated Miners' Bittensor Wallets
 ```
 
 ### Key Points
 
-- All ALPHA emissions go to **your** Bittensor wallet
+- All ALPHA emissions are initially received by **your** Bittensor wallet
+- **This is the core trust assumption:** federated miners rely on you to distribute their share
 - You are responsible for distributing to federated miners (if operating in public mode)
-- Cartha does **not** enforce profit-sharing agreements
-- The distribution mechanism is entirely up to you
+- Cartha does **not** enforce profit-sharing agreements on-chain
+- The distribution mechanism is up to you, but the 0xMarkets team provides tooling to automate it
 
-### Distribution Strategies
+### Distribution Methods
 
-| Strategy | Description | Trade-off |
-|----------|-------------|-----------|
-| **Manual Distribution** | Track shares and send ALPHA periodically | Simple but time-intensive |
-| **Smart Contract Escrow** | Custom contract to auto-split emissions | Requires development |
-| **Off-Chain Agreement** | Legal contract with manual accounting | Relies on trust and legal enforcement |
+| Method | Description | Best For |
+|--------|-------------|----------|
+| **Cartha Rewards System** | Automated epoch-by-epoch distribution via the Principal Miners dashboard — federated miners claim directly | Operators who want hands-off, transparent distribution (used by General Tensor) |
+| **Manual Distribution** | Track shares and send ALPHA periodically | Small operations with few federated miners |
+| **Off-Chain Agreement** | Legal contract with manual accounting | Custom arrangements with specific investors |
+
+> The 0xMarkets team strongly recommends using the automated Cartha Rewards System. It tracks shares, calculates commission, and lets federated miners claim directly — reducing distribution risk for everyone.
 
 ---
 
@@ -125,35 +142,41 @@ If you accept external capital, establish clear terms before federated miners lo
 
 | Topic | Details |
 |-------|---------|
+| **Commission Rate** | The percentage you take from federated miner rewards (e.g., 3–10%) |
+| **Distribution Method** | Automated (Cartha Rewards System) or manual; frequency and process |
 | **Minimum Investment** | Capital threshold and accepted lock durations |
-| **Profit Split** | Percentage to federated miners, pro-rata basis, performance fees |
-| **Distribution Schedule** | Weekly, monthly, or quarterly; minimum threshold; method |
-| **Risk Disclosure** | LP liquidation, impermanent loss, smart contract risks |
+| **Risk Disclosure** | LP liquidation, smart contract risks, distribution risk |
 
 ### Recommended Agreement Structure
 
 ```markdown
-# Federated Miner Agreement — [Your Name/Entity]
+# Principal Miner Terms — [Your Name/Entity]
+
+## Operator
+- Principal Miner Hotkey: 5G...
+- Operator: [Name/Entity]
+- Contact: [Discord/Telegram/Email]
 
 ## Terms
-- Principal Miner Hotkey: 5G...
-- Minimum Investment: 100,000 USDC
-- Lock Duration: 90–365 days
-- Profit Split: 70% to Federated Miner, 30% to Principal Miner
-- Distribution: Monthly, within 7 days of emission receipt
+- Commission Rate: [X]% of ALPHA emissions
+- Distribution: Automated via Cartha Rewards System (epoch-by-epoch)
+- Minimum Lock: [X] USDC for [X] days
+
+## What Federated Miners Should Know
+- ALPHA emissions go to the principal miner's Bittensor wallet first
+- Commission is deducted; remaining rewards are claimable on the Principal Miners dashboard
+- Your USDC is locked in a smart contract — the principal miner cannot access it
+- You can withdraw your USDC after your lock period expires (no approval needed)
 
 ## Risks
-- LP liquidation may result in capital loss
-- Emissions not guaranteed (depend on subnet performance)
-- Smart contract risks apply
+- LP liquidation may result in capital loss (your USDC provides DEX liquidity)
+- Emissions are not guaranteed (depend on subnet performance and trading volume)
+- Smart contract risks apply (audited but not risk-free)
+- Distribution risk: you rely on the principal miner to distribute rewards
 
-## Principal Withdrawal Protection
-- Federated miners can withdraw principal after lock expiry
+## Withdrawal
+- Federated miners can withdraw principal after lock expiry + 7-day cooldown
 - No principal miner approval required
-
-## Termination
-- Federated miner can choose not to re-lock after expiry
-- Principal miner cannot force withdrawal or extension
 ```
 
 ---
@@ -214,17 +237,17 @@ If you accept external capital, establish clear terms before federated miners lo
 
 | Risk | Details |
 |------|---------|
-| **Distribution Responsibility** | You must manually distribute emissions; no automatic enforcement |
-| **Performance Risk** | Poor pool performance or liquidation events reduce emissions and may cause federated miners to leave |
-| **Regulatory Risk** | Accepting external capital may trigger securities regulations; consult legal counsel |
+| **Distribution Responsibility** | If not using the automated Cartha Rewards System, you must distribute emissions manually. Failure to distribute damages your reputation and may cause federated miners to leave. |
+| **Performance Risk** | Poor pool performance or liquidation events reduce emissions. Federated miners bear the LP risk on their capital, but poor results reflect on you as the operator. |
+| **Regulatory Risk** | Accepting external capital may trigger securities regulations depending on your jurisdiction. Consult legal counsel. |
 
 ### Technical Risks
 
 | Risk | Details |
 |------|---------|
-| **Smart Contract Risk** | Vault contract bugs (audited but not risk-free) |
-| **Liquidation Risk** | LP positions can be liquidated; capital loss is permanent |
-| **Impermanent Loss** | Inherent to liquidity provision; volatile markets increase IL |
+| **Smart Contract Risk** | Vault contracts are audited but not risk-free. Bugs or exploits could result in loss of locked funds. |
+| **Liquidation Risk** | LP positions can be liquidated during volatile markets. Capital loss from liquidation is permanent and not reimbursed. |
+| **Network Risk** | Bittensor network issues or Base chain downtime could delay emissions or transactions. |
 
 ---
 
@@ -258,10 +281,13 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 > 📘 **Ready to become a principal miner?** Follow the [Miner Guide](../cartha/miner-guide.md) for complete step-by-step instructions on wallet creation, subnet registration, and locking funds.
 
+> 💡 **Want to lock to the in-house principal miner instead?** Visit the [General Tensor dashboard](https://cartha.finance/principal-miners) to federate under the team-operated miner, or see the [Federated Miner Guide](../cartha/federated-miner-guide.md) for a full walkthrough.
+
 ### Resources
 
 - **[Miner Guide](../cartha/miner-guide.md)** — Full setup and registration walkthrough
 - **[Federated Miners Guide](federated-miners.md)** — How external investors participate
+- **[Federated Miner Guide (Step-by-Step)](../cartha/federated-miner-guide.md)** — Complete walkthrough with screenshots
 - **[Cartha CLI](https://github.com/General-Tao-Ventures/cartha-cli)** — Command reference
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How epoch timing and rewards work
 - **[FAQ](../faq.md)** — Common questions
@@ -274,4 +300,4 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 ---
 
-**Disclaimer**: Principal miners are independent operators. Cartha provides the infrastructure but does not guarantee returns, enforce profit-sharing agreements, or assume responsibility for principal miner actions. All participants should conduct their own due diligence and consult appropriate advisors.
+**Disclaimer**: Principal miners are independent operators. Cartha provides the infrastructure but does not guarantee returns, enforce profit-sharing agreements, or assume responsibility for principal miner actions. General Tensor is operated by the 0xMarkets team and uses the automated rewards system, but the same risks (smart contract, liquidation, network) apply to all participants. Always conduct your own due diligence and consult appropriate advisors.

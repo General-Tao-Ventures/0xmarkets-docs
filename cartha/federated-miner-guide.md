@@ -131,7 +131,7 @@ Once your funds are locked, you can monitor your principal miner's performance a
 ### Accessing the Dashboard
 
 1. Click **"Principal Miners"** in the left navigation bar
-2. The dashboard shows the Cartha Core principal miner you're federated under
+2. The dashboard shows the General Tensor principal miner you're federated under
 
 ![Principal Miner Dashboard](../.gitbook/assets/principal-miner-page.png)
 
