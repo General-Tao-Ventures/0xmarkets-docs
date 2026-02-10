@@ -12,101 +12,19 @@ Federated Miners enable anyone with USDC and an EVM wallet to participate in Car
 
 ### Key Benefits
 
-- ✅ **No Bittensor Setup Required** - Just an EVM wallet and USDC
-- ✅ **Full Capital Control** - You own your position via smart contracts
-- ✅ **Direct Withdrawals** - No principal miner approval needed to withdraw
-- ✅ **Choose Your Manager** - Lock to any registered principal miner
-- ✅ **Flexible Lock Periods** - 1 day to 5 years
+- **No Bittensor Setup Required** — Just an EVM wallet and USDC
+- **Full Capital Control** — You own your position via smart contracts
+- **Direct Withdrawals** — No principal miner approval needed to withdraw
+- **Choose Your Manager** — Lock to any registered principal miner
+- **Flexible Lock Periods** — 1 day to 5 years
+- **No CLI Required** — Everything can be done through the web interface
 
 ### Key Considerations
 
-- ℹ️ **Emissions Go to Principal Miner** - ALPHA emissions are sent to the principal miner's Bittensor wallet, not your EVM wallet
-- ℹ️ **Profit-Sharing Agreement** - Establish distribution terms with the principal miner separately
-- ℹ️ **Your Funds Stay Yours** - Principal miner cannot access your capital; you maintain full control
-- ⚠️ **LP Risk Applies** - Liquidation losses from providing DEX liquidity may occur
-- ✅ **No CLI Required** - Everything can be done through the web interface
-
----
-
-## Quick Start
-
-### 1. Get USDC and ETH
-
-**Mainnet (Base):**
-- USDC: Purchase on exchanges or bridge to Base
-- ETH: For gas fees (small amount needed)
-
-**Testnet (Base Sepolia):**
-- ETH Faucet: https://console.optimism.io/faucet
-- USDC Faucet: https://cartha.finance/faucet
-
-### 2. Set Up Your Wallet
-
-Install and configure an EVM wallet:
-- **MetaMask** (browser extension)
-- **Coinbase Wallet** (mobile or browser)
-- **WalletConnect** (mobile wallets)
-
-Add Base network:
-```
-Network Name: Base
-RPC URL: https://mainnet.base.org
-Chain ID: 8453
-Currency Symbol: ETH
-Block Explorer: https://basescan.org
-```
-
-Or for testnet (Base Sepolia):
-```
-Network Name: Base Sepolia
-RPC URL: https://sepolia.base.org
-Chain ID: 84532
-Currency Symbol: ETH
-Block Explorer: https://sepolia.basescan.org
-```
-
-### 3. Choose a Principal Miner
-
-Find a principal miner to lock through:
-
-**Research:**
-- Track record and reputation
-- Profit-sharing terms
-- Distribution frequency
-- Communication channels
-- Pool strategy
-
-**Get Their Hotkey:**
-- 48-character SS58 address (starts with `5`)
-- Example: `5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY`
-
-### 4. Lock Your Funds
-
-**Via Cartha Interface** ✅ **Fully Self-Service**
-
-Visit: https://cartha.finance/create-lock
-
-1. Connect your EVM wallet
-2. Enter principal miner's hotkey (SS58 address)
-3. Select pool (BTCUSD, ETHUSD, EURUSD)
-4. Enter amount and lock duration (1-365 days)
-5. Click "Request Lock Signature" - the system will:
-   - Verify the hotkey is registered on the subnet
-   - Generate the required signature automatically
-   - Direct you to Phase 1 (USDC approval)
-6. Complete Phase 1: Approve USDC spending
-7. Complete Phase 2: Lock position transaction
-
-**That's it!** No CLI required, no coordination with the principal miner needed for the lock process.
-
-**Alternative: Via Shared URL** (Optional)
-
-If the principal miner provides a pre-filled lock URL:
-1. Click the URL (format: `https://cartha.finance/lock?phase=1&...`)
-2. Connect your wallet
-3. Verify the parameters match your agreement
-4. Complete Phase 1: Approve USDC
-5. Complete Phase 2: Lock position
+- **Emissions Go to Principal Miner** — ALPHA emissions are sent to the principal miner's Bittensor wallet, not your EVM wallet
+- **Profit-Sharing Agreement** — Establish distribution terms with the principal miner separately
+- **Your Funds Stay Yours** — Principal miner cannot access your capital; you maintain full control
+- **LP Risk Applies** — Liquidation losses from providing DEX liquidity may occur
 
 ---
 
@@ -128,7 +46,7 @@ If the principal miner provides a pre-filled lock URL:
 │     Principal Miner                         │
 │     - Registered Bittensor hotkey           │
 │     - Manages pool strategy                 │
-│     - Receives all TAO emissions            │
+│     - Receives all ALPHA emissions          │
 │     - Distributes to you per agreement      │
 └─────────────────────────────────────────────┘
                     ↓
@@ -137,7 +55,7 @@ If the principal miner provides a pre-filled lock URL:
 ┌─────────────────────────────────────────────┐
 │     Cartha Subnet Validators                │
 │     - Score principal miner performance     │
-│     - Distribute TAO emissions              │
+│     - Distribute ALPHA emissions            │
 └─────────────────────────────────────────────┘
 ```
 
@@ -158,31 +76,68 @@ Your position is secured on-chain:
 
 ---
 
+## Becoming a Federated Miner
+
+To start as a federated miner you need:
+
+- An **EVM wallet** (MetaMask or similar) connected to Base Mainnet
+- **Base ETH** for gas fees
+- **Base USDC** for your deposit
+- A **principal miner's hotkey** (SS58 address) to lock through
+
+> 📘 **Step-by-step instructions:** See the [Miner Guide](../cartha/miner-guide.md) for a complete walkthrough on setting up your wallet, obtaining tokens, and locking funds via the web interface. Federated miners can skip straight to the wallet setup and lock steps — no subnet registration needed.
+
+---
+
+## Choosing a Principal Miner
+
+### What to Research
+
+Before locking, evaluate potential principal miners on:
+
+- **Track record and reputation** — Past performance and distribution history
+- **Profit-sharing terms** — Percentage split, fees, distribution frequency
+- **Communication** — Active channels (Discord, Telegram, email) and responsiveness
+- **Pool strategy** — Which markets they operate in and why
+
+### Where to Find Principal Miners
+
+- **Leaderboard:** Visit [cartha.finance/leaderboard](https://cartha.finance/leaderboard) to view top-performing miners
+- **Community:** [Discord](https://discord.gg/7DXG57B6) and Telegram groups
+- **Direct Outreach:** Post your capital amount and preferred lock duration in community channels
+
+### Red Flags
+
+Avoid principal miners who:
+- Promise guaranteed returns
+- Request capital outside of Cartha vaults
+- Refuse to provide written agreements
+- Don't disclose their Bittensor wallet address
+- Have no track record or references
+
+### Green Flags
+
+Look for principal miners who:
+- Provide transparent performance reporting
+- Have satisfied federated miners as references
+- Use clear written agreements
+- Disclose all risks upfront
+- Maintain consistent distribution history
+
+---
+
 ## Understanding the Agreement
+
+Since ALPHA emissions go to the principal miner's wallet, you need a clear arrangement for profit sharing. Cartha does **not** enforce these agreements — they are between you and the principal miner.
 
 ### What to Negotiate
 
-Before locking, establish clear terms with the principal miner:
-
-**Profit Split:**
-- What percentage of TAO emissions do you receive?
-- Is it pro-rata based on capital contribution?
-- Are there any performance fees?
-
-**Distribution:**
-- How often will you receive distributions?
-- What's the distribution method? (TAO transfer, stablecoin, etc.)
-- Minimum distribution threshold?
-
-**Lock Terms:**
-- Preferred pool selection (BTCUSD, ETHUSD, etc.)
-- Lock duration (longer = higher subnet score)
-- Renewal terms after expiry
-
-**Communication:**
-- How will the principal miner report performance?
-- What's the contact method? (Discord, Telegram, email)
-- Response time expectations?
+| Topic | Details |
+|-------|---------|
+| **Profit Split** | Percentage of emissions you receive, whether it's pro-rata, any performance fees |
+| **Distribution Schedule** | Weekly, monthly, or quarterly; minimum thresholds; method (TAO transfer, stablecoin, etc.) |
+| **Lock Terms** | Preferred pool, lock duration, renewal terms |
+| **Communication** | Reporting frequency, contact method, response expectations |
 
 ### Sample Agreement Template
 
@@ -196,72 +151,40 @@ Before locking, establish clear terms with the principal miner:
 - Federated Miner EVM: 0x...
 
 ## Terms
-- Lock Amount: 200,000 USDC
-- Pool: BTCUSD
-- Lock Duration: 180 days
-- Expiry Date: [Auto-calculated]
+- Lock Amount: [X] USDC
+- Pool: [BTCUSD / ETHUSD / etc.]
+- Lock Duration: [X] days
 
 ## Profit Split
-- Federated Miner: 75% of ALPHA emissions
-- Principal Miner: 25% management fee
+- Federated Miner: [X]% of ALPHA emissions
+- Principal Miner: [X]% management fee
 
 ## Distribution
-- Frequency: Monthly
-- Method: TAO transfer to Bittensor wallet [address]
-- Timing: Within 7 days of principal miner receiving emissions
+- Frequency: [Monthly / Weekly / etc.]
+- Method: TAO transfer to [wallet address]
 
 ## Risks Acknowledged
 - LP liquidation may result in capital loss
 - Emissions not guaranteed
-- Principal miner does NOT control market conditions
 - Smart contract risks apply
 
 ## Principal Protection
-- You can withdraw USDC principal after lock expiry
+- Federated miner can withdraw USDC after lock expiry
 - No principal miner approval required
-- Withdrawal is your right via smart contract
-
-## Signatures
-- Principal Miner: _______________
-- Federated Miner: _______________
-- Date: _______________
 ```
 
 ---
 
 ## Managing Your Position
 
-### Viewing Your Positions
+Once locked, you can manage your position through the [Cartha web interface](https://cartha.finance):
 
-**Via Lock UI:**
-1. Visit https://cartha.finance/manage
-2. Connect your EVM wallet
-3. View all positions, amounts, and expiry dates
+- **View Positions** — See all your active locks, amounts, and expiry dates
+- **Top Up** — Add more USDC to an existing position (no principal miner approval needed)
+- **Extend Lock** — Increase lock duration for a higher subnet score and better emissions
+- **Withdraw** — Claim your principal after lock expiry (minus any liquidation losses)
 
-**Via Block Explorer:**
-1. Visit https://basescan.org (or https://sepolia.basescan.org for testnet)
-2. Enter your wallet address
-3. View vault contract interactions
-
-### Position Actions
-
-**Top-Up (Add More USDC):**
-- Visit https://cartha.finance/manage
-- Click "Top Up" on your position
-- Add more USDC to increase your share
-- No approval from principal miner needed
-
-**Extend Lock:**
-- Visit https://cartha.finance/manage
-- Click "Extend" on your position
-- Extend lock duration for higher subnet score
-- Improves your emission share
-
-**Withdraw After Expiry:**
-- Wait for lock period to end
-- Visit https://cartha.finance/manage
-- Click "Withdraw" on expired position
-- Receive your principal back (minus any liquidation losses)
+> 📘 **Detailed instructions:** See the [Miner Guide](../cartha/miner-guide.md) for step-by-step position management with screenshots.
 
 ---
 
@@ -269,67 +192,28 @@ Before locking, establish clear terms with the principal miner:
 
 ### What You're Protected From
 
-✅ **Principal Theft**
-- Your USDC is in a smart contract, not the principal miner's wallet
-- Principal miner cannot withdraw your funds
-- You control withdrawal via your EVM wallet
-
-✅ **Forced Lock Extension**
-- Principal miner cannot extend your lock
-- Position automatically expires per your chosen duration
-
-✅ **Arbitrary Terms Changes**
-- Original lock terms are immutable on-chain
-- Any changes require a new lock position
+| Protection | Details |
+|-----------|---------|
+| **Principal Theft** | Your USDC is in a smart contract, not the principal miner's wallet |
+| **Forced Lock Extension** | Principal miner cannot extend your lock |
+| **Arbitrary Terms Changes** | On-chain lock terms are immutable |
 
 ### What You're NOT Protected From
 
-⚠️ **Emission Non-Payment**
-- If principal miner doesn't distribute TAO, Cartha doesn't enforce it
-- You must rely on legal agreements or reputation
+| Risk | Details |
+|------|---------|
+| **Emission Non-Payment** | If the principal miner doesn't distribute, Cartha doesn't enforce it |
+| **Liquidation Losses** | LP positions can be liquidated in volatile markets; capital loss is permanent |
+| **Poor Performance** | Low trading volume or bad subnet score reduces returns |
+| **Smart Contract Risks** | Potential bugs in vault contracts or Base network issues |
 
-⚠️ **Liquidation Losses**
-- LP positions can be liquidated in volatile markets
-- Capital loss is permanent (not reimbursed)
-- This is inherent to liquidity provision
+### Risk Mitigation
 
-⚠️ **Poor Performance**
-- Principal miner's pool strategy may underperform
-- Low trading volume = lower fee earnings
-- Bad subnet score = lower emissions
-
-⚠️ **Smart Contract Risks**
-- Bugs in vault contracts (unlikely but possible)
-- EVM chain risks (Base network downtime, reorgs)
-
-### Risk Mitigation Strategies
-
-**1. Start Small**
-- Lock minimum amount first (100k USDC)
-- Test the principal miner's distribution
-- Scale up after successful payouts
-
-**2. Diversify**
-- Don't lock 100% with one principal miner
-- Use multiple managers with different strategies
-- Split across different pools
-
-**3. Due Diligence**
-- Research principal miner's history
-- Check their communication and transparency
-- Ask for references from other federated miners
-- Verify their Bittensor wallet address
-
-**4. Legal Protection**
-- Use written agreements
-- Consider escrow services for large amounts
-- Know your jurisdiction's investor protections
-
-**5. Monitor Regularly**
-- Track your position via Lock UI
-- Monitor principal miner's performance
-- Watch for liquidation events
-- Stay informed about pool health
+1. **Start Small** — Lock the minimum amount first; scale up after successful payouts
+2. **Diversify** — Spread across multiple principal miners and pools
+3. **Due Diligence** — Research history, check references, verify wallet addresses
+4. **Legal Protection** — Use written agreements; consider escrow for large amounts
+5. **Monitor Regularly** — Track your position and the principal miner's performance
 
 ---
 
@@ -337,232 +221,67 @@ Before locking, establish clear terms with the principal miner:
 
 ### Return Components
 
-**1. Trading Fees (50% to LPs)**
-- Proportional to your locked USDC
-- Based on pool trading volume
-- Paid continuously in USDC (stays in vault)
+| Source | How It Works |
+|--------|-------------|
+| **Trading Fees (50% to LPs)** | Proportional to your locked USDC; based on pool trading volume; paid in USDC (stays in vault) |
+| **ALPHA Emissions** | Based on total pool capital, lock duration, and principal miner's subnet score; paid to principal miner's wallet; you receive your share per agreement |
 
-**2. TAO Emissions**
-- Based on total pool capital (you + others under same hotkey)
-- Based on lock duration
-- Based on principal miner's subnet score
-- **Paid to principal miner's Bittensor wallet**
-- You receive your share per agreement
+### Return Estimates
 
-### Expected Returns
+*These are estimates — actual returns vary based on market conditions and principal miner performance.*
 
-*These are estimates - actual returns vary*
-
-**Conservative Scenario:**
-- 100,000 USDC for 6 months
-- Moderate pool activity
-- 70% profit share with principal miner
-- Estimated: 5-10% APY
-
-**Moderate Scenario:**
-- 250,000 USDC for 1 year
-- Active pool with good principal miner
-- 75% profit share
-- Estimated: 10-20% APY
-
-**Optimistic Scenario:**
-- 500,000+ USDC for 2 years
-- Top-performing principal miner
-- 80% profit share
-- Estimated: 20-35% APY
-
-**Risk Scenario:**
-- Liquidation event: -10% to -50% capital loss
-- Poor principal miner: Delayed/no distributions
-- Low activity pool: <5% APY
-
-### Example Payout Calculation
-
-**Your Position:**
-- 200,000 USDC locked
-- 12-month lock period
-- BTCUSD pool
-
-**Principal Miner's Pool:**
-- Your capital: 200,000 USDC
-- Other federated miners: 600,000 USDC
-- Principal's own capital: 200,000 USDC
-- **Total: 1,000,000 USDC**
-
-**Annual Emissions: 100,000 TAO**
-
-**Profit Split (75% to federated miners, 25% to principal):**
-- Total to federated miners: 75,000 TAO
-- Your share (20% of pool): 15,000 TAO
-- Principal miner's management fee: 25,000 TAO
-
-**Trading Fees (Separate):**
-- Pool earns 50,000 USDC in fees
-- Your share (20%): 10,000 USDC
-
-**Total Returns:**
-- 15,000 TAO (distributed by principal miner)
-- 10,000 USDC (in vault, claimed at withdrawal)
-- **Estimated APY: ~20-30%** (depends on TAO price)
-
----
-
-## Finding Principal Miners
-
-### Where to Look
-
-**Community Channels:**
-- Discord: https://discord.gg/7DXG57B6
-- Telegram groups
-- Twitter/X announcements
-
-**Leaderboard:**
-- Visit https://cartha.finance/leaderboard
-- View top-performing miners
-- Check their total locked capital
-- Reach out to discuss terms
-
-**Direct Outreach:**
-- Post in community channels
-- Specify your capital amount and lock duration
-- Compare offers from multiple principal miners
-
-### Red Flags
-
-⛔ **Avoid Principal Miners Who:**
-- Promise guaranteed returns
-- Request capital outside of Cartha vaults
-- Refuse to provide written agreements
-- Don't disclose their Bittensor wallet address
-- Have no track record or references
-- Pressure you to lock immediately
-- Offer terms that seem too good to be true
-
-### Green Flags
-
-✅ **Look for Principal Miners Who:**
-- Provide transparent performance reporting
-- Have satisfied federated miners (references)
-- Use clear written agreements
-- Respond promptly to questions
-- Disclose all risks upfront
-- Have consistent distribution history
-- Maintain active communication channels
-
----
-
-## Withdrawing Your Principal
-
-### When Can You Withdraw?
-
-After your lock period expires:
-1. Visit https://cartha.finance/manage
-2. Connect your EVM wallet
-3. Find your expired position
-4. Click "Withdraw"
-5. Confirm transaction in your wallet
-
-### What You Receive
-
-**Principal USDC:**
-- Original lock amount
-- Minus any liquidation losses
-- Plus trading fees earned (if not distributed)
-
-**TAO Emissions:**
-- Already distributed by principal miner
-- Not included in withdrawal (received separately)
-
-### Re-Locking
-
-After withdrawal, you can:
-- Lock again with the same principal miner
-- Switch to a different principal miner
-- Exit entirely
-
-**Tips for Re-Locking:**
-- Negotiate improved terms based on track record
-- Consider different pools for diversification
-- Adjust lock duration based on market outlook
+| Scenario | Capital | Duration | Estimated APY |
+|----------|---------|----------|---------------|
+| Conservative | 100,000 USDC | 6 months | 5–10% |
+| Moderate | 250,000 USDC | 1 year | 10–20% |
+| Optimistic | 500,000+ USDC | 2 years | 20–35% |
+| Risk (liquidation) | Any | Any | -10% to -50% capital loss |
 
 ---
 
 ## Frequently Asked Questions
 
-### Can the principal miner steal my USDC?
-
+**Can the principal miner steal my USDC?**
 No. Your USDC is locked in a Cartha vault smart contract, not the principal miner's wallet. Only you can withdraw via your EVM wallet after lock expiry.
 
-### What if the principal miner doesn't pay me?
-
+**What if the principal miner doesn't pay me?**
 Cartha doesn't enforce profit-sharing agreements. You must rely on legal agreements, reputation, or escrow. This is why due diligence is critical.
 
-### What happens if the pool gets liquidated?
-
+**What happens if the pool gets liquidated?**
 Your capital is reduced by the liquidation loss. This is permanent and not reimbursed. LP risk is inherent to the system.
 
-### Can I withdraw before my lock expires?
-
+**Can I withdraw before my lock expires?**
 No. Lock duration is enforced by smart contracts. Plan your lock period carefully.
 
-### How often will I receive distributions?
+**Can I lock to multiple principal miners?**
+Yes. You can diversify across multiple principal miners with different pools and lock durations.
 
-This depends on your agreement with the principal miner. Common schedules: weekly, monthly, or quarterly.
-
-### What if the principal miner stops operating?
-
-Your principal is still safe in the vault. You can withdraw after expiry. However, emissions will stop if the miner de-registers.
-
-### Can I lock to multiple principal miners?
-
-Yes! You can diversify across multiple principal miners with different pools and lock durations.
-
-### Is there a minimum lock amount?
-
+**Is there a minimum lock amount?**
 Yes, 100,000 USDC is the minimum lock amount.
 
-### What are the gas fees?
-
-Two transactions required:
-1. Approve USDC (~$0.10-$1 in ETH)
-2. Lock position (~$0.50-$5 in ETH)
-
-Fees vary based on Base network congestion.
+**What if the principal miner stops operating?**
+Your principal is still safe in the vault. You can withdraw after expiry. However, emissions will stop if the miner de-registers.
 
 ---
 
-## Getting Help
+## Getting Started
+
+> 📘 **Ready to become a federated miner?** Follow the [Miner Guide](../cartha/miner-guide.md) for complete step-by-step instructions on wallet setup, obtaining tokens, and locking funds.
 
 ### Resources
 
-- **[Principal Miners Guide](principal-miners.md)** - Understanding your manager
-- **[Interface Guide](../testnet/cartha-interface.md)** - How to use the interface
-- **[FAQ](../faq.md)** - Common questions
-- **[Risk Disclosure](../legal-and-risk.md)** - Full risk information
+- **[Principal Miners Guide](principal-miners.md)** — Understanding your manager
+- **[Miner Guide](../cartha/miner-guide.md)** — Full setup and locking walkthrough
+- **[Interface Guide](../testnet/cartha-interface.md)** — How to use the Cartha interface
+- **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How epoch timing and rewards work
+- **[FAQ](../faq.md)** — Common questions
+- **[Risk Disclosure](../legal-and-risk.md)** — Full risk information
 
 ### Support
 
 - **Discord**: https://discord.gg/7DXG57B6
 - **Website**: https://cartha.finance
 - **Email**: support@0xmarkets.io
-
-### Community
-
-Join discussions with other federated miners:
-- Share experiences
-- Compare principal miner terms
-- Get recommendations
-- Report issues
-
----
-
-## Next Steps
-
-1. **Research**: Learn about LP risks and Cartha mechanics
-2. **Find Principal Miners**: Compare options and terms
-3. **Start Small**: Lock minimum amount first
-4. **Monitor**: Track performance and distributions
-5. **Scale**: Increase capital after successful payouts
 
 ---
 
