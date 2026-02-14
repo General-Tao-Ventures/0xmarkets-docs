@@ -250,7 +250,23 @@ You'll see:
 
 > 📘 **Learn more**: See [Weekly Epochs](../how-it-works/weekly-epochs.md) for a complete guide on epoch timing, how rewards are calculated, and timezone references.
 
-## Step 5: Check Your Miner Status (Optional)
+## Step 5: Set Up Automated Rewards (Optional — for Public Mode)
+
+If you plan to accept federated miners (external capital), deploy the **Principal Miner Template** to automate reward distribution:
+
+1. **Clone the template:**
+   ```bash
+   git clone https://github.com/General-Tao-Ventures/cartha-principal-miner-template.git
+   cd cartha-principal-miner-template
+   ```
+
+2. **Configure and deploy** — see the [template README](https://github.com/General-Tao-Ventures/cartha-principal-miner-template#readme) for Docker and bare-metal setup guides
+
+3. **Apply to be listed** — visit [cartha.finance/principal-miners/apply](https://cartha.finance/principal-miners/apply) to submit your application. Once approved, your miner will appear on the [Principal Miners](https://cartha.finance/principal-miners) page for federated miners to discover.
+
+> This step is optional if you're mining solo (private mode). The rewards system is only needed if you want to accept and distribute rewards to federated miners.
+
+## Step 6: Check Your Miner Status (Optional)
 
 You can verify your miner status using the CLI or by viewing "My Positions" on the web interface.
 
@@ -274,7 +290,7 @@ This shows:
 - Days remaining countdown
 - Registration status
 
-## Step 6: Withdraw After Expiry
+## Step 7: Withdraw After Expiry
 
 Once your lock period and the mandatory 7-day cooldown have both passed, you can withdraw your USDC.
 

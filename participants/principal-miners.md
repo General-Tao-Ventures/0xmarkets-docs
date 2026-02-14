@@ -101,11 +101,11 @@ Federated Miners' Bittensor Wallets
 
 | Method | Description | Best For |
 |--------|-------------|----------|
-| **Cartha Rewards System** | Automated epoch-by-epoch distribution via the Principal Miners dashboard — federated miners claim directly | Operators who want hands-off, transparent distribution (used by General Tensor) |
+| **Cartha Rewards System** | Automated epoch-by-epoch distribution via the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) — federated miners claim directly from your dashboard | Operators who want hands-off, transparent distribution (used by General Tensor) |
 | **Manual Distribution** | Track shares and send ALPHA periodically | Small operations with few federated miners |
 | **Off-Chain Agreement** | Legal contract with manual accounting | Custom arrangements with specific investors |
 
-> The 0xMarkets team strongly recommends using the automated Cartha Rewards System. It tracks shares, calculates commission, and lets federated miners claim directly — reducing distribution risk for everyone.
+> The 0xMarkets team strongly recommends using the automated Cartha Rewards System. Deploy the [open-source template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and it handles epoch monitoring, reward scoring, commission deduction, and self-service claiming for your federated miners.
 
 ---
 
@@ -131,6 +131,60 @@ Your subnet score is based on the **sum of all positions** under your hotkey:
 - All federated miner capital
 - Across all pools
 - Weighted by lock duration and amount
+
+---
+
+## Setting Up the Automated Rewards System
+
+If you want to run the Cartha Rewards System for your federated miners (recommended), the 0xMarkets team provides an open-source template you can deploy on any VPS or cloud provider.
+
+### Principal Miner Template
+
+**Repository:** [github.com/General-Tao-Ventures/cartha-principal-miner-template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template)
+
+The template is a self-contained backend that:
+
+- **Monitors** the Bittensor chain for epoch boundaries
+- **Sweeps** accumulated ALPHA from your miner hotkey to an aggregator hotkey
+- **Scores** federated miner positions and distributes rewards proportionally (minus your commission)
+- **Processes claims** from federated miners who want to withdraw their ALPHA
+
+### Quick Deploy (Docker)
+
+```bash
+git clone https://github.com/General-Tao-Ventures/cartha-principal-miner-template.git
+cd cartha-principal-miner-template
+cp .env.example .env
+# Edit .env with your hotkeys, wallet password, commission rate, etc.
+docker compose up -d
+```
+
+This starts a PostgreSQL database, API server (port 8100), and epoch monitor — everything needed for automated distribution.
+
+### Configuration
+
+At minimum, you need to set:
+
+| Variable | Description |
+|----------|-------------|
+| `MINER_HOTKEY` | Your Bittensor hotkey (SS58) |
+| `MINER_COLDKEY` | Your Bittensor coldkey (SS58) |
+| `AGGREGATOR_HOTKEY` | Aggregator hotkey for reward accumulation |
+| `WALLET_PASSWORD` | Password to unlock your BT wallet |
+| `COMMISSION_RATE` | Your commission (e.g., `0.05` for 5%) |
+| `MINER_NAME` | Display name shown on the Cartha listing page |
+| `MINER_DESCRIPTION` | Description shown on the listing page |
+
+See the [template README](https://github.com/General-Tao-Ventures/cartha-principal-miner-template#configuration) for the full configuration reference.
+
+### Get Listed on Cartha
+
+After deploying your rewards system, apply to be listed on the [Principal Miners](https://cartha.finance/principal-miners) page so federated miners can discover you:
+
+1. **Deploy & verify** — Make sure your API is accessible (`curl https://your-domain.com/health`)
+2. **Apply** — Visit [cartha.finance/principal-miners/apply](https://cartha.finance/principal-miners/apply) and fill in your details
+3. **Wait for approval** — The Cartha team reviews applications and notifies you via email
+4. **Go live** — Once approved, your miner appears on the listing page and federated miners can lock capital to your hotkey
 
 ---
 
@@ -281,10 +335,13 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 > 📘 **Ready to become a principal miner?** Follow the [Miner Guide](../cartha/miner-guide.md) for complete step-by-step instructions on wallet creation, subnet registration, and locking funds.
 
+> 🛠️ **Want to run automated rewards?** Deploy the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and [apply to be listed](https://cartha.finance/principal-miners/apply) on the Cartha frontend.
+
 > 💡 **Want to lock to the in-house principal miner instead?** Visit the [General Tensor dashboard](https://cartha.finance/principal-miners) to federate under the team-operated miner, or see the [Federated Miner Guide](../cartha/federated-miner-guide.md) for a full walkthrough.
 
 ### Resources
 
+- **[Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template)** — Open-source backend for automated reward distribution
 - **[Miner Guide](../cartha/miner-guide.md)** — Full setup and registration walkthrough
 - **[Federated Miners Guide](federated-miners.md)** — How external investors participate
 - **[Federated Miner Guide (Step-by-Step)](../cartha/federated-miner-guide.md)** — Complete walkthrough with screenshots

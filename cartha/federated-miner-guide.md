@@ -72,7 +72,7 @@ You'll need USDC on Base for your deposit. You can:
 
 ### Enter Your Lock Details
 
-5. **Enter the Principal Miner's Hotkey** — This is the SS58 address of the principal miner you want to lock through (a 48-character string starting with `5`). You can find principal miners on the [Leaderboard](https://cartha.finance/leaderboard) or through community channels.
+5. **Enter the Principal Miner's Hotkey** — This is the SS58 address of the principal miner you want to lock through (a 48-character string starting with `5`). You can find principal miners on the [Principal Miners page](https://cartha.finance/principal-miners), the [Leaderboard](https://cartha.finance/leaderboard), or through community channels.
 
 ![Paste Hotkey](../.gitbook/assets/paste-your-or-principal-miner-hotkey.png)
 
@@ -378,7 +378,7 @@ Once your lock period and cooldown have both passed, your position will show as 
 - [ ] Base Mainnet network added
 - [ ] ETH on Base (for gas fees)
 - [ ] USDC on Base (for liquidity)
-- [ ] Found a principal miner to lock through (check [Leaderboard](https://cartha.finance/leaderboard))
+- [ ] Found a principal miner to lock through (browse [Principal Miners](https://cartha.finance/principal-miners) or [Leaderboard](https://cartha.finance/leaderboard))
 - [ ] Locked funds via [Become an LP](https://cartha.finance)
 - [ ] Position confirmed on [My Positions](https://cartha.finance/positions)
 - [ ] Bittensor coldkey ready (for claiming ALPHA rewards)

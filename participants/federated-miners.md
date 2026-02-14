@@ -129,7 +129,8 @@ If you prefer a different operator, evaluate them on:
 
 ### Where to Find Principal Miners
 
-- **General Tensor:** [cartha.finance/principal-miners](https://cartha.finance/principal-miners) — the team-operated default
+- **Principal Miners Page:** [cartha.finance/principal-miners](https://cartha.finance/principal-miners) — browse all approved principal miners, compare commission rates, view locked capital, and see performance stats
+- **General Tensor:** Featured on the principal miners page — the team-operated default
 - **Leaderboard:** [cartha.finance/leaderboard](https://cartha.finance/leaderboard) — view top-performing miners
 - **Community:** [Discord](https://discord.gg/zGkW2kTsGM) and Telegram groups
 - **Direct Outreach:** Post your capital amount and preferred lock duration in community channels
