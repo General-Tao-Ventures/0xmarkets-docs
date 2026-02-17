@@ -11,9 +11,27 @@ Federated miners provide liquidity by depositing USDC into a **principal miner's
 **What you'll do:**
 
 1. Set up an EVM wallet on Base with ETH and USDC
-2. Connect to Cartha and lock funds via "Become an LP"
+2. Choose a deposit method and lock your funds
 3. Monitor your position and the principal miner's performance
 4. Claim ALPHA rewards to a Bittensor coldkey
+
+## How to Deposit
+
+There are **two ways** to lock funds as a federated miner:
+
+### Option A: Deposit via a Trusted Principal Miner (Recommended)
+
+Browse the **Principal Miners** page, choose a trusted and verified principal miner, and lock directly from their dashboard. This is the easiest path — no need to find or copy a hotkey yourself. Principal miners charge a commission on your rewards (e.g. 3%).
+
+**[Deposit via Trusted Principal Miner →](federated-miner-deposit-principal.md)**
+
+### Option B: Direct Deposit (Any Hotkey)
+
+If you already have a principal miner's hotkey (SS58 address), you can paste it directly into the **"Become an LP"** form. This is useful when you have a specific miner you want to lock through that may not be listed on the Principal Miners page.
+
+**[Direct Deposit (Any Hotkey) →](federated-miner-deposit-direct.md)**
+
+---
 
 ## Prerequisites
 
@@ -58,69 +76,12 @@ You'll need USDC on Base for your deposit. You can:
 
 ---
 
-## Step 2: Lock Funds via "Become an LP"
+## Step 2: Lock Your Funds
 
-### Connect Your Wallet
+Choose one of the two deposit methods:
 
-1. Go to [https://cartha.finance](https://cartha.finance)
-2. Click **"Connect Wallet"** in the top right corner and select your wallet provider
-3. Make sure you're connected to **Base Mainnet** network
-
-### Navigate to "Become an LP"
-
-4. Click **"Become an LP"** in the left navigation bar
-
-### Enter Your Lock Details
-
-5. **Enter the Principal Miner's Hotkey** — This is the SS58 address of the principal miner you want to lock through (a 48-character string starting with `5`). You can find principal miners on the [Principal Miners page](https://cartha.finance/principal-miners), the [Leaderboard](https://cartha.finance/leaderboard), or through community channels.
-
-![Paste Hotkey](../.gitbook/assets/paste-your-or-principal-miner-hotkey.png)
-
-The system will verify the hotkey is registered on the subnet.
-
-6. **Select a Pool** — Choose which trading pair you want to provide liquidity for (BTC/USD, ETH/USD, etc.)
-
-![Select Pool](../.gitbook/assets/select-available-pools.png)
-
-7. **Enter Amount** — Specify how much USDC you want to lock (minimum 100,000 USDC)
-
-![Enter Amount](../.gitbook/assets/input-amount.png)
-
-8. **Set Lock Duration** — Choose how many days to lock your funds (minimum 7 days, maximum 365 days). Longer lock periods increase your deposit score and share of ALPHA rewards.
-
-![Enter Lock Days](../.gitbook/assets/input-lock-days.png)
-
-### Execute the Transaction
-
-9. **Request Signature & Continue** — Click the button to proceed
-
-![Continue](../.gitbook/assets/continue.png)
-
-10. **Approve USDC** — First, approve the vault contract to spend your USDC. Confirm in your wallet (requires a small gas fee in ETH).
-
-![Approve USDC](../.gitbook/assets/approve-USDC-limit.jpeg)
-
-11. **Lock Position** — After approval, confirm the second transaction to lock your USDC in the vault.
-
-![Lock Position](../.gitbook/assets/check-lock-position.jpeg)
-
-### Verify Your Position
-
-12. **Wait for confirmation** — It may take 30 seconds to 5 minutes for the position to be processed by the verifier.
-
-![Wait for Confirmation](../.gitbook/assets/wait-30s-5m-refresh-to-check-position.jpeg)
-
-13. **View your position** — Navigate to **"My Positions"** in the sidebar to see your active lock.
-
-![My Positions](../.gitbook/assets/final-my-positions-page.png)
-
-You'll see:
-- Pool ID and trading pair
-- Principal miner hotkey
-- Lock status
-- Initially locked amount and total committed
-- Lock expiration date
-- Options to **Extend** or **Top Up** your position
+- **[Deposit via Trusted Principal Miner](federated-miner-deposit-principal.md)** — Browse and pick a verified miner (recommended)
+- **[Direct Deposit (Any Hotkey)](federated-miner-deposit-direct.md)** — Paste a hotkey manually via "Become an LP"
 
 ---
 
@@ -131,7 +92,7 @@ Once your funds are locked, you can monitor your principal miner's performance a
 ### Accessing the Dashboard
 
 1. Click **"Principal Miners"** in the left navigation bar
-2. The dashboard shows the General Tensor principal miner you're federated under
+2. The dashboard shows the principal miner you're federated under
 
 ![Principal Miner Dashboard](../.gitbook/assets/principal-miner-page.png)
 
@@ -378,8 +339,9 @@ Once your lock period and cooldown have both passed, your position will show as 
 - [ ] Base Mainnet network added
 - [ ] ETH on Base (for gas fees)
 - [ ] USDC on Base (for liquidity)
-- [ ] Found a principal miner to lock through (browse [Principal Miners](https://cartha.finance/principal-miners) or [Leaderboard](https://cartha.finance/leaderboard))
-- [ ] Locked funds via [Become an LP](https://cartha.finance)
+- [ ] Deposited funds via one of the two methods:
+  - [ ] [Trusted Principal Miner](federated-miner-deposit-principal.md) (recommended)
+  - [ ] [Direct Deposit (Any Hotkey)](federated-miner-deposit-direct.md)
 - [ ] Position confirmed on [My Positions](https://cartha.finance/positions)
 - [ ] Bittensor coldkey ready (for claiming ALPHA rewards)
 

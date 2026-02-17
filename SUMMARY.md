@@ -11,6 +11,8 @@
 * [Cartha](cartha/README.md)
   * [Miner Guide](cartha/miner-guide.md)
   * [Federated Miner Guide](cartha/federated-miner-guide.md)
+    * [Deposit via Principal Miner](cartha/federated-miner-deposit-principal.md)
+    * [Direct Deposit (Any Hotkey)](cartha/federated-miner-deposit-direct.md)
   * [Validator Guide](cartha/validator-guide.md)
   * [Cartha Interface](cartha/cartha-interface.md)
   * [Security Audit](cartha/security-audit.md)

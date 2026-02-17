@@ -15,7 +15,7 @@ This litepaper aims to outline the architecture of 0xMarkets powered by the Cart
 
 ## Cartha Subnet
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/cartha-subnet-overview.png" alt=""><figcaption></figcaption></figure>
 
 ### Objective
 
