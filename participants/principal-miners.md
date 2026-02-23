@@ -67,7 +67,7 @@ Becoming a principal miner involves three main steps:
 2. **Register your hotkey** to the Cartha subnet (SN35)
 3. **Lock USDC funds** to provide liquidity via the web interface
 
-> 📘 **Step-by-step instructions:** See the [Miner Guide](../cartha/miner-guide.md) for a complete walkthrough covering wallet creation, subnet registration, and locking funds with screenshots.
+> 📘 **Step-by-step instructions:** See the [Principal Miner Guide](../cartha/principal-miner-guide.md) for a complete walkthrough covering wallet creation, subnet registration, and locking funds with screenshots.
 
 ---
 
@@ -250,7 +250,7 @@ If you accept external capital, establish clear terms before federated miners lo
 | **Extend** | Increase lock duration for a higher subnet score |
 | **Withdraw** | Claim principal after lock expiry |
 
-> 📘 **Detailed instructions:** See the [Miner Guide](../cartha/miner-guide.md) for step-by-step position management with screenshots.
+> 📘 **Detailed instructions:** See the [Principal Miner Guide](../cartha/principal-miner-guide.md) for step-by-step position management with screenshots.
 
 ---
 
@@ -333,7 +333,7 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 ## Getting Started
 
-> 📘 **Ready to become a principal miner?** Follow the [Miner Guide](../cartha/miner-guide.md) for complete step-by-step instructions on wallet creation, subnet registration, and locking funds.
+> 📘 **Ready to become a principal miner?** Follow the [Principal Miner Guide](../cartha/principal-miner-guide.md) for complete step-by-step instructions on wallet creation, subnet registration, and locking funds.
 
 > 🛠️ **Want to run automated rewards?** Deploy the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and [apply to be listed](https://cartha.finance/principal-miners/apply) on the Cartha frontend.
 
@@ -342,7 +342,7 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 ### Resources
 
 - **[Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template)** — Open-source backend for automated reward distribution
-- **[Miner Guide](../cartha/miner-guide.md)** — Full setup and registration walkthrough
+- **[Principal Miner Guide](../cartha/principal-miner-guide.md)** — Full setup and registration walkthrough
 - **[Federated Miners Guide](federated-miners.md)** — How external investors participate
 - **[Federated Miner Guide (Step-by-Step)](../cartha/federated-miner-guide.md)** — Complete walkthrough with screenshots
 - **[Cartha CLI](https://github.com/General-Tao-Ventures/cartha-cli)** — Command reference
