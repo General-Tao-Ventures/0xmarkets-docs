@@ -14,6 +14,7 @@
     * [Deposit via Principal Miner](cartha/federated-miner-deposit-principal.md)
     * [Direct Deposit (Any Hotkey)](cartha/federated-miner-deposit-direct.md)
   * [Validator Guide](cartha/validator-guide.md)
+  * [Principal Miner Dashboard](cartha/principal-miner-dashboard.md)
   * [Cartha Interface](cartha/cartha-interface.md)
   * [Security Audit](cartha/security-audit.md)
   * [How it works](how-it-works/README.md)
