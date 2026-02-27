@@ -171,9 +171,9 @@ To claim your ALPHA rewards, you need a **Bittensor coldkey** (SS58 address) —
 
 If you don't already have a Bittensor wallet, you can create one using either method:
 
-**Option 1: Talisman Browser Extension (Recommended for non-technical users)**
+**Option 1: Talisman Browser Extension (Recommended)**
 
-[Talisman](https://www.talisman.xyz/) is a browser extension wallet that supports Bittensor (Substrate) accounts.
+[Talisman](https://www.talisman.xyz/) is the recommended way to get a Bittensor wallet — no CLI needed. It's a browser extension that supports Bittensor (Substrate) accounts.
 
 1. Install the [Talisman extension](https://www.talisman.xyz/) for Chrome, Firefox, or Edge
 2. Create a new wallet and **save your recovery phrase securely**

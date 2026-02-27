@@ -177,7 +177,7 @@ The Cartha Interface supports multiple wallet types:
 
 * **MetaMask** - Most popular Ethereum wallet
 * **Coinbase Wallet** - Coinbase's official wallet
-* **Talisman** - Polkadot ecosystem wallet
+* **Talisman** - Recommended Bittensor/Polkadot wallet (browser extension)
 * **WalletConnect** - Connect any WalletConnect-compatible wallet
 
 **Network Requirement**: All wallets must be connected to **Base Sepolia** network (Chain ID: 84532) for testnet, or **Base Mainnet** (Chain ID: 8453) for mainnet.
