@@ -253,7 +253,7 @@ Shows all your past reward claims:
 4. **Monitor Upcoming Epoch** — If your lock is expiring and you don't re-lock, your share drops to zero next epoch
 5. **Streak and Consistency scores** — High streak + high consistency = the miner is reliably distributing. Low consistency might just mean volatile trading days
 6. **Compare Per $1K Locked** — This normalizes earnings across different position sizes so you can compare apples to apples
-7. **Claim regularly** — Your ALPHA rewards accumulate but don't auto-compound. Claim them to your Bittensor coldkey when you're ready
+7. **Claim regularly** — Your ALPHA rewards accumulate but don't auto-compound. Claim them to your Bittensor coldkey when you're ready. See **[How to Claim Rewards](claim-rewards.md)** for a video walkthrough
 
 ---
 
@@ -273,6 +273,7 @@ No Bittensor setup, no CLI, no infra to run. Just USDC on Base and an EVM wallet
 
 ## Related Guides
 
+- **[How to Claim Rewards](claim-rewards.md)** — Video walkthrough for claiming ALPHA
 - **[Federated Miner Guide](federated-miner-guide.md)** — How to set up, lock, and claim
 - **[Deposit via Principal Miner](federated-miner-deposit-principal.md)** — Step-by-step locking walkthrough
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How the Friday-to-Thursday epoch cycle works

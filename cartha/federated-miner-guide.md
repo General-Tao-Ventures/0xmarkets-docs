@@ -165,6 +165,8 @@ Each entry shows:
 
 To claim your ALPHA rewards, you need a **Bittensor coldkey** (SS58 address) — this is where the ALPHA tokens will be sent on the Bittensor network.
 
+> 📹 **Video walkthrough**: See **[How to Claim Rewards](claim-rewards.md)** for a quick video guide.
+
 ### Get a Bittensor Wallet
 
 If you don't already have a Bittensor wallet, you can create one using either method:
