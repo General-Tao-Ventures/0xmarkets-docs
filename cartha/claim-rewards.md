@@ -18,10 +18,7 @@ Quick guide for federated miners: claim your ALPHA rewards from the Principal Mi
 
 ## Video Walkthrough
 
-<video controls width="100%">
-  <source src="../.gitbook/assets/principal-miner-dashboard/Cartha-claim-rewards-with-GTV.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+{% embed url="https://storage.googleapis.com/cartha-public/assets/Cartha-claim-rewards-with-GTV.mp4" %}
 
 ---
 
