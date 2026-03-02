@@ -84,14 +84,26 @@ Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** f
 
 **Vault Tokens:**
 
-| Token  | Address                                                                                                                 |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| cvBTC  | [`0xD090239EaE0d756726b6afd57E0b23A24FCABe86`](https://basescan.org/address/0xD090239EaE0d756726b6afd57E0b23A24FCABe86) |
-| cvETH  | [`0x47EbDBE398733664250356F7F19fd516a5f1Dd0a`](https://basescan.org/address/0x47EbDBE398733664250356F7F19fd516a5f1Dd0a) |
+**Crypto** — Parent Vault: [`0x7c5fAc6A0295663686873E418406cf540c45CCF3`](https://basescan.org/address/0x7c5fAc6A0295663686873E418406cf540c45CCF3)
+
+| Token | Address                                                                                                                   |
+| ----- | ------------------------------------------------------------------------------------------------------------------------- |
+| cvBTC | [`0xD090239EaE0d756726b6afd57E0b23A24FCABe86`](https://basescan.org/address/0xD090239EaE0d756726b6afd57E0b23A24FCABe86) |
+| cvETH | [`0x47EbDBE398733664250356F7F19fd516a5f1Dd0a`](https://basescan.org/address/0x47EbDBE398733664250356F7F19fd516a5f1Dd0a) |
+
+**Currencies** — Parent Vault: [`0xf69eeDf403C9DB553E1d1DCC29B31d0c3e7c58F3`](https://basescan.org/address/0xf69eeDf403C9DB553E1d1DCC29B31d0c3e7c58F3)
+
+| Token | Address                                                                                                                   |
+| ----- | ------------------------------------------------------------------------------------------------------------------------- |
+| cvEUR | [`0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86`](https://basescan.org/address/0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86) |
+| cvGBP | [`0x9Eed917485e08FdFee977629bf933E8C0B33e539`](https://basescan.org/address/0x9Eed917485e08FdFee977629bf933E8C0B33e539) |
+| cvJPY | [`0xf2e3f581A7dE8B055c0122E3bFb445A67b485831`](https://basescan.org/address/0xf2e3f581A7dE8B055c0122E3bFb445A67b485831) |
+
+**Commodities** — Parent Vault: [`0xa265777B6241143C752d37025Bb4dE4B3E311A19`](https://basescan.org/address/0xa265777B6241143C752d37025Bb4dE4B3E311A19)
+
+| Token  | Address                                                                                                                   |
+| ------ | ------------------------------------------------------------------------------------------------------------------------- |
 | cvGOLD | [`0xabc777A16E41CF6E2F02A768D1f9f4d8aa68e58F`](https://basescan.org/address/0xabc777A16E41CF6E2F02A768D1f9f4d8aa68e58F) |
-| cvEUR  | [`0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86`](https://basescan.org/address/0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86) |
-| cvGBP  | [`0x9Eed917485e08FdFee977629bf933E8C0B33e539`](https://basescan.org/address/0x9Eed917485e08FdFee977629bf933E8C0B33e539) |
-| cvJPY  | [`0xf2e3f581A7dE8B055c0122E3bFb445A67b485831`](https://basescan.org/address/0xf2e3f581A7dE8B055c0122E3bFb445A67b485831) |
 
 ## Security
 
