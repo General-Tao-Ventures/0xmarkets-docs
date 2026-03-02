@@ -75,11 +75,12 @@ Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** f
 
 **Core Contracts:**
 
-| Contract      | Address                                                                                                                 |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Diamond | [`0xf88D00A36B97865F3343D78DCD8Dd4f5ed7A6879`](https://basescan.org/address/0xf88D00A36B97865F3343D78DCD8Dd4f5ed7A6879) |
-| Factory | [`0xbf24aB3b0b1Ea071F5b5F7B0827eeEE78Ad1a86D`](https://basescan.org/address/0xbf24aB3b0b1Ea071F5b5F7B0827eeEE78Ad1a86D) |
-| Upgradable Beacon | [`0x1c9b55afc905b25131cc9004c8a4c11073afa7aa`](https://basescan.org/address/0x1c9b55afc905b25131cc9004c8a4c11073afa7aa) |
+| Contract                     | Address                                                                                                                   |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Diamond Proxy              | [`0xf88D00A36B97865F3343D78DCD8Dd4f5ed7A6879`](https://basescan.org/address/0xf88D00A36B97865F3343D78DCD8Dd4f5ed7A6879) |
+| Factory     | [`0xbf24aB3b0b1Ea071F5b5F7B0827eeEE78Ad1a86D`](https://basescan.org/address/0xbf24aB3b0b1Ea071F5b5F7B0827eeEE78Ad1a86D) |
+| Factory Proxy              | [`0x4a9f12fc6085210D158Ca8100E5dD37B7eCf4EF9`](https://basescan.org/address/0x4a9f12fc6085210D158Ca8100E5dD37B7eCf4EF9) |
+| Upgradable Beacon            | [`0x1c9b55afc905b25131cc9004c8a4c11073afa7aa`](https://basescan.org/address/0x1c9b55afc905b25131cc9004c8a4c11073afa7aa) |
 
 **Vault Tokens:**
 
