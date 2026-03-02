@@ -12,6 +12,10 @@ Track your federated mining earnings, monitor your positions, and plan your next
 2. Pick a principal miner (e.g. **General Tensor**)
 3. Connect your EVM wallet (top-right) to see your personal earnings
 
+> **Shortcut from My Positions**: If you have an active federated position, the **"View Miner Page"** button on the [My Positions](https://cartha.finance/positions) page takes you directly to your principal miner's dashboard.
+
+<figure><img src="../.gitbook/assets/miner-dashboard-position-page.png" alt="My Positions page showing View Miner Page button"><figcaption>Click "View Miner Page" from My Positions to jump directly to your principal miner's dashboard</figcaption></figure>
+
 Without a wallet connected you can still see the public info (stats, performance, estimator). Connect your wallet to unlock your personal earnings dashboard, upcoming epoch details, and activity logs.
 
 ---

@@ -24,6 +24,10 @@ Quick guide for federated miners: claim your ALPHA rewards from the Principal Mi
 
 ## Steps
 
+> **Tip**: From the [My Positions](https://cartha.finance/positions) page, click **"View Miner Page"** on any federated position to jump directly to your principal miner's dashboard — no need to browse the list.
+
+<figure><img src="../.gitbook/assets/miner-dashboard-position-page.png" alt="My Positions page with View Miner Page button"><figcaption>Click "View Miner Page" on your position card to go straight to the principal miner dashboard where you can claim rewards</figcaption></figure>
+
 1. Go to [cartha.finance/principal-miners](https://cartha.finance/principal-miners) and pick your principal miner (e.g. **General Tensor**)
 2. **Connect your EVM wallet** — the one you used to lock your USDC
 3. Scroll to your earnings summary and click the green **"Claim Rewards"** button

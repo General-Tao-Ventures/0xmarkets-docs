@@ -69,9 +69,12 @@ Navigate to **"My Positions"** (or visit `/manage`) to see all your active lock 
 
 ![My Positions](../.gitbook/assets/my-positions-page.png)
 
+<figure><img src="../.gitbook/assets/miner-dashboard-position-page.png" alt="My Positions — Portfolio Summary and Position Cards"><figcaption>My Positions page showing Portfolio Summary with P&amp;L, position cards with miner name, and quick actions</figcaption></figure>
+
 **Features**:
 
 * **All Positions at a Glance**: See all your pools in one dashboard
+* **Portfolio Summary**: Total deposited, current vault value, and real-time P&L across all positions
 * **Position Details**: For each position, view:
   * Pool name (e.g., BTCUSD, ETH/USD, EUR/USD)
   * Amount locked (USDC)
@@ -81,6 +84,7 @@ Navigate to **"My Positions"** (or visit `/manage`) to see all your active lock 
   * EVM address used for the lock
 * **Status Indicators**: Color-coded status badges
 * **Quick Actions**: Extend and Top Up buttons for each position
+* **View Miner Page**: For positions under a trusted principal miner, a direct link to their dashboard to monitor earnings and claim ALPHA rewards
 * **Refresh Button**: Manually refresh to see latest status
 
 **Access Methods**:

@@ -222,6 +222,8 @@ For more details, see the [Bittensor CLI documentation](https://docs.learnbitten
 
 ## Managing Your Position
 
+<figure><img src="../.gitbook/assets/miner-dashboard-position-page.png" alt="My Positions — Portfolio Summary and Position Cards"><figcaption>My Positions page showing Portfolio Summary with P&amp;L, position cards with miner name, and quick actions</figcaption></figure>
+
 ### Top Up (Add More USDC)
 
 1. Go to **"My Positions"**
