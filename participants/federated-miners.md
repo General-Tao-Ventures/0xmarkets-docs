@@ -16,7 +16,7 @@ Your locked USDC provides liquidity for [0xMarkets](https://0xmarkets.io), a dec
 
 The 0xMarkets team operates **General Tensor**, an in-house principal miner available to all federated miners. If you're new to Cartha or don't have a specific principal miner in mind, General Tensor offers:
 
-- **Automated distribution** — Rewards are calculated and claimable epoch-by-epoch on the [Principal Miners dashboard](https://cartha.finance/principal-miners)
+- **Automated distribution** — Rewards are calculated and claimable epoch-by-epoch on the [Principal Miners dashboard](https://liquidity.0xmarkets.io/principal-miners)
 - **Transparent commission** — Rate is publicly displayed on the dashboard
 - **Team-operated** — Run by the same team that built the subnet and the exchange
 - **No off-chain agreements needed** — Everything is handled through the dashboard
@@ -113,9 +113,9 @@ The simplest way to start is by locking to **General Tensor**, the principal min
 | **Operator** | 0xMarkets team (builders of Cartha subnet and 0xMarkets exchange) |
 | **Commission** | 3% of ALPHA emissions |
 | **Distribution** | Automated — rewards are calculated per epoch and claimable directly from the dashboard |
-| **Dashboard** | [cartha.finance/principal-miners](https://cartha.finance/principal-miners) — view performance, earnings, and claim rewards |
+| **Dashboard** | [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners) — view performance, earnings, and claim rewards |
 
-To lock to General Tensor, copy the hotkey from the [Principal Miners page](https://cartha.finance/principal-miners) and use it when locking via "Become an LP".
+To lock to General Tensor, copy the hotkey from the [Principal Miners page](https://liquidity.0xmarkets.io/principal-miners) and use it when locking via "Become an LP".
 
 ### Evaluating Other Principal Miners
 
@@ -129,9 +129,9 @@ If you prefer a different operator, evaluate them on:
 
 ### Where to Find Principal Miners
 
-- **Principal Miners Page:** [cartha.finance/principal-miners](https://cartha.finance/principal-miners) — browse all approved principal miners, compare commission rates, view locked capital, and see performance stats
+- **Principal Miners Page:** [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners) — browse all approved principal miners, compare commission rates, view locked capital, and see performance stats
 - **General Tensor:** Featured on the principal miners page — the team-operated default
-- **Leaderboard:** [cartha.finance/leaderboard](https://cartha.finance/leaderboard) — view top-performing miners
+- **Leaderboard:** [liquidity.0xmarkets.io/leaderboard](https://liquidity.0xmarkets.io/leaderboard) — view top-performing miners
 - **Community:** [Discord](https://0xmarkets.io/discord) and Telegram groups
 - **Direct Outreach:** Post your capital amount and preferred lock duration in community channels
 
@@ -185,7 +185,7 @@ Since ALPHA emissions go to the principal miner's wallet first, you need a clear
 
 ## Managing Your Position
 
-Once locked, you can manage your position through the [Cartha web interface](https://cartha.finance):
+Once locked, you can manage your position through the [Cartha web interface](https://liquidity.0xmarkets.io):
 
 - **View Positions** — See all your active locks, amounts, and expiry dates
 - **Top Up** — Add more USDC to an existing position (no principal miner approval needed)
@@ -260,7 +260,7 @@ No. Your USDC is locked in a Cartha vault smart contract, not the principal mine
 If you use a principal miner on the **Cartha Rewards System** (like General Tensor), rewards are calculated automatically and you claim them directly from the dashboard — no manual payment required. For principal miners *not* on the rewards system, you rely on their agreement and reputation. This is why choosing a trusted operator matters.
 
 **What is General Tensor?**
-General Tensor is the in-house principal miner operated by the 0xMarkets team. It uses automated epoch-by-epoch distribution, has a publicly disclosed commission rate, and is the recommended starting point for new federated miners. View it at [cartha.finance/principal-miners](https://cartha.finance/principal-miners).
+General Tensor is the in-house principal miner operated by the 0xMarkets team. It uses automated epoch-by-epoch distribution, has a publicly disclosed commission rate, and is the recommended starting point for new federated miners. View it at [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners).
 
 **What happens if the pool gets liquidated?**
 Your capital is reduced by the liquidation loss. This is permanent and not reimbursed. LP risk is inherent to the system — your USDC provides real liquidity on the 0xMarkets DEX.
@@ -298,7 +298,7 @@ General Tensor takes a 3% commission from your gross ALPHA rewards each epoch. T
 ### Support
 
 - **Discord**: https://0xmarkets.io/discord
-- **Website**: https://cartha.finance
+- **Website**: https://liquidity.0xmarkets.io
 - **Email**: support@0xmarkets.io
 
 ---

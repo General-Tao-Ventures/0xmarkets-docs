@@ -2,7 +2,7 @@
 
 Complete guide for becoming a liquidity provider (miner) on Cartha testnet using the web interface.
 
-**Web Interface**: [https://cartha.finance](https://cartha.finance)
+**Web Interface**: [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 
 **CLI Repository** (for registration only): [cartha-cli](https://github.com/General-Tao-Ventures/cartha-cli)
 
@@ -62,7 +62,7 @@ You can also use the [Chainlist](https://chainlist.org/) website:
 
 Visit the Cartha faucet to claim testnet USDC:
 
-1. Go to [https://cartha.finance](https://cartha.finance)
+1. Go to [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 
 ![Landing Page](../.gitbook/assets/landing-page.jpeg)
 
@@ -148,7 +148,7 @@ Now that your hotkey is registered, you can lock USDC funds to provide liquidity
 
 ### Navigate to "Become an LP"
 
-1. Go to [https://cartha.finance](https://cartha.finance)
+1. Go to [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 2. Click on "Become an LP" in the navigation bar
 
 ![Become an LP Navigation](../.gitbook/assets/become-an-lp-navbar.png)
@@ -223,7 +223,7 @@ You'll see:
 - ✅ Two transactions required: Approve + Lock
 
 **Managing Positions:**
-- Visit [My Positions](https://cartha.finance/positions) to view all your locks
+- Visit [My Positions](https://liquidity.0xmarkets.io/positions) to view all your locks
 - Use "Extend" to increase lock duration
 - Use "Top Up" to add more USDC to existing position
 
@@ -247,7 +247,7 @@ You can verify your miner status using the CLI or by viewing "My Positions" on t
 
 ### Via Web Interface (Recommended)
 
-Simply visit [https://cartha.finance/positions](https://cartha.finance/positions) to see all your active positions.
+Simply visit [https://liquidity.0xmarkets.io/positions](https://liquidity.0xmarkets.io/positions) to see all your active positions.
 
 ### Via CLI
 
@@ -291,7 +291,7 @@ cartha --help
 cartha miner --help
 ```
 
-**Note**: Locking funds is now done via the web interface at [https://cartha.finance](https://cartha.finance), not through CLI.
+**Note**: Locking funds is now done via the web interface at [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io), not through CLI.
 
 ## Troubleshooting
 
@@ -336,7 +336,7 @@ cartha miner --help
 
 **Solution**:
 
-- Visit the Cartha faucet at https://cartha.finance/faucet
+- Visit the Cartha faucet at https://liquidity.0xmarkets.io/faucet
 - Connect your wallet and claim 1,000,000 testnet USDC
 - **Cooldown**: 24 hours between claims per wallet
 - Verify receipt on [BaseScan Sepolia](https://sepolia.basescan.org/)
@@ -390,7 +390,7 @@ cartha miner --help
 
 1. **Get Tokens**
    - Get testnet ETH from https://console.optimism.io/faucet
-   - Get testnet USDC from https://cartha.finance/faucet
+   - Get testnet USDC from https://liquidity.0xmarkets.io/faucet
    - Get testnet TAO from https://app.minersunion.ai/testnet-faucet
 
 2. **Register Your Hotkey**
@@ -401,7 +401,7 @@ cartha miner --help
    Save your hotkey SS58 address!
 
 3. **Lock Funds via Web Interface**
-   - Go to https://cartha.finance
+   - Go to https://liquidity.0xmarkets.io
    - Click "Become an LP"
    - Enter your hotkey SS58 address
    - Choose pool, amount, and lock duration
@@ -410,10 +410,10 @@ cartha miner --help
    - Confirm lock transaction
 
 4. **Verify Your Position**
-   - Visit https://cartha.finance/positions
+   - Visit https://liquidity.0xmarkets.io/positions
    - Your position should appear within 30 seconds to 5 minutes
 
 
 ---
 
-**Ready to become a miner?** Visit [https://cartha.finance](https://cartha.finance) and start providing liquidity today!
+**Ready to become a miner?** Visit [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io) and start providing liquidity today!

@@ -10,8 +10,8 @@ Lock funds by pasting any principal miner's hotkey directly into the **"Become a
 
 You'll need the **SS58 hotkey address** of the principal miner you want to lock through. This is a 48-character string starting with `5`. You can find hotkeys:
 
-- On the [Principal Miners page](https://cartha.finance/principal-miners)
-- On the [Leaderboard](https://cartha.finance/leaderboard)
+- On the [Principal Miners page](https://liquidity.0xmarkets.io/principal-miners)
+- On the [Leaderboard](https://liquidity.0xmarkets.io/leaderboard)
 - Through community channels (Discord, etc.)
 
 ---
@@ -20,7 +20,7 @@ You'll need the **SS58 hotkey address** of the principal miner you want to lock 
 
 ### 1. Connect Your Wallet
 
-1. Go to [https://cartha.finance](https://cartha.finance)
+1. Go to [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 2. Click **"Connect Wallet"** in the top right corner and select your wallet provider
 3. Make sure you're connected to **Base Mainnet** network
 

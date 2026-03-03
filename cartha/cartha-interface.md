@@ -2,7 +2,7 @@
 
 **A modern web interface for managing your Cartha lock positions.** The Cartha Interface replaces the need to manually interact with smart contracts on BaseScan, providing a streamlined, user-friendly experience for liquidity providers.
 
-**URL**: [https://cartha.finance](https://cartha.finance/)
+**URL**: [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io/)
 
 ## What is Cartha Interface?
 
@@ -173,8 +173,8 @@ cartha v lock -w cold -wh hot -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
 
 You can also access the UI directly:
 
-* **Landing Page**: https://cartha.finance
-* **My Positions**: https://cartha.finance/manage
+* **Landing Page**: https://liquidity.0xmarkets.io
+* **My Positions**: https://liquidity.0xmarkets.io/manage
 
 When accessing directly, you'll need to:
 
@@ -292,7 +292,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 ### Security
 
-1. **Verify URLs**: Always use the official URL: https://cartha.finance
+1. **Verify URLs**: Always use the official URL: https://liquidity.0xmarkets.io
 2. **Check Addresses**: Verify all addresses match before signing transactions
 3. **Review Parameters**: Always review transaction parameters before executing
 4. **Keep CLI Updated**: Ensure your CLI is up-to-date for best compatibility
@@ -306,4 +306,4 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 ***
 
-**Ready to get started?** Visit [https://cartha.finance](https://cartha.finance) to manage your liquidity positions!
+**Ready to get started?** Visit [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io) to manage your liquidity positions!

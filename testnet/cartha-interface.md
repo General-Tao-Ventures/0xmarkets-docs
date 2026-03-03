@@ -2,7 +2,7 @@
 
 **A modern web interface for managing your Cartha lock positions.** The Cartha Interface replaces the need to manually interact with smart contracts on BaseScan, providing a streamlined, user-friendly experience for liquidity providers.
 
-**URL**: [https://cartha.finance](https://cartha.finance/)
+**URL**: [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io/)
 
 ## What is Cartha Interface?
 
@@ -120,7 +120,7 @@ A built-in faucet for claiming testnet tokens:
 
 **How to Use**:
 
-1. Navigate to https://cartha.finance/faucet
+1. Navigate to https://liquidity.0xmarkets.io/faucet
 2. Connect your wallet (must be on Base Sepolia network)
 3. Click "Claim USDC" to receive 1,000,000 testnet USDC
 4. Wait 24 hours before claiming again from the same wallet
@@ -161,9 +161,9 @@ cartha v lock -w cold -wh hot -n test -p BTCUSD -a 100 -d 30 -e 0xYourEVM...
 
 You can also access the UI directly:
 
-* **Landing Page**: https://cartha.finance
-* **My Positions**: https://cartha.finance/manage
-* **Faucet**: https://cartha.finance/faucet
+* **Landing Page**: https://liquidity.0xmarkets.io
+* **My Positions**: https://liquidity.0xmarkets.io/manage
+* **Faucet**: https://liquidity.0xmarkets.io/faucet
 
 When accessing directly, you'll need to:
 
@@ -291,7 +291,7 @@ The UI includes automatic wallet validation to prevent common mistakes:
 
 ### Security
 
-1. **Verify URLs**: Always use the official URL: https://cartha.finance
+1. **Verify URLs**: Always use the official URL: https://liquidity.0xmarkets.io
 2. **Check Addresses**: Verify all addresses match before signing transactions
 3. **Review Parameters**: Always review transaction parameters before executing
 4. **Keep CLI Updated**: Ensure your CLI is up-to-date for best compatibility

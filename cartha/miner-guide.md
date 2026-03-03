@@ -2,7 +2,7 @@
 
 Everything you need to start mining on Cartha — whether you want to run your own operation or deposit into an existing one.
 
-- **Web Interface**: [cartha.finance](https://cartha.finance)
+- **Web Interface**: [Cartha](https://liquidity.0xmarkets.io)
 
 ---
 
@@ -109,7 +109,7 @@ Cartha operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59
 
 ## Managing Positions
 
-Once locked, manage your positions at [cartha.finance/positions](https://cartha.finance/positions):
+Once locked, manage your positions at [liquidity.0xmarkets.io/positions](https://liquidity.0xmarkets.io/positions):
 
 | Action | Description |
 |--------|-------------|
@@ -148,8 +148,8 @@ All miners face these risks regardless of path:
 - **[Principal Miner Guide →](principal-miner-guide.md)** — Run your own miner operation
 - **[Federated Miner Guide →](federated-miner-guide.md)** — Deposit into an existing miner
 - **[Miner Dashboard →](principal-miner-dashboard.md)** — Track your earnings and performance
-- **[Earning Estimator](https://cartha.finance/principal-miners)** — Model your returns before committing
+- **[Earning Estimator](https://liquidity.0xmarkets.io/principal-miners)** — Model your returns before committing
 
 ---
 
-**Ready to start?** Visit [cartha.finance](https://cartha.finance) and start earning ALPHA today.
+**Ready to start?** Visit [Cartha](https://liquidity.0xmarkets.io) and start earning ALPHA today.

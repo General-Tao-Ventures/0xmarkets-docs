@@ -4,7 +4,7 @@ Get in touch with the 0xMarkets and Cartha team.
 
 ### Websites
 
-- **Cartha Interface**: [cartha.finance](https://cartha.finance)
+- **Cartha Interface**: [Cartha](https://liquidity.0xmarkets.io)
 - **0xMarkets**: [0xmarkets.io](https://0xmarkets.io)
 
 ### Community

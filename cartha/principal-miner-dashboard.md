@@ -1,6 +1,6 @@
 # Principal Miner Dashboard
 
-Track your federated mining earnings, monitor your positions, and plan your next moves — all from the [Principal Miner Dashboard](https://cartha.finance/principal-miners).
+Track your federated mining earnings, monitor your positions, and plan your next moves — all from the [Principal Miner Dashboard](https://liquidity.0xmarkets.io/principal-miners).
 
 > This guide walks through every section of the dashboard so you know exactly what each number means and how to use it.
 
@@ -8,11 +8,11 @@ Track your federated mining earnings, monitor your positions, and plan your next
 
 ## Getting There
 
-1. Go to [cartha.finance/principal-miners](https://cartha.finance/principal-miners)
+1. Go to [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners)
 2. Pick a principal miner (e.g. **General Tensor**)
 3. Connect your EVM wallet (top-right) to see your personal earnings
 
-> **Shortcut from My Positions**: If you have an active federated position, the **"View Miner Page"** button on the [My Positions](https://cartha.finance/positions) page takes you directly to your principal miner's dashboard.
+> **Shortcut from My Positions**: If you have an active federated position, the **"View Miner Page"** button on the [My Positions](https://liquidity.0xmarkets.io/positions) page takes you directly to your principal miner's dashboard.
 
 <figure><img src="../.gitbook/assets/miner-dashboard-position-page.png" alt="My Positions page showing View Miner Page button"><figcaption>Click "View Miner Page" from My Positions to jump directly to your principal miner's dashboard</figcaption></figure>
 
@@ -65,7 +65,7 @@ The **Earnings Estimator** lets you model "what would I earn if I locked X USDC 
 - **Est. Monthly** — Daily × 30
 - **Est. APY** — Annualized percentage yield based on current pool conditions
 
-> The estimator uses the same scoring formula as the [Earning Simulator](https://cartha.finance/upcoming) on the Upcoming Epoch page: `score = amount × min(lock_days, 365) / 365`. Longer locks earn proportionally more per dollar locked. All estimates are after commission.
+> The estimator uses the same scoring formula as the [Earning Simulator](https://liquidity.0xmarkets.io/upcoming) on the Upcoming Epoch page: `score = amount × min(lock_days, 365) / 365`. Longer locks earn proportionally more per dollar locked. All estimates are after commission.
 
 ---
 
@@ -265,13 +265,13 @@ Shows all your past reward claims:
 
 Lock USDC through a principal miner and start earning ALPHA rewards today.
 
-1. **[Browse Principal Miners](https://cartha.finance/principal-miners)** — Compare commission rates, locked capital, and performance
-2. **[Try the Earnings Estimator](https://cartha.finance/principal-miners)** — Model your returns before you commit
-3. **[Lock & Earn](https://cartha.finance/principal-miners)** — Pick a miner, hit "Lock to this Miner", choose your amount and duration, and you're in
+1. **[Browse Principal Miners](https://liquidity.0xmarkets.io/principal-miners)** — Compare commission rates, locked capital, and performance
+2. **[Try the Earnings Estimator](https://liquidity.0xmarkets.io/principal-miners)** — Model your returns before you commit
+3. **[Lock & Earn](https://liquidity.0xmarkets.io/principal-miners)** — Pick a miner, hit "Lock to this Miner", choose your amount and duration, and you're in
 
 No Bittensor setup, no CLI, no infra to run. Just USDC on Base and an EVM wallet.
 
-> New here? Start with **[General Tensor](https://cartha.finance/principal-miners/general-tensor)** — the team-operated miner with 3% commission, automated distribution, and full dashboard transparency. Follow the **[Federated Miner Guide](federated-miner-guide.md)** for a step-by-step walkthrough.
+> New here? Start with **[General Tensor](https://liquidity.0xmarkets.io/principal-miners/general-tensor)** — the team-operated miner with 3% commission, automated distribution, and full dashboard transparency. Follow the **[Federated Miner Guide](federated-miner-guide.md)** for a step-by-step walkthrough.
 
 ---
 
@@ -282,4 +282,4 @@ No Bittensor setup, no CLI, no infra to run. Just USDC on Base and an EVM wallet
 - **[Deposit via Principal Miner](federated-miner-deposit-principal.md)** — Step-by-step locking walkthrough
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How the Friday-to-Thursday epoch cycle works
 - **[Fees & Rewards](../how-it-works/fees-and-rewards.md)** — Full breakdown of how earnings are calculated
-- **[Earning Simulator](https://cartha.finance/upcoming)** — Advanced simulator with full position ranking table
+- **[Earning Simulator](https://liquidity.0xmarkets.io/upcoming)** — Advanced simulator with full position ranking table

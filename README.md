@@ -24,6 +24,6 @@ coverY: 0
 **Get involved**
 
 * 🚀 [Trade on 0xMarkets](https://0xmarkets.io)
-* 💧 [Provide Liquidity](https://cartha.finance) — Earn ALPHA emissions by becoming a liquidity provider
+* 💧 [Provide Liquidity](https://liquidity.0xmarkets.io) — Earn ALPHA emissions by becoming a liquidity provider
 
 > This is an informational site. Nothing here is financial advice. See [Legal & risk.](legal-and-risk.md)

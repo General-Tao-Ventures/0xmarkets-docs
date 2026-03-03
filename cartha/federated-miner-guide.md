@@ -2,7 +2,7 @@
 
 Complete guide for becoming a federated miner on Cartha — no CLI required, everything is done through the web interface.
 
-- **Web Interface**: [https://cartha.finance](https://cartha.finance)
+- **Web Interface**: [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 
 ## Overview
 
@@ -346,7 +346,7 @@ Once your lock period and cooldown have both passed, your position will show as 
 - [ ] Deposited funds via one of the two methods:
   - [ ] [Trusted Principal Miner](federated-miner-deposit-principal.md) (recommended)
   - [ ] [Direct Deposit (Any Hotkey)](federated-miner-deposit-direct.md)
-- [ ] Position confirmed on [My Positions](https://cartha.finance/positions)
+- [ ] Position confirmed on [My Positions](https://liquidity.0xmarkets.io/positions)
 - [ ] Bittensor coldkey ready (for claiming ALPHA rewards)
 
 ---
@@ -361,9 +361,9 @@ Once your lock period and cooldown have both passed, your position will show as 
 ### Support
 
 - **Discord**: https://0xmarkets.io/discord
-- **Website**: https://cartha.finance
+- **Website**: https://liquidity.0xmarkets.io
 - **Email**: support@0xmarkets.io
 
 ---
 
-**Ready to get started?** Visit [https://cartha.finance](https://cartha.finance) and start earning as a federated miner today!
+**Ready to get started?** Visit [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io) and start earning as a federated miner today!

@@ -13,7 +13,7 @@ Traders on 0xMarkets can earn from the **incentive pool** (10% of total subnet A
 * **Trade to earn**: Your trading volume and activity generate points
 * **Weekly epochs**: Rewards calculated Friday 00:00 UTC → Thursday 23:59 UTC
 * **Emission share**: Points convert to ALPHA rewards from the incentive pool allocation
-* **Track rewards**: View your accumulated rewards at [cartha.finance/leaderboard](https://cartha.finance/leaderboard)
+* **Track rewards**: View your accumulated rewards at [liquidity.0xmarkets.io/leaderboard](https://liquidity.0xmarkets.io/leaderboard)
 
 ### Introducing Broker (IB) Program
 

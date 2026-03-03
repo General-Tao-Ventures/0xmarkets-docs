@@ -46,7 +46,7 @@ Top-ups during an epoch go into a pending state and don't count toward your curr
 * **10% of ALPHA emissions** allocated to an incentive pool for airdrops and rewards
 * Currently used for trader leaderboards and IB (Introducing Broker) rebates
 * Can be used to incentivize any party in the ecosystem
-* Track rewards at [cartha.finance/leaderboard](https://cartha.finance/leaderboard)
+* Track rewards at [liquidity.0xmarkets.io/leaderboard](https://liquidity.0xmarkets.io/leaderboard)
 
 **What rewards do validators earn?**
 

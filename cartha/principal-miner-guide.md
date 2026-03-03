@@ -2,7 +2,7 @@
 
 Step-by-step guide to becoming a principal miner on Cartha — register your hotkey, lock capital, set up automated rewards, and get listed for federated miners to find you.
 
-- **Web Interface**: [cartha.finance](https://cartha.finance)
+- **Web Interface**: [Cartha](https://liquidity.0xmarkets.io)
 - **CLI**: [cartha-cli on PyPI](https://pypi.org/project/cartha-cli/) · [GitHub](https://github.com/General-Tao-Ventures/cartha-cli)
 - **Rewards Template**: [cartha-principal-miner-template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template)
 
@@ -85,7 +85,7 @@ After registration you'll see your hotkey SS58 address — **save it**, you'll n
 
 Now lock USDC to provide liquidity via the web interface.
 
-1. Go to [cartha.finance](https://cartha.finance) → **"Become an LP"**
+1. Go to [Cartha](https://liquidity.0xmarkets.io) → **"Become an LP"**
 2. **Enter your hotkey** (the SS58 address from Step 2)
 
 ![Paste Hotkey](../.gitbook/assets/paste-your-or-principal-miner-hotkey.png)
@@ -105,7 +105,7 @@ Now lock USDC to provide liquidity via the web interface.
 ![Approve USDC](../.gitbook/assets/approve-USDC-limit.jpeg)
 ![Lock Position](../.gitbook/assets/check-lock-position.jpeg)
 
-6. **Verify** — your position should appear at [cartha.finance/positions](https://cartha.finance/positions) within 30 seconds to 5 minutes
+6. **Verify** — your position should appear at [liquidity.0xmarkets.io/positions](https://liquidity.0xmarkets.io/positions) within 30 seconds to 5 minutes
 
 ![My Positions](../.gitbook/assets/final-my-positions-page.png)
 
@@ -153,9 +153,9 @@ See the [template README](https://github.com/General-Tao-Ventures/cartha-princip
 
 ## Step 5: Apply to Get Listed
 
-Once your rewards system is live, apply to be listed on the [Principal Miners](https://cartha.finance/principal-miners) page so federated miners can discover you.
+Once your rewards system is live, apply to be listed on the [Principal Miners](https://liquidity.0xmarkets.io/principal-miners) page so federated miners can discover you.
 
-Go to [cartha.finance/principal-miners/apply](https://cartha.finance/principal-miners/apply) and complete the 4-step application:
+Go to [liquidity.0xmarkets.io/principal-miners/apply](https://liquidity.0xmarkets.io/principal-miners/apply) and complete the 4-step application:
 
 ### 1. Identity
 
@@ -193,7 +193,7 @@ Go to [cartha.finance/principal-miners/apply](https://cartha.finance/principal-m
 
 ### 4. Review & Submit
 
-Review all your details and submit. The Cartha team reviews applications and notifies you via email. Once approved, your miner appears on the [Principal Miners](https://cartha.finance/principal-miners) page and federated miners can lock capital to your hotkey.
+Review all your details and submit. The Cartha team reviews applications and notifies you via email. Once approved, your miner appears on the [Principal Miners](https://liquidity.0xmarkets.io/principal-miners) page and federated miners can lock capital to your hotkey.
 
 ---
 
@@ -201,7 +201,7 @@ Review all your details and submit. The Cartha team reviews applications and not
 
 ### Via Web Interface
 
-Visit [cartha.finance/positions](https://cartha.finance/positions) to see all your active positions.
+Visit [liquidity.0xmarkets.io/positions](https://liquidity.0xmarkets.io/positions) to see all your active positions.
 
 ### Via CLI
 

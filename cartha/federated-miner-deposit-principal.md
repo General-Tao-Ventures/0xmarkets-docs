@@ -18,7 +18,7 @@ Principal miners charge a **commission** (e.g. 3%) on the ALPHA rewards your pos
 
 ### 1. Connect Your Wallet
 
-1. Go to [https://cartha.finance](https://cartha.finance)
+1. Go to [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 2. Click **"Connect Wallet"** in the top right corner and select your wallet provider
 3. Make sure you're connected to **Base Mainnet** network
 

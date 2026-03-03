@@ -109,7 +109,7 @@ To ensure you're included in the next epoch:
 1. **Check your timezone** - Know what time Thursday 23:00 UTC is in your local time
 2. **Complete all transactions** - Both approve and lock transactions
 3. **Wait for verification** - Allow up to 15 minutes for the indexer + verifier
-4. **Confirm "In Next Epoch" status** - Check your position on [My Positions](https://cartha.finance/positions)
+4. **Confirm "In Next Epoch" status** - Check your position on [My Positions](https://liquidity.0xmarkets.io/positions)
 
 ### Timezone Reference
 
@@ -168,7 +168,7 @@ Expired positions are removed at the daily check (00:00 UTC). You'll need to cre
 
 ### How do I know I'm in the frozen epoch?
 
-Check your position status on [My Positions](https://cartha.finance/positions):
+Check your position status on [My Positions](https://liquidity.0xmarkets.io/positions):
 - **Active** = You're in the frozen epoch, earning rewards
 - **In Next Epoch** = You're verified for the upcoming freeze
 
@@ -191,4 +191,4 @@ This is normal! You're verified and waiting for the next Friday freeze. Once Fri
 
 ---
 
-**Ready to lock?** Visit [https://cartha.finance](https://cartha.finance) and lock by Thursday to be included in the next epoch!
+**Ready to lock?** Visit [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io) and lock by Thursday to be included in the next epoch!

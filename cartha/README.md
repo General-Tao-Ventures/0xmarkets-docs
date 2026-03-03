@@ -45,7 +45,7 @@ Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** f
 * **Trade on 0xMarkets** with up to 500x leverage on FX, commodities, and crypto
 * **Earn from incentive pool** through weekly leaderboard rewards
 * **Introducing Broker program** earn rebates for referred trading volume
-* **Track rewards** on the leaderboard at https://cartha.finance/leaderboard
+* **Track rewards** on the leaderboard at https://liquidity.0xmarkets.io/leaderboard
 * **Permissionless trading** with fixed fee structure
 
 ### For Developers
@@ -63,7 +63,7 @@ Cartha is a Bittensor subnet where miners act as **Liquidity Providers (LPs)** f
 * **Bittensor Network**: `finney` (Bittensor mainnet)
 * **Subnet UID**: `35` (Cartha subnet)
 * **EVM Chain**: Base Mainnet (Chain ID: `8453`)
-* **Lock UI URL**: `https://cartha.finance` (for managing locks and positions)
+* **Lock UI URL**: `https://liquidity.0xmarkets.io` (for managing locks and positions)
 
 ### Token Requirements
 

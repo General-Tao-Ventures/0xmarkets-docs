@@ -24,7 +24,7 @@ The incentive pool receives **10% of total ALPHA emissions** and is used to ince
 * **Airdrops**: Flexible allocation to incentivize any party in the ecosystem
 * **Community programs**: Future initiatives to grow and engage the community
 
-Rewards are tracked at [cartha.finance/leaderboard](https://cartha.finance/leaderboard) and swept to participant wallets via the liquidity flow controller.
+Rewards are tracked at [liquidity.0xmarkets.io/leaderboard](https://liquidity.0xmarkets.io/leaderboard) and swept to participant wallets via the liquidity flow controller.
 
 ## Lock Expiration & Withdrawals
 

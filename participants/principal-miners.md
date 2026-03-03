@@ -20,7 +20,7 @@ The 0xMarkets team operates **General Tensor**, a principal miner available to a
 | **Commission** | 3% of ALPHA emissions |
 | **Distribution** | Automated epoch-by-epoch via the Cartha rewards system |
 | **Trusted Status** | Yes — operated by the team that built the subnet and the exchange |
-| **Dashboard** | [cartha.finance/principal-miners](https://cartha.finance/principal-miners) |
+| **Dashboard** | [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners) |
 
 > General Tensor is a good starting point, but you are free to lock to any registered principal miner. Always review terms before committing.
 
@@ -113,7 +113,7 @@ Federated Miners' Bittensor Wallets
 
 ### How Federated Miners Lock to You
 
-Federated miners can lock capital to your hotkey through the [Cartha web interface](https://cartha.finance). They need your **Bittensor hotkey address** (SS58 format) — a 48-character string starting with `5`.
+Federated miners can lock capital to your hotkey through the [Cartha web interface](https://liquidity.0xmarkets.io). They need your **Bittensor hotkey address** (SS58 format) — a 48-character string starting with `5`.
 
 The process is fully self-service: federated miners enter your hotkey, choose a pool, set an amount and lock duration, and complete the transaction. No CLI or coordination from you is required for the lock itself.
 
@@ -179,10 +179,10 @@ See the [template README](https://github.com/General-Tao-Ventures/cartha-princip
 
 ### Get Listed on Cartha
 
-After deploying your rewards system, apply to be listed on the [Principal Miners](https://cartha.finance/principal-miners) page so federated miners can discover you:
+After deploying your rewards system, apply to be listed on the [Principal Miners](https://liquidity.0xmarkets.io/principal-miners) page so federated miners can discover you:
 
 1. **Deploy & verify** — Make sure your API is accessible (`curl https://your-domain.com/health`)
-2. **Apply** — Visit [cartha.finance/principal-miners/apply](https://cartha.finance/principal-miners/apply) and fill in your details
+2. **Apply** — Visit [liquidity.0xmarkets.io/principal-miners/apply](https://liquidity.0xmarkets.io/principal-miners/apply) and fill in your details
 3. **Wait for approval** — The Cartha team reviews applications and notifies you via email
 4. **Go live** — Once approved, your miner appears on the listing page and federated miners can lock capital to your hotkey
 
@@ -239,7 +239,7 @@ If you accept external capital, establish clear terms before federated miners lo
 
 ### Viewing Positions
 
-- **Web Interface:** Visit [cartha.finance/positions](https://cartha.finance/positions) — see all positions, amounts, and expiry dates
+- **Web Interface:** Visit [liquidity.0xmarkets.io/positions](https://liquidity.0xmarkets.io/positions) — see all positions, amounts, and expiry dates
 - **CLI:** `cartha miner status --wallet-name <coldkey> --wallet-hotkey <hotkey>`
 
 ### Position Actions
@@ -335,9 +335,9 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 > 📘 **Ready to become a principal miner?** Follow the [Principal Miner Guide](../cartha/principal-miner-guide.md) for complete step-by-step instructions on wallet creation, subnet registration, and locking funds.
 
-> 🛠️ **Want to run automated rewards?** Deploy the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and [apply to be listed](https://cartha.finance/principal-miners/apply) on the Cartha frontend.
+> 🛠️ **Want to run automated rewards?** Deploy the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and [apply to be listed](https://liquidity.0xmarkets.io/principal-miners/apply) on the Cartha frontend.
 
-> 💡 **Want to lock to the in-house principal miner instead?** Visit the [General Tensor dashboard](https://cartha.finance/principal-miners) to federate under the team-operated miner, or see the [Federated Miner Guide](../cartha/federated-miner-guide.md) for a full walkthrough.
+> 💡 **Want to lock to the in-house principal miner instead?** Visit the [General Tensor dashboard](https://liquidity.0xmarkets.io/principal-miners) to federate under the team-operated miner, or see the [Federated Miner Guide](../cartha/federated-miner-guide.md) for a full walkthrough.
 
 ### Resources
 
@@ -352,7 +352,7 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 ### Support
 
 - **Discord**: https://0xmarkets.io/discord
-- **Website**: https://cartha.finance
+- **Website**: https://liquidity.0xmarkets.io
 - **Email**: support@0xmarkets.io
 
 ---
