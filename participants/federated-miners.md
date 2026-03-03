@@ -132,7 +132,7 @@ If you prefer a different operator, evaluate them on:
 - **Principal Miners Page:** [cartha.finance/principal-miners](https://cartha.finance/principal-miners) — browse all approved principal miners, compare commission rates, view locked capital, and see performance stats
 - **General Tensor:** Featured on the principal miners page — the team-operated default
 - **Leaderboard:** [cartha.finance/leaderboard](https://cartha.finance/leaderboard) — view top-performing miners
-- **Community:** [Discord](https://discord.gg/zGkW2kTsGM) and Telegram groups
+- **Community:** [Discord](https://0xmarkets.io/discord) and Telegram groups
 - **Direct Outreach:** Post your capital amount and preferred lock duration in community channels
 
 ### Red Flags
@@ -297,7 +297,7 @@ General Tensor takes a 3% commission from your gross ALPHA rewards each epoch. T
 
 ### Support
 
-- **Discord**: https://discord.gg/zGkW2kTsGM
+- **Discord**: https://0xmarkets.io/discord
 - **Website**: https://cartha.finance
 - **Email**: support@0xmarkets.io
 

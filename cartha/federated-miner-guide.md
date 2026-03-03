@@ -360,7 +360,7 @@ Once your lock period and cooldown have both passed, your position will show as 
 
 ### Support
 
-- **Discord**: https://discord.gg/zGkW2kTsGM
+- **Discord**: https://0xmarkets.io/discord
 - **Website**: https://cartha.finance
 - **Email**: support@0xmarkets.io
 
