@@ -215,6 +215,9 @@ The UI includes automatic wallet validation to prevent common mistakes:
 * **Sidebar**: Persistent sidebar on dashboard pages with logo and wallet status
 * **Logo Navigation**: Click the Cartha logo to return to the landing page
 * **Breadcrumbs**: Clear navigation paths between pages
+* **Leaderboard**: Combined page at `/leaderboard` with two tabs:
+  * **Current Epoch** — Live miner rankings, position distribution chart, and your positions
+  * **Upcoming Epoch** — Preview of next week's rankings plus the Earning Simulator
 
 ## Troubleshooting
 

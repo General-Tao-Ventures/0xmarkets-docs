@@ -65,7 +65,7 @@ The **Earnings Estimator** lets you model "what would I earn if I locked X USDC 
 - **Est. Monthly** — Daily × 30
 - **Est. APY** — Annualized percentage yield based on current pool conditions
 
-> The estimator uses the same scoring formula as the [Earning Simulator](https://liquidity.0xmarkets.io/upcoming) on the Upcoming Epoch page: `score = amount × min(lock_days, 365) / 365`. Longer locks earn proportionally more per dollar locked. All estimates are after commission.
+> The estimator uses the same scoring formula as the [Earning Simulator](https://liquidity.0xmarkets.io/leaderboard?tab=upcoming) on the Leaderboard → Upcoming Epoch tab: `score = amount × min(lock_days, 365) / 365`. Longer locks earn proportionally more per dollar locked. All estimates are after commission.
 
 ---
 
@@ -282,4 +282,4 @@ No Bittensor setup, no CLI, no infra to run. Just USDC on Base and an EVM wallet
 - **[Deposit via Principal Miner](federated-miner-deposit-principal.md)** — Step-by-step locking walkthrough
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How the Friday-to-Thursday epoch cycle works
 - **[Fees & Rewards](../how-it-works/fees-and-rewards.md)** — Full breakdown of how earnings are calculated
-- **[Earning Simulator](https://liquidity.0xmarkets.io/upcoming)** — Advanced simulator with full position ranking table
+- **[Earning Simulator](https://liquidity.0xmarkets.io/leaderboard?tab=upcoming)** — Advanced simulator with full position ranking table (Leaderboard → Upcoming Epoch tab)
