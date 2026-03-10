@@ -1,21 +1,21 @@
 # Providing Liquidity
 
-## GM Pools (0xMarkets Markets)
+## 0xM Pools
 
-GM is the liquidity provider token for individual 0xMarkets markets.
+0xM is the liquidity provider token for individual 0xMarkets markets.
 
-* Each GM pool backs a single trading pair and is risk-isolated from other markets
+* Each 0xM pool backs a single trading pair and is risk-isolated from other markets
 * Liquidity providers earn 63% of the fees generated from trading, liquidations, borrowing, and swaps
 * Fees accumulate directly into the pool token value — no separate claiming is needed
-* Simply holding GM tokens generates returns automatically
+* Simply holding 0xM tokens generates returns automatically
 
-## GLV Pools (0xMarkets Vaults)
+## 0xM Vaults
 
-GLV is the liquidity provider token for 0xMarkets vaults.
+0xM Vaults are multi-market liquidity positions on 0xMarkets.
 
-* Vaults automatically distribute liquidity across multiple GM markets
+* Vaults automatically distribute liquidity across multiple 0xM pools
 * Rebalancing happens automatically based on utilization across the underlying pools
-* GLV holders earn fees from all underlying GM markets without managing individual positions
+* Vault holders earn fees from all underlying 0xM markets without managing individual positions
 
 ## Risks
 
@@ -29,6 +29,6 @@ Providing liquidity carries several risks that should be understood before depos
 ## How to Provide Liquidity
 
 1. Visit the **Pools** page on the 0xMarkets interface
-2. Select a GM pool or GLV vault
-3. Deposit tokens to receive GM or GLV tokens
+2. Select a 0xM pool or 0xM vault
+3. Deposit tokens to receive 0xM tokens
 4. Your tokens automatically earn fees from trading activity — no staking or additional steps required
