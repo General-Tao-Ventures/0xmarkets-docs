@@ -17,6 +17,8 @@
       * [Direct Deposit (Any Hotkey)](cartha/federated-miner-deposit-direct.md)
       * [Miner Dashboard](cartha/principal-miner-dashboard.md)
       * [How to Claim Rewards](cartha/claim-rewards.md)
+    * [How to Top Up & Extend Lock](cartha/how-to-top-up-and-extend.md)
+    * [How to Withdraw](cartha/how-to-withdraw.md)
   * [Governance (veALPHA)](how-it-works/governance-vealpha.md)
   * [Validator Guide](cartha/validator-guide.md)
   * [Security Audit](cartha/security-audit.md)
