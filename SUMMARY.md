@@ -33,6 +33,7 @@
     * [Cartha Interface](testnet/cartha-interface.md)
 * [Trading](trading/README.md)
   * [Order Types](trading/order-types.md)
+  * [Market Hours](trading/market-hours.md)
   * [Fees](trading/fees.md)
 * [Providing Liquidity](providing-liquidity.md)
 * [Referrals](referrals.md)
