@@ -1,0 +1,27 @@
+root: ./
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+redirects:
+  # Old trading section → current participants pages
+  trading/bonpstudio: participants/traders.md
+  trading/liquidity-providers: participants/miners-lps.md
+
+  # Old community/site paths → home
+  site/oh/community/benefits: README.md
+  site/community/benefits: README.md
+
+  # Old tokenomics page → fees & rewards (covers emissions + fee splits)
+  tokenomics: how-it-works/fees-and-rewards.md
+
+  # Old testnet Cartha lock UI → current Cartha interface page
+  testnet/cartha_lock_ui: testnet/cartha-interface.md
+
+  # Old media-kit → home
+  media-kit: README.md
+
+  # Old voices/trading paths → traders page
+  voices/trading/24/price-impact: participants/traders.md
+  voices/trading/2: participants/traders.md
