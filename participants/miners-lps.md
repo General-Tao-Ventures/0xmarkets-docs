@@ -1,6 +1,6 @@
 # Miners (LPs)
 
-Miners provide USDC liquidity into Cartha vaults and earn trading fees and ALPHA emissions in return.
+Miners provide USDC liquidity into the 0xMarkets liquidity vaults and earn trading fees and ALPHA emissions in return.
 
 There are two types of miners — **principal miners** who hold registered Bittensor hotkeys and operate vaults directly, and **federated miners** who lock capital through a principal miner without running any Bittensor infrastructure.
 
@@ -8,7 +8,7 @@ There are two types of miners — **principal miners** who hold registered Bitte
 
 ## Principal Miners
 
-Principal miners are registered Bittensor participants on the Cartha subnet (SN35). They lock USDC into market vaults, receive ALPHA emissions based on their vault's deposit score, and can optionally open their vault to external capital from federated miners.
+Principal miners are registered Bittensor participants on the Cartha subnet (SN35), which powers the 0xMarkets Liquidity Provider. They lock USDC into market vaults, receive ALPHA emissions based on their vault's deposit score, and can optionally open their vault to external capital from federated miners.
 
 **How scores and rewards are calculated:**
 
@@ -35,7 +35,7 @@ Principal miners with a total vault balance below **100,000 USDC** receive a sco
 
 ## Federated Miners
 
-Federated miners participate in Cartha subnet liquidity without running a Bittensor node. They lock USDC through a principal miner's vault using only an EVM wallet, and earn a share of the principal miner's ALPHA emissions based on their individual position score.
+Federated miners participate in the 0xMarkets Liquidity Provider without running a Bittensor node. They lock USDC through a principal miner's vault using only an EVM wallet, and earn a share of the principal miner's ALPHA emissions based on their individual position score.
 
 **How rewards flow to federated miners:**
 

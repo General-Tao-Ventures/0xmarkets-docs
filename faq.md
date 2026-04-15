@@ -1,7 +1,7 @@
 # FAQ
 
 **What is 0xMarkets?**\
-0xMarkets is a decentralized FX perpetual futures exchange (Perp DEX) where traders can access currencies, commodities, and other RWAs with leverage up to 500x. Liquidity is powered by the Cartha Subnet (SN35), built on Bittensor, where miners act as liquidity providers (LPs)
+0xMarkets is a decentralized FX perpetual futures exchange (Perp DEX) where traders can access currencies, commodities, and other RWAs with leverage up to 500x. Liquidity is powered by the 0xMarkets Liquidity Provider, built on the Cartha Subnet (SN35), where miners act as liquidity providers (LPs)
 
 **What assets are supported?**\
 Initially major FX and Crypto pairs and Gold, expanding to other commodities, crypto and more real-world assets (RWAs)

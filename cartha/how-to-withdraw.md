@@ -8,7 +8,7 @@ Once your lock period has expired and the cooldown has passed, you can withdraw 
 
 ## Overview
 
-Withdrawing from Cartha returns your locked USDC principal (plus any accrued vault value) to your connected EVM wallet. Withdrawal is only available after **both** conditions are met:
+Withdrawing from the 0xMarkets Liquidity Provider returns your locked USDC principal (plus any accrued vault value) to your connected EVM wallet. Withdrawal is only available after **both** conditions are met:
 
 1. **Lock period has expired** — the duration you set when locking has fully elapsed
 2. **7-day cooldown has passed** — a mandatory waiting period counted from the lock *creation* date, not the expiry date
@@ -137,7 +137,7 @@ When you withdraw:
 - **Gas fees**: A small amount of ETH is spent on the withdrawal transaction — this is not deducted from your USDC
 - **ALPHA rewards**: Unclaimed ALPHA earnings are **not** affected by withdrawal. You can still claim them after withdrawing your principal.
 
-> Cartha vaults provide real DEX liquidity. LP positions can experience losses in volatile markets. See [Safety & Liquidations](../how-it-works/safety-and-liquidations.md) for details.
+> The 0xMarkets liquidity vaults provide real DEX liquidity. LP positions can experience losses in volatile markets. See [Safety & Liquidations](../how-it-works/safety-and-liquidations.md) for details.
 
 ---
 

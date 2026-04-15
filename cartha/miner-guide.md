@@ -1,14 +1,14 @@
 # Miner Guide
 
-Everything you need to start mining on Cartha — whether you want to run your own operation or deposit into an existing one.
+Everything you need to start mining on the 0xMarkets Liquidity Provider — whether you want to run your own operation or deposit into an existing one.
 
-- **Web Interface**: [Cartha](https://liquidity.0xmarkets.io)
+- **Web Interface**: [0xMarkets Liquidity Interface](https://liquidity.0xmarkets.io)
 
 ---
 
 ## Two Ways to Mine
 
-There are two paths to providing liquidity and earning ALPHA on Cartha. Pick the one that fits your setup:
+There are two paths to providing liquidity and earning ALPHA on the 0xMarkets Liquidity Provider. Pick the one that fits your setup:
 
 | | Principal Miner | Federated Miner |
 |---|---|---|
@@ -100,7 +100,7 @@ Your deposit score determines your share of daily emissions:
 
 ### Epoch Cycle
 
-Cartha operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC.
+The 0xMarkets Liquidity Provider operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC.
 
 - Lock by **Thursday 23:00 UTC** to be included in the next epoch (the indexer needs up to 15 minutes buffer)
 - Positions locked after Friday 00:00 UTC go into the *following* week's epoch
@@ -154,4 +154,4 @@ All miners face these risks regardless of path:
 
 ---
 
-**Ready to start?** Visit [Cartha](https://liquidity.0xmarkets.io) and start earning ALPHA today.
+**Ready to start?** Visit the [0xMarkets Liquidity Interface](https://liquidity.0xmarkets.io) and start earning ALPHA today.

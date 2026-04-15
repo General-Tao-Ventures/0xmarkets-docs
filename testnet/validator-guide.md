@@ -1,6 +1,6 @@
-# Validator Guide - Cartha Testnet
+# Validator Guide - 0xMarkets Liquidity Provider Testnet
 
-Complete guide for running validators on Cartha testnet.
+Complete guide for running validators on the 0xMarkets Liquidity Provider testnet.
 
 - **Repository**: [cartha-validator](https://github.com/General-Tao-Ventures/cartha-validator)
 
@@ -201,7 +201,7 @@ This error only applies to mainnet (netuid 35). On testnet (netuid 78) all valid
 ## Additional Resources
 
 - **[Mainnet Validator Guide](../cartha/validator-guide.md)** — Full guide with scoring details and federated miner reward calculation
-- **[Testnet Overview](../testnet/README.md)** — Learn more about the Cartha testnet
+- **[Testnet Overview](../testnet/README.md)** — Learn more about the 0xMarkets Liquidity Provider testnet
 - **[Validator Architecture](https://github.com/General-Tao-Ventures/cartha-validator/blob/main/docs/ARCHITECTURE.md)** — Deep-dive into validator internals
 
 ---

@@ -8,7 +8,7 @@
 
 ## Overview
 
-Principal Miners are the bridge between Bittensor mining and external capital markets. They maintain registered hotkeys on the Cartha subnet (SN35) and lock USDC into market vaults to provide liquidity for [0xMarkets](https://0xmarkets.io), a decentralized perpetual futures exchange built by the same team behind Cartha. Optionally, they can accept capital from external investors (federated miners) to pool liquidity and scale their operations.
+Principal Miners are the bridge between Bittensor mining and external capital markets. They maintain registered hotkeys on the Cartha subnet (SN35), which powers the 0xMarkets Liquidity Provider, and lock USDC into market vaults to provide liquidity for [0xMarkets](https://0xmarkets.io), a decentralized perpetual futures exchange built by the same team. Optionally, they can accept capital from external investors (federated miners) to pool liquidity and scale their operations.
 
 ### General Tensor — The In-House Principal Miner
 
@@ -18,7 +18,7 @@ The 0xMarkets team operates **General Tensor**, a principal miner available to a
 |--------|------|
 | **Operator** | 0xMarkets team |
 | **Commission** | 3% of ALPHA emissions |
-| **Distribution** | Automated epoch-by-epoch via the Cartha rewards system |
+| **Distribution** | Automated epoch-by-epoch via the 0xMarkets liquidity rewards system |
 | **Trusted Status** | Yes — operated by the team that built the subnet and the exchange |
 | **Dashboard** | [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners) |
 
@@ -44,7 +44,7 @@ The 0xMarkets team operates **General Tensor**, a principal miner available to a
 
 ### Technical
 
-- Registered **Bittensor hotkey** on Cartha subnet (SN35)
+- Registered **Bittensor hotkey** on the Cartha subnet (SN35)
 - Sufficient **TAO** for registration fees
 - **EVM wallet** (MetaMask, Coinbase Wallet, etc.)
 - **USDC** for liquidity positions
@@ -76,7 +76,7 @@ Becoming a principal miner involves three main steps:
 ### How Emissions Flow
 
 ```
-Cartha Subnet Validators
+0xMarkets Liquidity Provider Validators
          ↓
     Score miners based on performance
          ↓
@@ -94,18 +94,18 @@ Federated Miners' Bittensor Wallets
 - All ALPHA emissions are initially received by **your** Bittensor wallet
 - **This is the core trust assumption:** federated miners rely on you to distribute their share
 - You are responsible for distributing to federated miners (if operating in public mode)
-- Cartha does **not** enforce profit-sharing agreements on-chain
+- The 0xMarkets Liquidity Provider does **not** enforce profit-sharing agreements on-chain
 - The distribution mechanism is up to you, but the 0xMarkets team provides tooling to automate it
 
 ### Distribution Methods
 
 | Method | Description | Best For |
 |--------|-------------|----------|
-| **Cartha Rewards System** | Automated epoch-by-epoch distribution via the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) — federated miners claim directly from your dashboard | Operators who want hands-off, transparent distribution (used by General Tensor) |
+| **0xMarkets Liquidity Rewards System** | Automated epoch-by-epoch distribution via the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) — federated miners claim directly from your dashboard | Operators who want hands-off, transparent distribution (used by General Tensor) |
 | **Manual Distribution** | Track shares and send ALPHA periodically | Small operations with few federated miners |
 | **Off-Chain Agreement** | Legal contract with manual accounting | Custom arrangements with specific investors |
 
-> The 0xMarkets team strongly recommends using the automated Cartha Rewards System. Deploy the [open-source template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and it handles epoch monitoring, reward scoring, commission deduction, and self-service claiming for your federated miners.
+> The 0xMarkets team strongly recommends using the automated 0xMarkets Liquidity Rewards System. Deploy the [open-source template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and it handles epoch monitoring, reward scoring, commission deduction, and self-service claiming for your federated miners.
 
 ---
 
@@ -113,7 +113,7 @@ Federated Miners' Bittensor Wallets
 
 ### How Federated Miners Lock to You
 
-Federated miners can lock capital to your hotkey through the [Cartha web interface](https://liquidity.0xmarkets.io). They need your **Bittensor hotkey address** (SS58 format) — a 48-character string starting with `5`.
+Federated miners can lock capital to your hotkey through the [0xMarkets Liquidity Interface](https://liquidity.0xmarkets.io). They need your **Bittensor hotkey address** (SS58 format) — a 48-character string starting with `5`.
 
 The process is fully self-service: federated miners enter your hotkey, choose a pool, set an amount and lock duration, and complete the transaction. No CLI or coordination from you is required for the lock itself.
 
@@ -136,7 +136,7 @@ Your subnet score is based on the **sum of all positions** under your hotkey:
 
 ## Setting Up the Automated Rewards System
 
-If you want to run the Cartha Rewards System for your federated miners (recommended), the 0xMarkets team provides an open-source template you can deploy on any VPS or cloud provider.
+If you want to run the 0xMarkets Liquidity Rewards System for your federated miners (recommended), the 0xMarkets team provides an open-source template you can deploy on any VPS or cloud provider.
 
 ### Principal Miner Template
 
@@ -172,18 +172,18 @@ At minimum, you need to set:
 | `AGGREGATOR_HOTKEY` | Aggregator hotkey for reward accumulation |
 | `WALLET_PASSWORD` | Password to unlock your BT wallet |
 | `COMMISSION_RATE` | Your commission (e.g., `0.05` for 5%) |
-| `MINER_NAME` | Display name shown on the Cartha listing page |
+| `MINER_NAME` | Display name shown on the 0xMarkets liquidity listing page |
 | `MINER_DESCRIPTION` | Description shown on the listing page |
 
 See the [template README](https://github.com/General-Tao-Ventures/cartha-principal-miner-template#configuration) for the full configuration reference.
 
-### Get Listed on Cartha
+### Get Listed on the 0xMarkets Liquidity Interface
 
 After deploying your rewards system, apply to be listed on the [Principal Miners](https://liquidity.0xmarkets.io/principal-miners) page so federated miners can discover you:
 
 1. **Deploy & verify** — Make sure your API is accessible (`curl https://your-domain.com/health`)
 2. **Apply** — Visit [liquidity.0xmarkets.io/principal-miners/apply](https://liquidity.0xmarkets.io/principal-miners/apply) and fill in your details
-3. **Wait for approval** — The Cartha team reviews applications and notifies you via email
+3. **Wait for approval** — The 0xMarkets team reviews applications and notifies you via email
 4. **Go live** — Once approved, your miner appears on the listing page and federated miners can lock capital to your hotkey
 
 ---
@@ -197,7 +197,7 @@ If you accept external capital, establish clear terms before federated miners lo
 | Topic | Details |
 |-------|---------|
 | **Commission Rate** | The percentage you take from federated miner rewards (e.g., 3–10%) |
-| **Distribution Method** | Automated (Cartha Rewards System) or manual; frequency and process |
+| **Distribution Method** | Automated (0xMarkets Liquidity Rewards System) or manual; frequency and process |
 | **Minimum Investment** | Capital threshold and accepted lock durations |
 | **Risk Disclosure** | LP liquidation, smart contract risks, distribution risk |
 
@@ -213,7 +213,7 @@ If you accept external capital, establish clear terms before federated miners lo
 
 ## Terms
 - Commission Rate: [X]% of ALPHA emissions
-- Distribution: Automated via Cartha Rewards System (epoch-by-epoch)
+- Distribution: Automated via 0xMarkets Liquidity Rewards System (epoch-by-epoch)
 - Minimum Lock: [X] USDC for [X] days
 
 ## What Federated Miners Should Know
@@ -291,7 +291,7 @@ If you accept external capital, establish clear terms before federated miners lo
 
 | Risk | Details |
 |------|---------|
-| **Distribution Responsibility** | If not using the automated Cartha Rewards System, you must distribute emissions manually. Failure to distribute damages your reputation and may cause federated miners to leave. |
+| **Distribution Responsibility** | If not using the automated 0xMarkets Liquidity Rewards System, you must distribute emissions manually. Failure to distribute damages your reputation and may cause federated miners to leave. |
 | **Performance Risk** | Poor pool performance or liquidation events reduce emissions. Federated miners bear the LP risk on their capital, but poor results reflect on you as the operator. |
 | **Regulatory Risk** | Accepting external capital may trigger securities regulations depending on your jurisdiction. Consult legal counsel. |
 
@@ -335,7 +335,7 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 > 📘 **Ready to become a principal miner?** Follow the [Principal Miner Guide](../cartha/principal-miner-guide.md) for complete step-by-step instructions on wallet creation, subnet registration, and locking funds.
 
-> 🛠️ **Want to run automated rewards?** Deploy the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and [apply to be listed](https://liquidity.0xmarkets.io/principal-miners/apply) on the Cartha frontend.
+> 🛠️ **Want to run automated rewards?** Deploy the [Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template) and [apply to be listed](https://liquidity.0xmarkets.io/principal-miners/apply) on the 0xMarkets liquidity frontend.
 
 > 💡 **Want to lock to the in-house principal miner instead?** Visit the [General Tensor dashboard](https://liquidity.0xmarkets.io/principal-miners) to federate under the team-operated miner, or see the [Federated Miner Guide](../cartha/federated-miner-guide.md) for a full walkthrough.
 
@@ -357,4 +357,4 @@ In public mode, your hotkey's deposit score includes all federated miner capital
 
 ---
 
-**Disclaimer**: Principal miners are independent operators. Cartha provides the infrastructure but does not guarantee returns, enforce profit-sharing agreements, or assume responsibility for principal miner actions. General Tensor is operated by the 0xMarkets team and uses the automated rewards system, but the same risks (smart contract, liquidation, network) apply to all participants. Always conduct your own due diligence and consult appropriate advisors.
+**Disclaimer**: Principal miners are independent operators. The 0xMarkets Liquidity Provider provides the infrastructure but does not guarantee returns, enforce profit-sharing agreements, or assume responsibility for principal miner actions. General Tensor is operated by the 0xMarkets team and uses the automated rewards system, but the same risks (smart contract, liquidation, network) apply to all participants. Always conduct your own due diligence and consult appropriate advisors.

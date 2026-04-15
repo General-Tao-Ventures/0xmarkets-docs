@@ -1,6 +1,6 @@
 # Federated Miner Guide
 
-Complete guide for becoming a federated miner on Cartha — no CLI required, everything is done through the web interface.
+Complete guide for becoming a federated miner on the 0xMarkets Liquidity Provider — no CLI required, everything is done through the web interface.
 
 - **Web Interface**: [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 
@@ -276,7 +276,7 @@ Once your lock period and cooldown have both passed, your position will show as 
 
 - **ALPHA emissions**: Based on your deposit score (time × amount × pool weight)
 - **Trading fees**: 50% of trading fees go to LPs, proportional to locked USDC
-- Cartha operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC
+- The 0xMarkets Liquidity Provider operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC
 - **Best Practice**: Lock by **Thursday 23:00 UTC** to ensure inclusion in the next epoch
 - The indexer needs up to 15 minutes to detect your position — give yourself buffer time
 - Positions locked after Friday 00:00 UTC go into the *following* week's epoch

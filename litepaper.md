@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This litepaper aims to outline the architecture of 0xMarkets powered by the Cartha Subnet. 0xMarkets is a **Multi-asset Decentralized Perpetual Futures Exchange** that offers traders the ability to lever up to 500x on **currencies**, **commodities, crypto** and other RWAs in a perimisionless manner. Liquidity is provided by the **Cartha Subnet (SN35)**, built on Bittensor, where miners act as Liquidity Providers (LPs) for the 0xMarkets DEX.
+This litepaper aims to outline the architecture of 0xMarkets and its liquidity layer. 0xMarkets is a **Multi-asset Decentralized Perpetual Futures Exchange** that offers traders the ability to lever up to 500x on **currencies**, **commodities, crypto** and other RWAs in a permissionless manner. Liquidity is provided by the **0xMarkets Liquidity Provider**, which runs on the **Cartha Subnet (SN35)** built on Bittensor, where miners act as Liquidity Providers (LPs) for the 0xMarkets DEX.
 
 ## Architecture
 
@@ -13,7 +13,7 @@ This litepaper aims to outline the architecture of 0xMarkets powered by the Cart
 * **Protocol fees:** 10% of trading fees to the treasury; optional treasury share of funding payments.
 * **Leverage:** up to **500x**; permissionless onboarding; fixed trading fee structure.
 
-## Cartha Subnet
+## 0xMarkets Liquidity Provider
 
 <figure><img src=".gitbook/assets/cartha-subnet-overview.png" alt=""><figcaption></figcaption></figure>
 

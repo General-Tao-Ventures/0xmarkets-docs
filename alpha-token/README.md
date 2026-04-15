@@ -1,6 +1,6 @@
 # ALPHA Token
 
-ALPHA is the native token of the Cartha Subnet (SN35) on Bittensor. It is emitted by the network each epoch and distributed to the participants who keep 0xMarkets running — miners providing liquidity, validators executing liquidations, and traders generating volume.
+ALPHA is the native token of the 0xMarkets Liquidity Provider, which runs on the Cartha Subnet (SN35) on Bittensor. It is emitted by the network each epoch and distributed to the participants who keep 0xMarkets running — miners providing liquidity, validators executing liquidations, and traders generating volume.
 
 ALPHA has two primary uses: it is a **yield-bearing asset** when locked into veALPHA, and it is the **unit of governance** that determines how the protocol allocates resources across markets.
 
@@ -38,7 +38,7 @@ The diagram below shows how ALPHA emissions and trading fees flow through the sy
 <figure><img src="../.gitbook/assets/0xM_Tokenomics.png" alt=""><figcaption><p>ALPHA emission and fee distribution across the 0xMarkets ecosystem</p></figcaption></figure>
 
 Key flows:
-* **Cartha → LP Miners / Validators / Incentive Pool** via ALPHA emissions each epoch
+* **0xMarkets Liquidity Provider → LP Miners / Validators / Incentive Pool** via ALPHA emissions each epoch
 * **0xMarkets → LP Miners** 50% of trading fees in USDC
 * **0xMarkets → veALPHA stakers** 40% of trading fees in USDC
 * **0xMarkets → Insurance Pool** 5% liquidation fee

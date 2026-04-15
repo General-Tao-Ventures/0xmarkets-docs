@@ -168,7 +168,7 @@ Return to [My Positions](https://liquidity.0xmarkets.io/manage) and refresh. You
 
 Both top up and extend transactions take effect at the start of the next epoch.
 
-- Cartha operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC
+- The 0xMarkets Liquidity Provider operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC
 - Complete your top up or extension before **Thursday 23:00 UTC** to be included in the upcoming epoch
 - Changes made after Friday 00:00 UTC will take effect in the *following* week's epoch
 - The indexer needs up to **15 minutes** to detect new transactions — give yourself a buffer
