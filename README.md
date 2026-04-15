@@ -5,7 +5,7 @@ coverY: 0
 
 # Home
 
-## 0xMarkets — FX Perp DEX, powered by the 0xMarkets Liquidity Provider
+## 0xMarkets — FX Perp DEX, powered by Bittensor
 
 **What it is:** A Multi-asset (FX, Crypto and Commodities) Perpetual Futures DEX where traders can get exposure with high leverage, while liquidity is sourced from the 0xMarkets Liquidity Provider, built on the Cartha Subnet (SN35). Miners act as LPs through USDC vaults (one per market) for risk isolation.
 
