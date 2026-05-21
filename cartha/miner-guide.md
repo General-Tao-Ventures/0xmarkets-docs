@@ -103,7 +103,7 @@ Cartha operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59
 - Lock by **Thursday 23:00 UTC** to be included in the next epoch (the indexer needs up to 15 minutes buffer)
 - Positions locked after Friday 00:00 UTC go into the *following* week's epoch
 
-> Learn more: [Weekly Epochs](../how-it-works/weekly-epochs.md) · [Fees & Rewards](../how-it-works/fees-and-rewards.md)
+> Learn more: [Weekly Epochs](../how-it-works/weekly-epochs.md) · [Rewards](../alpha-token/rewards/README.md)
 
 ---
 
@@ -126,7 +126,7 @@ When your lock expires and the 7-day cooldown has passed:
 3. Confirm the transaction in your wallet
 4. USDC is returned to your connected EVM wallet
 
-> The 7-day cooldown starts from lock creation, not expiry. See [Fees & Rewards](../how-it-works/fees-and-rewards.md) for details.
+> The 7-day cooldown starts from lock creation, not expiry. See [Rewards](../alpha-token/rewards/README.md) for details.
 
 ---
 

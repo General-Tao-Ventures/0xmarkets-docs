@@ -24,9 +24,7 @@ Complete guide for running validators on Cartha.
 - ✅ **Disk**: 20 GB SSD
 - ✅ **Network**: Stable internet connection with minimal downtime
 
-{% hint style="info" %}
-On mainnet, validators must be whitelisted by the subnet owner. Contact the team via [Discord](https://0xmarkets.io/discord) with your validator SS58 hotkey address to request access.
-{% endhint %}
+> **Note**: On mainnet, validators must be whitelisted by the subnet owner. Contact the team via [Discord](https://0xmarkets.io/discord) with your validator SS58 hotkey address to request access.
 
 ---
 
@@ -94,9 +92,7 @@ The `run.sh` script will:
 5. **Setup PM2** — configures PM2 to manage both validator and auto-updater processes
 6. **Start validator** — optionally starts the validator immediately
 
-{% hint style="warning" %}
-On mainnet, validators must be whitelisted before they can query verified miners. The whitelist is managed by the verifier service — contact the subnet owner to have your hotkey added.
-{% endhint %}
+> **Warning**: On mainnet, validators must be whitelisted before they can query verified miners. The whitelist is managed by the verifier service — contact the subnet owner to have your hotkey added.
 
 ---
 
@@ -440,14 +436,12 @@ curl "https://api.cartha.finance/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00
 
 ## Additional Resources
 
-- **[Participants: Validators](../participants/validators.md)** — High-level role overview
+- **[Validation Overview](../validation/README.md)** — High-level role overview
 - **[Cartha Architecture](https://github.com/General-Tao-Ventures/cartha-validator/blob/main/docs/ARCHITECTURE.md)** — Deep-dive into validator internals
-- **[Fees & Rewards](../how-it-works/fees-and-rewards.md)** — How emissions flow through the subnet
+- **[Rewards](../alpha-token/rewards/README.md)** — How emissions and fees flow through the subnet
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — Epoch lifecycle and timing
 - **Discord**: https://0xmarkets.io/discord — Join the Cartha community for whitelist requests and support
 
 ---
 
-{% hint style="info" %}
-Validators must be whitelisted by the subnet owner to participate on mainnet. Contact the team via Discord for whitelist requests.
-{% endhint %}
+> **Note**: Validators must be whitelisted by the subnet owner to participate on mainnet. Contact the team via Discord for whitelist requests.

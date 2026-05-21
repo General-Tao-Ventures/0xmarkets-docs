@@ -21,9 +21,7 @@ Complete guide for running validators on Cartha testnet.
 - ✅ **Disk**: 20 GB SSD
 - ✅ **Network**: Stable internet connection with minimal downtime
 
-{% hint style="info" %}
-On testnet, all validators are allowed — no whitelist is required. Whitelist restrictions only apply to mainnet.
-{% endhint %}
+> **Note**: On testnet, all validators are allowed — no whitelist is required. Whitelist restrictions only apply to mainnet.
 
 ---
 
@@ -206,6 +204,4 @@ This error only applies to mainnet (netuid 35). On testnet (netuid 78) all valid
 
 ---
 
-{% hint style="warning" %}
-Testnet is a testing environment. All tokens are testnet tokens with no real value. Use testnet to learn, test, and develop before deploying to mainnet.
-{% endhint %}
+> **Warning**: Testnet is a testing environment. All tokens are testnet tokens with no real value. Use testnet to learn, test, and develop before deploying to mainnet.
