@@ -8,13 +8,13 @@
 
 ## Overview
 
-Federated Miners enable anyone with USDC and an EVM wallet to participate in Cartha subnet's liquidity provision without the technical complexity of running Bittensor infrastructure. You lock capital through a registered principal miner's hotkey, maintain full ownership of your position, and can withdraw after your lock period expires.
+Federated Miners enable anyone with USDC and an EVM wallet to participate in the 0xMarkets Liquidity Provider without the technical complexity of running Bittensor infrastructure. You lock capital through a registered principal miner's hotkey, maintain full ownership of your position, and can withdraw after your lock period expires.
 
-Your locked USDC provides liquidity for [0xMarkets](https://0xmarkets.io), a decentralized perpetual futures exchange built by the same team behind Cartha. In return, you earn a share of trading fees and ALPHA emissions from the Bittensor subnet.
+Your locked USDC provides liquidity for [0xMarkets](https://0xmarkets.io), a decentralized perpetual futures exchange built by the same team. In return, you earn a share of trading fees and ALPHA emissions from the liquidity subnet.
 
 ### General Tensor — The Recommended Starting Point
 
-The 0xMarkets team operates **General Tensor**, an in-house principal miner available to all federated miners. If you're new to Cartha or don't have a specific principal miner in mind, General Tensor offers:
+The 0xMarkets team operates **General Tensor**, an in-house principal miner available to all federated miners. If you're new to the 0xMarkets Liquidity Provider or don't have a specific principal miner in mind, General Tensor offers:
 
 - **Automated distribution** — Rewards are calculated and claimable epoch-by-epoch on the [Principal Miners dashboard](https://liquidity.0xmarkets.io/principal-miners)
 - **Transparent commission** — Rate is publicly displayed on the dashboard
@@ -66,7 +66,7 @@ The 0xMarkets team operates **General Tensor**, an in-house principal miner avai
          Performance scoring
                     ↓
 ┌─────────────────────────────────────────────┐
-│     Cartha Subnet Validators                │
+│     0xMarkets Liquidity Provider Validators │
 │     - Score principal miner performance     │
 │     - Distribute ALPHA emissions            │
 └─────────────────────────────────────────────┘
@@ -110,7 +110,7 @@ The simplest way to start is by locking to **General Tensor**, the principal min
 
 | Detail | Info |
 |--------|------|
-| **Operator** | 0xMarkets team (builders of Cartha subnet and 0xMarkets exchange) |
+| **Operator** | 0xMarkets team (builders of the liquidity provider and the 0xMarkets exchange) |
 | **Commission** | 3% of ALPHA emissions |
 | **Distribution** | Automated — rewards are calculated per epoch and claimable directly from the dashboard |
 | **Dashboard** | [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners) — view performance, earnings, and claim rewards |
@@ -123,7 +123,7 @@ If you prefer a different operator, evaluate them on:
 
 - **Track record and reputation** — Past performance and distribution history
 - **Commission rate** — The percentage they take from your rewards
-- **Distribution method** — Automated (Cartha Rewards System) vs. manual
+- **Distribution method** — Automated (0xMarkets Liquidity Rewards System) vs. manual
 - **Communication** — Active channels (Discord, Telegram, email) and responsiveness
 - **Pool strategy** — Which markets they operate in and why
 
@@ -139,7 +139,7 @@ If you prefer a different operator, evaluate them on:
 
 Avoid principal miners who:
 - Promise guaranteed returns
-- Request capital outside of Cartha vaults
+- Request capital outside of the 0xMarkets liquidity vaults
 - Refuse to disclose their commission rate or terms
 - Don't use the automated distribution system without clear justification
 - Have no track record or references
@@ -147,7 +147,7 @@ Avoid principal miners who:
 ### Green Flags
 
 Look for principal miners who:
-- Use the automated Cartha Rewards System for transparent distribution
+- Use the automated 0xMarkets Liquidity Rewards System for transparent distribution
 - Provide transparent performance reporting
 - Have satisfied federated miners as references
 - Disclose all risks and commission upfront
@@ -163,29 +163,29 @@ If you lock to the in-house General Tensor principal miner, the terms are straig
 
 - **Commission rate** is 3% of your ALPHA emissions per epoch
 - **Distribution is automated** — rewards accumulate per epoch and you claim them directly from the dashboard
-- **No separate agreement needed** — everything is handled through the Cartha Rewards System
+- **No separate agreement needed** — everything is handled through the 0xMarkets Liquidity Rewards System
 - You still need a **Bittensor coldkey** (SS58 address) to claim your ALPHA rewards
 
 ### If You're Using Another Principal Miner
 
-Since ALPHA emissions go to the principal miner's wallet first, you need a clear arrangement for profit sharing. Cartha does **not** enforce these agreements on-chain — they are between you and the principal miner.
+Since ALPHA emissions go to the principal miner's wallet first, you need a clear arrangement for profit sharing. The 0xMarkets Liquidity Provider does **not** enforce these agreements on-chain — they are between you and the principal miner.
 
 **What to clarify before locking:**
 
 | Topic | Details |
 |-------|---------|
 | **Commission Rate** | What percentage does the principal miner take from your rewards? |
-| **Distribution Method** | Automated (Cartha Rewards System) or manual? If manual, how often? |
+| **Distribution Method** | Automated (0xMarkets Liquidity Rewards System) or manual? If manual, how often? |
 | **Lock Terms** | Preferred pool, lock duration, any minimum amounts |
 | **Communication** | How will you reach them? What reporting will they provide? |
 
-> **Tip:** Prefer principal miners who use the automated Cartha Rewards System. This significantly reduces distribution risk because rewards are calculated transparently and you claim directly — no manual transfers required.
+> **Tip:** Prefer principal miners who use the automated 0xMarkets Liquidity Rewards System. This significantly reduces distribution risk because rewards are calculated transparently and you claim directly — no manual transfers required.
 
 ---
 
 ## Managing Your Position
 
-Once locked, you can manage your position through the [Cartha web interface](https://liquidity.0xmarkets.io):
+Once locked, you can manage your position through the [0xMarkets Liquidity Interface](https://liquidity.0xmarkets.io):
 
 - **View Positions** — See all your active locks, amounts, and expiry dates
 - **Top Up** — Add more USDC to an existing position (no principal miner approval needed)
@@ -210,7 +210,7 @@ Once locked, you can manage your position through the [Cartha web interface](htt
 
 | Risk | Details |
 |------|---------|
-| **Distribution Risk** | If you use a principal miner that doesn't use the automated rewards system, they could fail to distribute your share. **Mitigation:** Use General Tensor or a principal miner on the Cartha Rewards System. |
+| **Distribution Risk** | If you use a principal miner that doesn't use the automated rewards system, they could fail to distribute your share. **Mitigation:** Use General Tensor or a principal miner on the 0xMarkets Liquidity Rewards System. |
 | **Liquidation Losses** | Your USDC provides DEX liquidity. LP positions can be liquidated in volatile markets; capital loss is permanent and not reimbursed. |
 | **Poor Performance** | Low trading volume or a bad subnet score reduces ALPHA emissions. Returns are not guaranteed. |
 | **Smart Contract Risk** | Vault contracts are audited but not risk-free. Bugs or exploits could result in loss of locked funds. |
@@ -218,7 +218,7 @@ Once locked, you can manage your position through the [Cartha web interface](htt
 
 ### Risk Mitigation
 
-1. **Use a Trusted Operator** — Lock to General Tensor or a principal miner using the automated Cartha Rewards System to minimize distribution risk
+1. **Use a Trusted Operator** — Lock to General Tensor or a principal miner using the automated 0xMarkets Liquidity Rewards System to minimize distribution risk
 2. **Start Small** — Lock a smaller amount first; scale up after verifying payouts work
 3. **Diversify** — Spread across multiple pools and potentially multiple principal miners
 4. **Monitor Regularly** — Track your position and rewards on the Principal Miners dashboard
@@ -230,7 +230,7 @@ Once locked, you can manage your position through the [Cartha web interface](htt
 
 ### How Miners Earn
 
-Miners on Cartha earn from two sources:
+Miners on the 0xMarkets Liquidity Provider earn from two sources:
 
 | Source | Details |
 |--------|---------|
@@ -254,10 +254,10 @@ Since you're a federated miner, ALPHA emissions go to the **principal miner's Bi
 ## Frequently Asked Questions
 
 **Can the principal miner steal my USDC?**
-No. Your USDC is locked in a Cartha vault smart contract, not the principal miner's wallet. The principal miner cannot access, move, or withdraw your committed funds. Only you can withdraw via your EVM wallet after lock expiry.
+No. Your USDC is locked in a 0xMarkets liquidity vault smart contract, not the principal miner's wallet. The principal miner cannot access, move, or withdraw your committed funds. Only you can withdraw via your EVM wallet after lock expiry.
 
 **What if the principal miner doesn't pay me?**
-If you use a principal miner on the **Cartha Rewards System** (like General Tensor), rewards are calculated automatically and you claim them directly from the dashboard — no manual payment required. For principal miners *not* on the rewards system, you rely on their agreement and reputation. This is why choosing a trusted operator matters.
+If you use a principal miner on the **0xMarkets Liquidity Rewards System** (like General Tensor), rewards are calculated automatically and you claim them directly from the dashboard — no manual payment required. For principal miners *not* on the rewards system, you rely on their agreement and reputation. This is why choosing a trusted operator matters.
 
 **What is General Tensor?**
 General Tensor is the in-house principal miner operated by the 0xMarkets team. It uses automated epoch-by-epoch distribution, has a publicly disclosed commission rate, and is the recommended starting point for new federated miners. View it at [liquidity.0xmarkets.io/principal-miners](https://liquidity.0xmarkets.io/principal-miners).
@@ -290,7 +290,7 @@ General Tensor takes a 3% commission from your gross ALPHA rewards each epoch. T
 
 - **[Principal Miners Guide](principal-miners.md)** — Understanding your manager
 - **[Federated Miner Guide](../cartha/federated-miner-guide.md)** — Full setup, locking, and claiming walkthrough
-- **[Interface Guide](../testnet/cartha-interface.md)** — How to use the Cartha interface
+- **[Interface Guide](../testnet/cartha-interface.md)** — How to use the 0xMarkets liquidity interface
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How epoch timing and rewards work
 - **[FAQ](../faq.md)** — Common questions
 - **[Risk Disclosure](../legal-and-risk.md)** — Full risk information
@@ -303,4 +303,4 @@ General Tensor takes a 3% commission from your gross ALPHA rewards each epoch. T
 
 ---
 
-**Disclaimer**: Federated mining involves significant risks including potential capital loss from liquidations, smart contract vulnerabilities, network failures, and reliance on principal miner distribution. General Tensor is operated by the 0xMarkets team with automated distribution, but the same LP and smart contract risks apply. Cartha provides infrastructure only and does not guarantee returns. Rewards depend on subnet performance and trading volume. Always do your own research and consult appropriate advisors before committing funds.
+**Disclaimer**: Federated mining involves significant risks including potential capital loss from liquidations, smart contract vulnerabilities, network failures, and reliance on principal miner distribution. General Tensor is operated by the 0xMarkets team with automated distribution, but the same LP and smart contract risks apply. The 0xMarkets Liquidity Provider provides infrastructure only and does not guarantee returns. Rewards depend on subnet performance and trading volume. Always do your own research and consult appropriate advisors before committing funds.

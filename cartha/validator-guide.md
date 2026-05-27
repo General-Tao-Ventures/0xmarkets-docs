@@ -1,6 +1,6 @@
 # Validator Guide
 
-Complete guide for running validators on Cartha.
+Complete guide for running validators on the 0xMarkets Liquidity Provider.
 
 - **Repository**: [cartha-validator](https://github.com/General-Tao-Ventures/cartha-validator)
 - **CLI Repository**: [cartha-cli](https://github.com/General-Tao-Ventures/cartha-cli)
@@ -48,9 +48,9 @@ For more details on wallet management, see the [Bittensor CLI documentation](htt
 
 ### Register to Subnet
 
-You can register to subnet 35 (Cartha mainnet) using either btcli or cartha-cli:
+You can register to subnet 35, which powers the 0xMarkets Liquidity Provider on mainnet, using either btcli or cartha-cli:
 
-**Option 1: Register via Cartha CLI**
+**Option 1: Register via the liquidity CLI**
 
 ```bash
 pip install cartha-cli
@@ -124,7 +124,7 @@ pm2 logs cartha-validator-manager
 
 ### Epoch Schedule
 
-Cartha uses a **weekly epoch cycle**:
+The 0xMarkets Liquidity Provider uses a **weekly epoch cycle**:
 
 | Event | Schedule |
 | --- | --- |
@@ -179,7 +179,7 @@ The **Incentive Pool** always receives a fixed **24.3902%** of all subnet emissi
 
 ## How Federated Miner Positions Affect Scores
 
-Cartha's design ensures every federated miner position makes a distinct, meaningful contribution to a principal miner's Bittensor weight.
+The 0xMarkets Liquidity Provider is designed so every federated miner position makes a distinct, meaningful contribution to a principal miner's Bittensor weight.
 
 ### How It Works
 
@@ -440,7 +440,7 @@ curl "https://api.cartha.finance/v1/verified-miners?epoch=$(date -u +%Y-%m-%dT00
 - **[Cartha Architecture](https://github.com/General-Tao-Ventures/cartha-validator/blob/main/docs/ARCHITECTURE.md)** — Deep-dive into validator internals
 - **[Rewards](../alpha-token/rewards/README.md)** — How emissions and fees flow through the subnet
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — Epoch lifecycle and timing
-- **Discord**: https://0xmarkets.io/discord — Join the Cartha community for whitelist requests and support
+- **Discord**: https://0xmarkets.io/discord — Join the 0xMarkets community for whitelist requests and support
 
 ---
 

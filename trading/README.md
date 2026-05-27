@@ -1,5 +1,7 @@
 # Trading on 0xMarkets
 
+> ⚠️ **Trading is currently in testnet.** The exchange runs on **Base Sepolia** (testnet). No real funds are at risk. Mainnet trading will launch in a future release — see the [Roadmap](../roadmap.md).
+
 ## What is 0xMarkets
 
 0xMarkets is a decentralized perpetual futures exchange deployed on Base Sepolia.
@@ -12,7 +14,16 @@
 
 1. **Connect a wallet** — MetaMask, Rabby, or any WalletConnect-compatible wallet
 2. **Fund your wallet with ETH on Base Sepolia** — you need ETH to pay gas fees for transactions
-3. **Navigate to the Trade page** to browse available markets and open positions
+3. **Navigate to [app.0xmarkets.io](https://app.0xmarkets.io/#/)** to browse available markets and open positions
+
+### Key Pages
+
+| Page | URL |
+|------|-----|
+| Trade | [app.0xmarkets.io/#/](https://app.0xmarkets.io/#/) |
+| Pools | [app.0xmarkets.io/#/pools](https://app.0xmarkets.io/#/pools) |
+| Leaderboard | [app.0xmarkets.io/#/leaderboard](https://app.0xmarkets.io/#/leaderboard) |
+| Stats | [app.0xmarkets.io/#/stats](https://app.0xmarkets.io/#/stats) |
 
 ## Multichain Trading
 

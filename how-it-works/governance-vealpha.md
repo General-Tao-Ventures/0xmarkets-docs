@@ -1,6 +1,7 @@
+---
+redirect_to: ../alpha-token/vealpha.md
+---
+
 # Governance (veALPHA)
 
-* **Lock ALPHA → veALPHA** for voting weight; longer locks = higher weight and fee share.&#x20;
-* **Alpha Voting:** direct emissions to selected vaults.
-* **Fees Voting:** adjust protocol fee splits and parameters.&#x20;
-
+This page has moved. See [Alpha Token → Governance (veALPHA)](../alpha-token/vealpha.md).

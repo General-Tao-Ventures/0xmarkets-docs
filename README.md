@@ -5,13 +5,13 @@ coverY: 0
 
 # Home
 
-## 0xMarkets — FX Perp DEX, secured by Cartha (SN35)
+## 0xMarkets — FX Perp DEX, powered by Bittensor
 
-**What it is:** A Multi-asset (FX, Crypto and Commodities) Perpetual Futures DEX where traders can get exposure with high leverage, while liquidity is sourced from the Cartha Subnet (SN35) — miners act as LPs through USDC vaults (one per market) for risk isolation.
+**What it is:** A Multi-asset (FX, Crypto and Commodities) Perpetual Futures DEX where traders can get exposure with high leverage, while liquidity is sourced from the 0xMarkets Liquidity Provider, built on the Cartha Subnet (SN35). Miners act as LPs through USDC vaults (one per market) for risk isolation.
 
 **Why it matters**
 
-* Deep, programmatic liquidity from miners (LPs) on Cartha SN35.
+* Deep, programmatic liquidity from miners (LPs) on the 0xMarkets Liquidity Provider.
 * Simple economics: trading fees flow to LPs and the treasury; liquidations reinforce safety.
 * Governance directs emissions and tunes parameters via veALPHA.
 

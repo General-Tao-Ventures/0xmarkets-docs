@@ -22,6 +22,6 @@ If an order is submitted during a market closure, the order will appear to be pr
 ## Key Details
 
 - **FX pairs** (EUR/USD, GBP/USD, USD/JPY): Closed from Friday 5PM ET to Sunday 5PM ET.
-- **Metals** (GOLD/USD): Closed from Friday 5PM ET to Sunday 6PM ET, plus a daily maintenance window from 5PM to 6PM ET Monday through Thursday.
+- **Metals** (GOLD/USD, SILVER/USD): Closed from Friday 5PM ET to Sunday 6PM ET, plus a daily maintenance window from 5PM to 6PM ET Monday through Thursday.
 - **Commodities** (WTI/USD): Same schedule as Metals.
-- **Crypto** (WBTC/USD, WETH/USD): Always open.
+- **Crypto** (WBTC/USD, WETH/USD, TAO/USD): Always open.

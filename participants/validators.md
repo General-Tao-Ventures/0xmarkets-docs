@@ -1,13 +1,13 @@
 # Validators
 
-Validators play a critical role in the Cartha subnet by scoring miners based on their USDC liquidity positions and publishing weights to the Bittensor network.
+Validators play a critical role in the 0xMarkets Liquidity Provider by scoring miners based on their USDC liquidity positions and publishing weights to the Bittensor network.
 
 ## Responsibilities
 
 - Score miners based on locked USDC amounts, lock duration, and pool weights
 - Publish normalized weights to Bittensor every epoch
 - Filter expired and deregistered miner positions throughout the week
-- Submit rankings to the Cartha leaderboard after each weight publication
+- Submit rankings to the 0xMarkets leaderboard after each weight publication
 
 ## How Validators Score Miners
 
@@ -29,7 +29,7 @@ A position locked for 365 days achieves the maximum boost of `1.0`. A position l
 
 ### 3. Pool Weight
 
-Each liquidity pool has a weight multiplier. Currently all pools use equal weight (`1.0`) in pre-DEX mode. After the Cartha DEX launches, pool weights will be sourced on-chain from the target allocation contracts.
+Each liquidity pool has a weight multiplier. Currently all pools use equal weight (`1.0`) in pre-DEX mode. After the full 0xMarkets liquidity layer launches, pool weights will be sourced on-chain from the target allocation contracts.
 
 ### Full Scoring Formula
 
@@ -57,7 +57,7 @@ weight(miner_i)  = (score_i / total_score) × 75.6098%
 
 ## Minimum Compute Requirements
 
-To run a Cartha validator, you need:
+To run a validator for the 0xMarkets Liquidity Provider, you need:
 
 - **CPU**: 2 cores minimum
 - **RAM**: 4 GB minimum

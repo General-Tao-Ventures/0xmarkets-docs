@@ -2,7 +2,7 @@
 
 ## Smart Contract Security Audit
 
-Cartha's smart contracts have been audited by **Hashlock**, a leading blockchain security audit firm. The audit was completed in **January 2026** and the smart contracts received a **Secure** rating.
+The 0xMarkets Liquidity Provider smart contracts have been audited by **Hashlock**, a leading blockchain security audit firm. The audit was completed in **January 2026** and the smart contracts received a **Secure** rating.
 
 ### Audit Details
 
@@ -15,7 +15,7 @@ Cartha's smart contracts have been audited by **Hashlock**, a leading blockchain
 
 ### About the Audit
 
-The audit covered Cartha's smart contract infrastructure, including:
+The audit covered the 0xMarkets Liquidity Provider smart contract infrastructure, including:
 
 * Vault contracts and deposit mechanisms
 * Liquidity management systems
@@ -23,7 +23,7 @@ The audit covered Cartha's smart contract infrastructure, including:
 * Security of USDC deposits and withdrawals
 * Access controls and permission systems
 
-Cartha operates as Subnet 35 on the Bittensor network, providing a decentralized liquidity engine for the 0xMarkets DEX. The protocol enables liquidity providers to deposit USDC into on-chain vaults, with dynamic allocation across trading pairs based on real-time demand.
+The 0xMarkets Liquidity Provider runs on Cartha, Subnet 35 on the Bittensor network, and provides the decentralized liquidity engine for the 0xMarkets DEX. The protocol enables liquidity providers to deposit USDC into on-chain vaults, with dynamic allocation across trading pairs based on real-time demand.
 
 ### View the Full Audit Report
 
@@ -44,21 +44,21 @@ The Hashlock audit included:
 
 ### Security Best Practices
 
-While Cartha's smart contracts have been audited and rated as secure, users should always:
+While the 0xMarkets Liquidity Provider smart contracts have been audited and rated as secure, users should always:
 
 * **Understand the risks** of participating in DeFi protocols
 * **Start with small amounts** when testing new features
 * **Verify contract addresses** before interacting with the protocol
 * **Keep private keys secure** and never share them with anyone
-* **Monitor positions regularly** through the Cartha Interface
+* **Monitor positions regularly** through the 0xMarkets Liquidity Interface
 
 ### Smart Contract Addresses
 
-All verified smart contract addresses can be found in the [Cartha overview](README.md#smart-contracts).
+All verified smart contract addresses can be found in the [0xMarkets Liquidity Provider overview](README.md#smart-contracts).
 
 ### Continuous Security
 
-Security is an ongoing priority for Cartha. The team:
+Security is an ongoing priority for the 0xMarkets Liquidity Provider. The team:
 
 * Monitors on-chain activity for anomalies
 * Maintains communication channels for security disclosures

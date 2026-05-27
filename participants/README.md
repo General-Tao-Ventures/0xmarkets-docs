@@ -1,6 +1,6 @@
 # Participants
 
-The 0xMarkets ecosystem consists of multiple participant types, each playing a crucial role in the decentralized perpetual futures platform powered by the Cartha subnet.
+The 0xMarkets ecosystem consists of multiple participant types, each playing a crucial role in the decentralized perpetual futures platform powered by the 0xMarkets Liquidity Provider on the Cartha subnet.
 
 ---
 
@@ -33,7 +33,7 @@ The 0xMarkets ecosystem consists of multiple participant types, each playing a c
 - Access deep liquidity across multiple markets
 
 **[Validators](validators.md)**
-- Run Bittensor validators on the Cartha subnet
+- Run Bittensor validators on the 0xMarkets Liquidity Provider
 - Score miner performance and reliability
 - Ensure network consensus and security
 - Earn validation rewards

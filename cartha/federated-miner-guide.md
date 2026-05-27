@@ -1,6 +1,6 @@
 # Federated Miner Guide
 
-Complete guide for becoming a federated miner on Cartha — no CLI required, everything is done through the web interface.
+Complete guide for becoming a federated miner on the 0xMarkets Liquidity Provider — no CLI required, everything is done through the web interface.
 
 - **Web Interface**: [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io)
 
@@ -276,7 +276,7 @@ Once your lock period and cooldown have both passed, your position will show as 
 
 - **ALPHA emissions**: Based on your deposit score (time × amount × pool weight)
 - **Trading fees**: 50% of trading fees go to LPs, proportional to locked USDC
-- Cartha operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC
+- The 0xMarkets Liquidity Provider operates on a **weekly epoch cycle**: Friday 00:00 UTC → Thursday 23:59 UTC
 - **Best Practice**: Lock by **Thursday 23:00 UTC** to ensure inclusion in the next epoch
 - The indexer needs up to 15 minutes to detect your position — give yourself buffer time
 - Positions locked after Friday 00:00 UTC go into the *following* week's epoch
@@ -296,12 +296,14 @@ Once your lock period and cooldown have both passed, your position will show as 
 
 | Pool Name | Vault Token | Address |
 |-----------|-------------|---------|
-| BTC/USD | cvBTC | [`0xD090239EaE0d756726b6afd57E0b23A24FCABe86`](https://basescan.org/address/0xD090239EaE0d756726b6afd57E0b23A24FCABe86) |
-| ETH/USD | cvETH | [`0x47EbDBE398733664250356F7F19fd516a5f1Dd0a`](https://basescan.org/address/0x47EbDBE398733664250356F7F19fd516a5f1Dd0a) |
-| GOLD/USD | cvGOLD | [`0xabc777A16E41CF6E2F02A768D1f9f4d8aa68e58F`](https://basescan.org/address/0xabc777A16E41CF6E2F02A768D1f9f4d8aa68e58F) |
-| EUR/USD | cvEUR | [`0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86`](https://basescan.org/address/0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86) |
-| GBP/USD | cvGBP | [`0x9Eed917485e08FdFee977629bf933E8C0B33e539`](https://basescan.org/address/0x9Eed917485e08FdFee977629bf933E8C0B33e539) |
-| JPY/USD | cvJPY | [`0xf2e3f581A7dE8B055c0122E3bFb445A67b485831`](https://basescan.org/address/0xf2e3f581A7dE8B055c0122E3bFb445A67b485831) |
+| BTC/USD    | cvBTC    | [`0xD090239EaE0d756726b6afd57E0b23A24FCABe86`](https://basescan.org/address/0xD090239EaE0d756726b6afd57E0b23A24FCABe86) |
+| ETH/USD    | cvETH    | [`0x47EbDBE398733664250356F7F19fd516a5f1Dd0a`](https://basescan.org/address/0x47EbDBE398733664250356F7F19fd516a5f1Dd0a) |
+| TAO/USD    | cvTAO    | [`0x47C563FFa0aB3e952561a72D3F09ec2c8ADb7FD5`](https://basescan.org/address/0x47C563FFa0aB3e952561a72D3F09ec2c8ADb7FD5) |
+| GOLD/USD   | cvGOLD   | [`0xabc777A16E41CF6E2F02A768D1f9f4d8aa68e58F`](https://basescan.org/address/0xabc777A16E41CF6E2F02A768D1f9f4d8aa68e58F) |
+| SILVER/USD | cvSILVER | [`0x48682e7Bf092219e27D27F7A8d01b2538A828998`](https://basescan.org/address/0x48682e7Bf092219e27D27F7A8d01b2538A828998) |
+| EUR/USD    | cvEUR    | [`0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86`](https://basescan.org/address/0x8AE6DDb449b3D8d1fE961483Fbe1329b5e4cbD86) |
+| GBP/USD    | cvGBP    | [`0x9Eed917485e08FdFee977629bf933E8C0B33e539`](https://basescan.org/address/0x9Eed917485e08FdFee977629bf933E8C0B33e539) |
+| JPY/USD    | cvJPY    | [`0xf2e3f581A7dE8B055c0122E3bFb445A67b485831`](https://basescan.org/address/0xf2e3f581A7dE8B055c0122E3bFb445A67b485831) |
 
 **Network**: Base Mainnet (Chain ID: 8453)
 

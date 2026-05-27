@@ -56,6 +56,8 @@
   * [Miner Dashboard](cartha/principal-miner-dashboard.md)
   * [How to Claim Rewards](cartha/claim-rewards.md)
 * [Principal Miner Guide](cartha/principal-miner-guide.md)
+* [How to Top Up & Extend Lock](cartha/how-to-top-up-and-extend.md)
+* [How to Withdraw](cartha/how-to-withdraw.md)
 * [Testnet](testnet/README.md)
   * [Miner Guide](testnet/miner-guide.md)
   * [Validator Guide](testnet/validator-guide.md)
