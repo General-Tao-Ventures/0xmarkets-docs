@@ -281,5 +281,5 @@ No Bittensor setup, no CLI, no infra to run. Just USDC on Base and an EVM wallet
 - **[Federated Miner Guide](federated-miner-guide.md)** — How to set up, lock, and claim
 - **[Deposit via Principal Miner](federated-miner-deposit-principal.md)** — Step-by-step locking walkthrough
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How the Friday-to-Thursday epoch cycle works
-- **[Fees & Rewards](../how-it-works/fees-and-rewards.md)** — Full breakdown of how earnings are calculated
+- **[Rewards](../alpha-token/rewards/README.md)** — Full breakdown of how earnings are calculated
 - **[Earning Simulator](https://liquidity.0xmarkets.io/leaderboard?tab=upcoming)** — Advanced simulator with full position ranking table (Leaderboard → Upcoming Epoch tab)

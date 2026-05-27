@@ -254,4 +254,4 @@ Shows: miner state, active pools, amounts, expiry dates, and registration status
 - **[Miner Dashboard](principal-miner-dashboard.md)** — Track your earnings and performance
 - **[Principal Miner Template](https://github.com/General-Tao-Ventures/cartha-principal-miner-template)** — Open-source rewards system
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — Epoch timing and scoring
-- **[Fees & Rewards](../how-it-works/fees-and-rewards.md)** — Full earnings breakdown
+- **[Rewards](../alpha-token/rewards/README.md)** — Full earnings breakdown ([Token Emissions](../alpha-token/rewards/token-emissions.md) · [Fee Distribution](../alpha-token/rewards/fee-distribution.md))

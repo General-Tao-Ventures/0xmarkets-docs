@@ -17,9 +17,11 @@ coverY: 0
 
 **Start here**
 
-* Read the [Litepaper.](litepaper.md)
-* Skim [How it works.](how-it-works/)
-* See the [Diagrams](diagrams/).
+* Read the [Litepaper](litepaper.md) — the protocol in one document
+* If you want to **trade** — start with [Trading › Overview](trading/overview.md)
+* If you want to **provide liquidity** — start with [Cartha (Subnet 35)](cartha/README.md) and [LP Vaults](cartha/lp-vaults.md)
+* If you want to **run a validator** — start with [Validation](validation/README.md)
+* For everything else, the [FAQ](faq.md) and [Glossary](glossary.md) are good entry points
 
 **Get involved**
 

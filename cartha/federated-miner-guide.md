@@ -261,7 +261,7 @@ Once your lock period and cooldown have both passed, your position will show as 
 4. Click **"Confirm Full Withdrawal"** and approve the transaction in your wallet
 5. Your USDC will be returned to your connected EVM wallet
 
-**Note:** There is a mandatory 7-day cooldown from the initial lock start. You can only withdraw after both the lock period and cooldown have passed. See [Fees & Rewards](../how-it-works/fees-and-rewards.md) for details.
+**Note:** There is a mandatory 7-day cooldown from the initial lock start. You can only withdraw after both the lock period and cooldown have passed. See [Rewards](../alpha-token/rewards/README.md) for details.
 
 ### Multiple Positions
 
@@ -355,9 +355,10 @@ Once your lock period and cooldown have both passed, your position will show as 
 
 ## Resources
 
-- **[Federated Miners (Participants)](../participants/federated-miners.md)** — Understanding the federated miner role, risks, and economics
+- **[Delegated Miner](delegated-miner.md)** — Understanding the role, risks, and economics
+- **[Risk Management](risk-management.md)** — Full LP risk surface and mitigations
 - **[Weekly Epochs](../how-it-works/weekly-epochs.md)** — How epoch timing and rewards work
-- **[Fees & Rewards](../how-it-works/fees-and-rewards.md)** — Full breakdown of fee and emission distribution
+- **[Rewards](../alpha-token/rewards/README.md)** — Full breakdown of fee and emission distribution
 - **[FAQ](../faq.md)** — Common questions
 
 ### Support
