@@ -1,42 +1,26 @@
-# Trading on 0xMarkets
+# Trading
 
-> ⚠️ **Trading is currently in testnet.** The exchange runs on **Base Sepolia** (testnet). No real funds are at risk. Mainnet trading will launch in a future release — see the [Roadmap](../roadmap.md).
+0xMarkets is a multi-asset perpetual futures exchange on Base. You trade FX, commodities, and crypto with leverage, using USDC as collateral, directly from your own wallet — no account, no KYC, no custody.
 
-## What is 0xMarkets
+This section explains how trading works, end to end:
 
-0xMarkets is a decentralized perpetual futures exchange deployed on Base Sepolia.
+| Page | What it covers |
+|---|---|
+| [Opening a trade](opening-a-trade.md) | Long or short, size, leverage, collateral, and how your order is filled |
+| [Managing positions](managing-positions.md) | Add or remove collateral, partial close, set stop-loss / take-profit |
+| [Closing a trade](closing-a-trade.md) | Market close, triggers, and how PnL settles |
+| [Order types](order-types.md) | Market, Limit, TP/SL, Stop Market, TWAP |
+| [Leverage & margin](leverage-and-margin.md) | Max leverage per asset, the leverage ladder, and maintenance margin |
+| [Liquidations](liquidations.md) | When a position is liquidated and what it costs |
+| [Fees](fees.md) | Opening and closing fees by asset class |
+| [Funding & borrowing](funding-and-borrowing.md) | The ongoing costs of holding a position |
+| [Price impact & slippage](price-impact-and-slippage.md) | How your size affects your fill, and how to cap slippage |
+| [Pricing & the oracle](pricing-and-oracle.md) | Where prices come from and how trades are priced |
+| [Market hours](market-hours.md) | When each market trades |
+| [PnL & profit settlement](pnl-and-settlement.md) | How profit and loss are calculated and paid |
 
-* **Oracle-based pricing** — prices are sourced from aggregated exchange data via Pyth Network, ensuring accurate and tamper-resistant price feeds
-* **Up to 500x leverage** on FX pairs, crypto assets, commodities, and real-world assets (RWAs)
-* **USDC-only collateral** — all markets use USDC as the sole collateral token, simplifying position management
+## How it works in one paragraph
 
-## Getting Started
+When you open a position, you are trading against a pool of liquidity supplied by **liquidity providers (LPs)** — the other side of every trade. The same person can be both a trader and an LP. Prices come from a real-time oracle, not an order book, so you always trade at the market price adjusted for the size of your trade. Your position stays open until you close it, it hits a stop, or it gets liquidated. Profit and loss settle in USDC.
 
-1. **Connect a wallet** — MetaMask, Rabby, or any WalletConnect-compatible wallet
-2. **Fund your wallet with ETH on Base Sepolia** — you need ETH to pay gas fees for transactions
-3. **Navigate to [app.0xmarkets.io](https://app.0xmarkets.io/#/)** to browse available markets and open positions
-
-### Key Pages
-
-| Page | URL |
-|------|-----|
-| Trade | [app.0xmarkets.io/#/](https://app.0xmarkets.io/#/) |
-| Pools | [app.0xmarkets.io/#/pools](https://app.0xmarkets.io/#/pools) |
-| Leaderboard | [app.0xmarkets.io/#/leaderboard](https://app.0xmarkets.io/#/leaderboard) |
-| Stats | [app.0xmarkets.io/#/stats](https://app.0xmarkets.io/#/stats) |
-
-## Multichain Trading
-
-0xMarkets Account enables trading from any supported chain without manually bridging funds.
-
-* Funds deposited on any supported network are automatically bridged to the settlement chain
-* Your balance is usable across all supported networks
-* No need to switch chains or manage bridging separately
-
-## RPC URLs
-
-0xMarkets automatically selects reading RPCs for reliability, but transaction RPCs depend on your wallet configuration.
-
-* If transactions fail or take too long, try changing the RPC URL in your wallet settings
-* Use [chainlist.org](https://chainlist.org) to find alternative Base Sepolia RPC endpoints
-* Multiple RPC providers are available — switching can resolve intermittent connection issues
+> Nothing here is financial advice. Perpetual futures with leverage carry a high risk of loss. See [Risk disclosures](../security/risk-disclosures.md).

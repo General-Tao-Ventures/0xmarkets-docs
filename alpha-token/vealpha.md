@@ -1,87 +1,119 @@
-# Governance (veALPHA)
+# Staking & Governance (veALPHA)
 
-veALPHA is the vote-escrow governance token of 0xMarkets. By locking ALPHA tokens for a chosen duration, holders receive veALPHA — a non-transferrable, time-weighted balance that entitles them to a share of protocol trading fees and a vote in governance decisions.
+Holding Alpha already earns you the network's validator yield. **Staking** your Alpha on 0xMarkets adds a second income stream on top — a share of the exchange's trading fees — and mints you **veALPHA**, the token that gives you a vote in how the exchange is run.
 
-The mechanism is inspired by the vote-escrow model pioneered by Curve Finance. It rewards long-term alignment: the longer and larger your lock, the greater your share of rewards and voting power.
+In short: stake Alpha, earn two ways, and help govern the protocol.
+
+> **Status.** Staking runs on Bittensor's **conviction** mechanism, which is live at the network level. The 0xMarkets staking interface and the first version of veALPHA governance are rolling out progressively. 
 
 ***
 
-## Why Lock ALPHA?
+## How it works
 
-Locking ALPHA into veALPHA creates two primary benefits:
+Staking on 0xMarkets is built on **conviction**, a Bittensor mechanism that lets you lock Alpha to a subnet for a chosen period. The flow is four steps:
 
-1. **USDC yield** — 40% of all trading fees generated on 0xMarkets are distributed to veALPHA holders, paid in USDC each epoch.
-2. **Governance power** — veALPHA holders vote on which markets receive what share of ALPHA emissions, influencing how liquidity is incentivised across the platform.
+1. **You stake Alpha on 0xMarkets.** Under the hood, this locks your Alpha to conviction, directed at the **0xMarkets owner key** on Bittensor Subnet 35. Anyone staking through 0xMarkets is delegating their conviction to that key — you don't have to manage any of it manually.
+2. **Your stake produces a conviction score.** Bittensor weights your locked amount by how long you lock it for (see [What conviction is](#what-conviction-is) below), and tracks the result as a single score.
+3. **0xMarkets reads your score via the conviction API** and uses it to size your share of the staking rewards pool — the larger your score relative to everyone else's, the larger your slice.
+4. **You're minted veALPHA** in proportion to your score, which gives you governance rights over the exchange.
 
-This gives the token a fundamental, stablecoin-denominated value floor:
+***
+
+## Two-sided rewards
+
+Staking pays you from two independent sources at the same time:
+
+| Reward | Paid in | Where it comes from |
+|---|---|---|
+| **Validator yield** | Alpha | Bittensor's native staking dividends — earned on your Alpha for being staked, the same yield any staked Alpha accrues. |
+| **Trading-fee share** | USDC | **40% of all trading fees** generated on the 0xMarkets exchange flow into a staking pool and are split among stakers by conviction score. |
+
+You keep the first simply by holding and staking Alpha. You earn the second on top, funded directly by exchange activity. The two stack — which is why **staking your Alpha is the way to maximise your yield**, and why the more the exchange trades, the more valuable staking becomes.
+
+> The 40% staking share is one slice of how every trading fee is split across the protocol (LP pool, stakers, treasury). For the full breakdown, see [Fees & rewards](../how-it-works/fees-and-rewards.md).
+
+> **LPs have the highest earning potential.** Liquidity providers already earn LP yield (a share of trading fees plus Alpha emissions). By staking the Alpha they earn, they collect **staking yield on top** — earning from both sides of the protocol at once. See [Providing Liquidity](../liquidity/README.md) for how LP yield works.
+
+***
+
+## What conviction is
+
+Conviction is Bittensor's way of measuring committed stake. The core idea is simple:
 
 ```
-token_value ≈ trading_fees_to_stakers / clearing_yield
+conviction ≈ amount staked × lock time
 ```
 
-The more the platform trades, the more valuable locking becomes.
+- You lock Alpha for a **chosen duration**. A larger amount and a longer lock both raise your score.
+- Your score starts at the full value of what you lock and **decays as the lock approaches expiry** — commitment that's about to end counts for less than commitment with time left on it.
+- The network **recalculates scores periodically** (on a ~30-day cadence, smoothed with a moving average), so your share adjusts over time rather than being fixed at the moment you stake.
+
+This is what makes staking fair: rewards and voting weight track genuine, time-backed commitment, not just whoever shows up with the most tokens for a moment.
+
+### Unlocking
+
+Unstaking follows Bittensor's standard conviction rules — 0xMarkets adds no layer of its own. You request an unlock, and the stake then becomes withdrawable over an extended decay period rather than instantly: roughly **90% of your stake is withdrawable after ~12 months**. Locking is a real commitment, so stake with that timeline in mind.
 
 ***
 
-## Who Is veALPHA For?
+## Your share of the staking pool
 
-**Miners (LPs)** earn ALPHA as rewards for providing liquidity. Instead of selling those rewards immediately, miners can lock them into veALPHA to compound their returns with a share of USDC trading fees on top of their existing yield.
-
-**ALPHA holders and speculators** can lock tokens to earn a proportional share of exchange revenue — effectively owning a productive stake in the growth of the subnet. Early lockers benefit most: they accumulate a larger veALPHA position before the platform scales, meaning their share of future fees is locked in at a favourable size.
-
-***
-
-## How veALPHA is Calculated
-
-Your veALPHA balance is determined by how much you lock and for how long:
+The staking pool is funded by **40% of the exchange's trading fees**, distributed in **USDC**. Your share each epoch is your conviction score as a fraction of everyone's:
 
 ```
-veALPHA = ALPHA × lockDuration / maxLockDuration
+your_reward = staking_pool × (your_conviction / total_conviction)
 ```
 
-* **Maximum lock duration:** 2 years
-* **Minimum lock:** any amount, any duration up to 2 years
-* **Non-transferrable:** veALPHA is tied to your wallet and cannot be sold or transferred
+Because the pool is fed by real trading volume and split by committed stake, it anchors Alpha's value to what the exchange actually earns: the busier the exchange, the larger the pool every staker draws from.
 
-**Example:**
-* User A locks 7,500 ALPHA for 2 years → **7,500 veALPHA**
-* User B locks 5,000 ALPHA for 1 year → **2,500 veALPHA**
-* User A holds 75% of the veALPHA supply and receives 75% of rewards
-
-This structure means a smaller holder who locks for longer can earn a proportionally larger share than a bigger holder who locks for a shorter period.
+Rewards accrue to your stake each epoch and are **claimed manually in USDC** through the 0xMarkets interface — they sit unclaimed until you withdraw them.
 
 ***
 
-## USDC Rewards
+## veALPHA & governance
 
-Trading fees on 0xMarkets are distributed as follows each epoch:
+When you stake, you're minted **veALPHA** in proportion to your conviction score. veALPHA is:
 
-| Recipient          | Share |
-| ------------------ | ----- |
-| LP Miners          | 50%   |
-| veALPHA stakers    | 40%   |
-| Protocol treasury  | 10%   |
+- **Non-transferable** — it's bound to your wallet and can't be sold or moved.
+- **Score-linked** — your veALPHA reflects your conviction score, so it grows as you commit more or longer, and adjusts as scores are recalculated. `[TBD: confirm veALPHA tracks score dynamically vs. minted once at stake]`
 
-The 40% allocated to veALPHA stakers is distributed **pro-rata** based on each holder's veALPHA balance at the snapshot of that epoch. Rewards are claimable in USDC at the end of each epoch. Unclaimed USDC remains in the smart contract until claimed.
+veALPHA is your governance weight over the exchange.
+
+### Governance v1 — fee distribution
+
+The first version of governance gives veALPHA holders control over **how the exchange's trading fees are distributed**. Every trading fee is split across four destinations. These are the launch values:
+
+| Destination | Launch | Minimum (floor) |
+|---|---|---|
+| **LP pool** | 50% | 30% |
+| **Staking pool** | 40% | 30% |
+| **Treasury** | 10% | 10% |
+| **Alpha buyback** | 0% | — |
+
+veALPHA holders vote to **change this split**, with one constraint: no destination can be pushed below its floor. The floors guarantee that liquidity providers, stakers, and protocol operations are always funded — 70% of every fee is protected by the minimums, leaving **30% that governance can reallocate** across the four buckets (including turning on the Alpha buyback).
+
+For example, holders could vote to lift the staking pool to 50% and route 10% to buyback, as long as LPs stay at or above 30%, stakers at or above 30%, and treasury at or above 10%, and the four shares total 100%.
+
+This puts the most important economic lever — who gets what share of fee revenue — directly in the hands of the people who've committed to the network, without letting any single group be starved.
+
+> **Governance expands over time.** Fee-distribution voting is the first release. The next step is **LP pool weights** — letting veALPHA holders steer how liquidity incentives are allocated. `[TBD: LP pool weight specs]`
 
 ***
 
-## Lock Rules
+## Why hold Alpha
 
-* Locks are epoch-aligned — when you lock, rewards begin from the **next epoch**, not immediately.
-* If you already have an active lock, any new lock must be **equal to or longer** than your current remaining duration.
-* Extending your lock to a longer duration re-locks your full position to that new term.
-* veALPHA is **non-transferrable** and bound to the wallet that created the lock.
+Putting it together:
 
-***
+- **Hold Alpha** → earn native validator yield.
+- **Stake it on 0xMarkets** → add a USDC share of exchange trading fees on top, sized by your conviction.
+- **Get veALPHA** → vote on how the exchange distributes its fees.
 
-## Governance & Voting
+Each piece reinforces the next: more committed stake deepens the network, more trading grows the fee pool, and governance lets stakers steer the economics in their favour. Holding and staking Alpha is how you sit on every side of that loop.
 
-veALPHA holders vote on how ALPHA emissions are distributed across trading markets (e.g. EUR/USD, XAU/USD, XAU/BTC). Each market has a gauge, and voters allocate their veALPHA weight across gauges each epoch.
+![The Diamond Hand Loop — Alpha emissions flow to participants, who stake via conviction into veALPHA and earn a share of the exchange's trading fees, feeding back into the network.](../.gitbook/assets/diamond-hand-loop.png)
 
-The weighted outcome determines each pool's share of ALPHA rewards for the following epoch. This creates a self-correcting system: voters are incentivised to direct rewards toward the most utilised markets, which in turn deepens liquidity and generates more USDC fees for everyone.
+## Next
 
-veALPHA holders may also vote on exchange parameters and protocol fee settings within defined bounds.
-
-> Governance voting is on the roadmap and will be introduced progressively. Trading fee rewards are live from launch.
-
+- [Alpha Token](README.md)
+- [Fees & rewards](../how-it-works/fees-and-rewards.md)
+- [Weekly epochs](../how-it-works/weekly-epochs.md)

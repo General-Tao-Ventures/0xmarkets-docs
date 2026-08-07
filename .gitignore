@@ -1,0 +1,10 @@
+# Honkit / GitBook local build output
+_book/
+_book*/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store

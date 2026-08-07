@@ -5,9 +5,9 @@ structure:
   summary: SUMMARY.md
 
 redirects:
-  # Old trading section → current participants pages
-  trading/bonpstudio: participants/traders.md
-  trading/liquidity-providers: participants/miners-lps.md
+  # Old trading paths → current pages
+  trading/bonpstudio: getting-started/what-is-0xmarkets.md
+  trading/liquidity-providers: liquidity/README.md
 
   # Old community/site paths → home
   site/oh/community/benefits: README.md
@@ -16,12 +16,12 @@ redirects:
   # Old tokenomics page → fees & rewards (covers emissions + fee splits)
   tokenomics: how-it-works/fees-and-rewards.md
 
-  # Old testnet Cartha lock UI → current Cartha interface page
-  testnet/cartha_lock_ui: testnet/cartha-interface.md
+  # Old liquidity lock UI path → liquidity interface
+  testnet/cartha_lock_ui: liquidity/interface.md
 
   # Old media-kit → home
   media-kit: README.md
 
-  # Old voices/trading paths → traders page
-  voices/trading/24/price-impact: participants/traders.md
-  voices/trading/2: participants/traders.md
+  # Old voices/trading paths → trading
+  voices/trading/24/price-impact: trading/price-impact-and-slippage.md
+  voices/trading/2: trading/README.md

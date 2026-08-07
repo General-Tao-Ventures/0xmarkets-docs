@@ -1,51 +1,78 @@
 # Table of contents
 
-* [Home](README.md)
+* [0xMarkets](README.md)
+
+## Getting Started
+
+* [Overview](getting-started/README.md)
+* [What is 0xMarkets](getting-started/what-is-0xmarkets.md)
+* [Connect your wallet](getting-started/connect-wallet.md)
+* [Deposit USDC](getting-started/deposit-usdc.md)
+* [Place your first trade](getting-started/place-your-first-trade.md)
+
+## Trading
+
+* [Overview](trading/README.md)
+* [Opening a trade](trading/opening-a-trade.md)
+* [Managing positions](trading/managing-positions.md)
+* [Closing a trade](trading/closing-a-trade.md)
+* [Order types](trading/order-types.md)
+* [Leverage & margin](trading/leverage-and-margin.md)
+* [Liquidations](trading/liquidations.md)
+* [Fees](trading/fees.md)
+* [Funding & borrowing](trading/funding-and-borrowing.md)
+* [Price impact & slippage](trading/price-impact-and-slippage.md)
+* [Pricing & the oracle](trading/pricing-and-oracle.md)
+* [Market hours](trading/market-hours.md)
+* [PnL & profit settlement](trading/pnl-and-settlement.md)
+
+## Reference
+
+* [Overview](reference/README.md)
+* [Markets](reference/markets.md)
+* [Fee schedule](reference/fee-schedule.md)
+* [Glossary](reference/glossary.md)
+* [FAQ](reference/faq.md)
+
+## Providing Liquidity
+
+* [Overview](liquidity/README.md)
+* [The Liquidity Interface](liquidity/interface.md)
+* [Become a Liquidity Provider](liquidity/miner-guide.md)
+* [Federated Miner Guide](liquidity/federated-miner-guide.md)
+  * [Deposit via Principal Miner](liquidity/federated-miner-deposit-principal.md)
+  * [Direct Deposit](liquidity/federated-miner-deposit-direct.md)
+* [Dashboard](liquidity/principal-miner-dashboard.md)
+* [Claim Rewards](liquidity/claim-rewards.md)
+* [Top Up & Extend Lock](liquidity/how-to-top-up-and-extend.md)
+* [Withdraw](liquidity/how-to-withdraw.md)
+
+## Operators
+
+* [Principal Miner Guide](liquidity/principal-miner-guide.md)
+* [Validator Guide](liquidity/validator-guide.md)
+
+## Protocol & Token
+
 * [Litepaper](litepaper.md)
-* [Participants](participants/README.md)
-  * [Miners (LPs)](participants/miners-lps.md)
-    * [Principal Miners](participants/principal-miners.md)
-    * [Federated Miners](participants/federated-miners.md)
-  * [Traders](participants/traders.md)
-  * [Validators](participants/validators.md)
+* [How it works](how-it-works/README.md)
+  * [Weekly epochs](how-it-works/weekly-epochs.md)
+  * [Fees & rewards](how-it-works/fees-and-rewards.md)
 * [Alpha Token](alpha-token/README.md)
-  * [Governance (veALPHA)](alpha-token/vealpha.md)
-* [0xMarkets Liquidity Provider](cartha/README.md)
-  * [0xMarkets Liquidity Interface](cartha/cartha-interface.md)
-  * [Miner Guide](cartha/miner-guide.md)
-    * [Principal Miner Guide](cartha/principal-miner-guide.md)
-    * [Federated Miner Guide](cartha/federated-miner-guide.md)
-      * [Deposit via Principal Miner](cartha/federated-miner-deposit-principal.md)
-      * [Direct Deposit (Any Hotkey)](cartha/federated-miner-deposit-direct.md)
-      * [Miner Dashboard](cartha/principal-miner-dashboard.md)
-      * [How to Claim Rewards](cartha/claim-rewards.md)
-    * [How to Top Up & Extend Lock](cartha/how-to-top-up-and-extend.md)
-    * [How to Withdraw](cartha/how-to-withdraw.md)
-  * [Validator Guide](cartha/validator-guide.md)
-  * [Security Audit](cartha/security-audit.md)
-  * [How it works](how-it-works/README.md)
-    * [Weekly Epochs](how-it-works/weekly-epochs.md)
-    * [Fees & rewards](how-it-works/fees-and-rewards.md)
-    * [Safety & liquidations](how-it-works/safety-and-liquidations.md)
-  * [Running on testnet](testnet/README.md)
-    * [Testnet](cartha/testnet.md)
-    * [Miner Guide](testnet/miner-guide.md)
-    * [Validator Guide](testnet/validator-guide.md)
-    * [0xMarkets Liquidity Interface](testnet/cartha-interface.md)
-* [Trading (Testnet)](trading/README.md)
-  * [Order Types](trading/order-types.md)
-  * [Market Hours](trading/market-hours.md)
-  * [Fees](trading/fees.md)
-  * [Providing Liquidity](providing-liquidity.md)
-  * [Referrals](referrals.md)
-* [Diagrams](diagrams/README.md)
-  * [Big picture](diagrams/big-picture.md)
-  * [Fees snapshot](diagrams/fees-snapshot.md)
-  * [Safety net](diagrams/safety-net.md)
-  * [Governance map](diagrams/governance-map.md)
-* [FAQ](faq.md)
-* [Glossary](glossary.md)
-* [Roadmap](roadmap.md)
-* [Changelog](changelog.md)
-* [Legal & risk](legal-and-risk.md)
+  * [Staking & Governance (veALPHA)](alpha-token/vealpha.md)
+
+## Referrals
+
+* [Referrals](referrals.md)
+
+## Security & Risk
+
+* [Overview](security/README.md)
+* [Audits](security/audits.md)
+* [Oracle security](security/oracle-security.md)
+* [Insurance fund](security/insurance-fund.md)
+* [Risk disclosures](security/risk-disclosures.md)
+
+## More
+
 * [Contact](contact.md)

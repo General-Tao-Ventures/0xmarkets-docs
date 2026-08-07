@@ -1,29 +1,33 @@
----
-cover: .gitbook/assets/twitter-header.png
-coverY: 0
----
+# 0xMarkets
 
-# Home
+**The multi-asset perpetual futures exchange on Base.** Trade FX, commodities, and crypto with leverage — long or short, in USDC, from your own wallet. No account, no KYC, no custody.
 
-## 0xMarkets — FX Perp DEX, powered by Bittensor
+> **0xMarkets is in Beta.** The exchange is live and fully functional, and we're actively refining it as it matures. As always with leveraged trading, only commit capital you can afford to lose. See [Risk disclosures](security/risk-disclosures.md).
 
-**What it is:** A Multi-asset (FX, Crypto and Commodities) Perpetual Futures DEX where traders can get exposure with high leverage, while liquidity is sourced from the 0xMarkets Liquidity Provider, built on the Cartha Subnet (SN35). Miners act as LPs through USDC vaults (one per market) for risk isolation.
+## What you can trade
 
-**Why it matters**
+| Asset class | Markets | Up to |
+|---|---|---|
+| **FX** | EUR/USD, GBP/USD, USD/JPY | 500x |
+| **Commodities** | Gold, Silver, Oil | 200x |
+| **Crypto** | BTC, ETH, TAO | 100x |
 
-* Deep, programmatic liquidity from miners (LPs) on the 0xMarkets Liquidity Provider.
-* Simple economics: trading fees flow to LPs and the treasury; liquidations reinforce safety.
-* Governance directs emissions and tunes parameters via veALPHA.
+Every market is USD-quoted and collateralized in **USDC** on Base. This is the Beta launch line-up — the market list grows as liquidity deepens and new markets are listed. See [Markets](reference/markets.md) for the full list and details.
 
-**Start here**
+## How it works, briefly
 
-* Read the [Litepaper.](litepaper.md)
-* Skim [How it works.](how-it-works/)
-* See the [Diagrams](diagrams/).
+You trade against liquidity provided by **liquidity providers (LPs)** — the other side of every trade. (The same person can be both a trader and an LP.) Prices come from a low-latency oracle, not an order book, so you always trade at the live market price adjusted for the size of your trade. Your position stays open until you close it, hit a stop, or get liquidated. Everything settles in USDC.
 
-**Get involved**
+## Start here
 
-* 🚀 [Trade on 0xMarkets](https://0xmarkets.io)
-* 💧 [Provide Liquidity](https://liquidity.0xmarkets.io) — Earn ALPHA emissions by becoming a liquidity provider
+- **New to 0xMarkets?** → [Getting Started](getting-started/) — connect a wallet, deposit USDC, place your first trade.
+- **Want the mechanics?** → [Trading](trading/) — orders, leverage, fees, funding, liquidations, pricing.
+- **Looking for numbers?** → [Reference](reference/) — markets, fee schedule, glossary, FAQ.
+- **Earn as a partner?** → [Referrals](referrals.md) — IB / affiliate fee-share (coming soon).
+- **Security & risk** → [Security & Risk](security/) — audits, oracle security, insurance fund, disclosures.
 
-> This is an informational site. Nothing here is financial advice. See [Legal & risk.](legal-and-risk.md)
+## Get involved
+
+- 🚀 [Trade on 0xMarkets](https://0xmarkets.io)
+
+> Nothing here is financial advice. Perpetual futures with leverage carry a high risk of loss.
