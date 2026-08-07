@@ -1,10 +1,10 @@
 # Weekly Epochs
 
-Understanding the weekly epoch cycle is essential for maximizing your rewards as a miner on Cartha. This guide explains how epochs work, when rewards are calculated, and the best timing for locking your funds.
+Understanding the weekly epoch cycle is essential for maximizing your rewards as a liquidity provider (miner) on the **0xMarkets Liquidity Engine** (Bittensor Subnet 35). This guide explains how epochs work, when rewards are calculated, and the best timing for locking your funds.
 
 ## What is an Epoch?
 
-An **epoch** is a fixed time period during which miner positions are frozen and rewards are calculated. Cartha uses a **weekly epoch cycle** that runs from Friday to Thursday.
+An **epoch** is a fixed time period during which miner positions are frozen and rewards are calculated. The 0xMarkets Liquidity Engine uses a **weekly epoch cycle** that runs from Friday to Thursday.
 
 | Property | Value |
 |----------|-------|
@@ -192,3 +192,11 @@ This is normal! You're verified and waiting for the next Friday freeze. Once Fri
 ---
 
 **Ready to lock?** Visit [https://liquidity.0xmarkets.io](https://liquidity.0xmarkets.io) and lock by Thursday to be included in the next epoch!
+
+---
+
+## Next
+
+- [Fees & rewards](fees-and-rewards.md)
+- [How it works](README.md)
+- [Become a Liquidity Provider](../liquidity/miner-guide.md)

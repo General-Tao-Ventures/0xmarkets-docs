@@ -1,66 +1,54 @@
-# Order Types
+# Order types
 
-## Market Orders
+0xMarkets supports five order types. They fall into two groups: **market orders**, which execute immediately, and **trigger orders**, which wait for a price condition before executing.
 
-Market orders execute immediately at the current oracle price.
+| Order type | Group | What it does |
+|---|---|---|
+| **Market** | Immediate | Opens or closes now at the current price |
+| **Limit** | Trigger | Opens when the price reaches a level you set |
+| **Stop Market** | Trigger | Opens when the price crosses a level you set (breakout entry) |
+| **TP / SL** | Trigger | Closes an open position at a profit (TP) or loss (SL) target |
+| **TWAP** | Scheduled | Splits a large order into smaller pieces over time |
 
-* A keeper picks up and executes the order on-chain after submission
-* Best for entering or exiting positions quickly when price precision is less important than speed
+## Market
 
-## Limit Orders
+Executes as soon as a keeper can fill it, using a freshly signed oracle price. You set an **acceptable price** so the order won't fill if the market has moved past your tolerance. A market order that can't be filled within **5 minutes** expires.
 
-Limit orders trigger when the oracle price reaches your specified trigger price.
+Use it when you want in or out *now*.
 
-* **Long limits** trigger when the oracle price falls to or below the trigger price
-* **Short limits** trigger when the oracle price rises to or above the trigger price
-* Unlike traditional exchange limit orders, these are not passive orderbook orders — keepers execute them when the oracle price matches the trigger condition
-* Fast price movements can cause the oracle to skip past your trigger price, preventing execution
+## Limit
 
-## Take-Profit and Stop-Loss Orders
+Opens a position when the market reaches a price you specify — typically a price *better* than the current one (buy lower, sell higher). The order rests until the trigger price is met, then a keeper executes it.
 
-Take-profit (TP) and stop-loss (SL) orders automatically close positions at specified oracle price levels.
+Use it to enter at a target price without watching the market.
 
-* **Take-Profit Long** — triggers when the oracle price rises to or above the trigger price
-* **Take-Profit Short** — triggers when the oracle price falls to or below the trigger price
-* **Stop-Loss Long** — triggers when the oracle price falls to or below the trigger price
-* **Stop-Loss Short** — triggers when the oracle price rises to or above the trigger price
+## Stop Market
 
-## Auto-Cancel TP/SL
+Opens a position when the market *crosses* a price you specify — typically used for breakout entries (e.g. go long only if price breaks above resistance). Unlike a limit, a stop entry triggers in the direction of momentum.
 
-When enabled, TP/SL orders automatically cancel when their associated position is fully closed.
+## Take-profit / Stop-loss (TP / SL)
 
-* Prevents orphaned orders from triggering unexpectedly after a position has been closed by other means
-* Only applies to newly created TP/SL orders after the setting is enabled — existing orders are not affected
-* There is a limit on the number of active auto-cancelable orders per position
+These are exit triggers attached to an open position:
 
-## Stop-Market Orders
+- **Take-profit** closes the position when price reaches your profit target.
+- **Stop-loss** closes the position when price reaches your loss limit.
 
-Stop-market orders increase or open positions when the oracle price reaches a trigger level.
+You can set one or both. They're the core tool for managing a position you're not actively watching. See [Managing positions](managing-positions.md).
 
-* **Long positions** — trigger when the oracle price rises above the stop price
-* **Short positions** — trigger when the oracle price falls below the stop price
-* Used to enter positions on breakouts or momentum moves
+> A trigger fires when the condition is met, but the fill price is the oracle price at execution. In fast or [gapping markets](market-hours.md), the fill can differ from the trigger level.
 
-## TWAP Orders
+## TWAP
 
-TWAP (Time-Weighted Average Price) orders split large orders into multiple smaller parts distributed over time.
+A **Time-Weighted Average Price** order breaks a large order into a series of smaller orders executed over a period of time. This reduces the [price impact](price-impact-and-slippage.md) of entering or exiting a large position all at once, at the cost of taking longer to fill and accepting whatever average price the market gives over that window.
 
-* Minimizes price impact for large position changes
-* Configure the duration and number of parts (2-30) — the system calculates the frequency and size per part
-* Recommended for orders exceeding $1,000,000 with negative price impact above 0.2%
-* Implemented at the application layer by grouping standard limit orders with time-gated activation
+Use it for large size where minimizing market impact matters more than immediate execution.
 
-## Max Leverage
+## What's not supported
 
-Each market has a maximum allowed leverage that decreases as total open interest increases.
+There is no native **trailing stop** order. To trail a position, adjust your stop-loss manually as the trade moves in your favor.
 
-* This mechanism protects against price impact gaming via high-leverage positions
-* The interface warns when max leverage would be exceeded
-* **Position increases** — orders may be rejected if max leverage is exceeded
-* **Position decreases** — orders can still execute, but collateral within the position may not be reduced
+## Next
 
-## Execution Guarantees
-
-Limit, Stop-Market, TWAP, and TP/SL orders do not have guaranteed execution.
-
-> Orders may fail if the oracle price never reaches the trigger, there is insufficient liquidity, max leverage is exceeded, or the position becomes liquidatable before execution.
+- [Opening a trade](opening-a-trade.md)
+- [Price impact & slippage](price-impact-and-slippage.md)
+- [Pricing & the oracle](pricing-and-oracle.md)

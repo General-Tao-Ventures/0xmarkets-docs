@@ -1,38 +1,44 @@
 # Referrals
 
-## How It Works
+> **Coming soon.** The referral program is not live yet. This page describes how it will work at launch; the final details below may change before it ships.
 
-The referral program rewards both affiliates and the traders they refer.
+0xMarkets is building a referral program for **introducing brokers (IBs) and affiliates**. If you bring traders to the exchange, you earn a share of the trading fees they pay.
 
-* Create a referral code on the **Referrals** page
-* Share your referral link with traders
-* Referred traders receive fee discounts on their trades
-* Affiliates earn rebates from referred trading volume
-* Rewards accrue in the collateral token and can be claimed anytime
+## Who it's for
 
-## Referral Tiers
+- **Introducing brokers (IBs)** — partners who route trading flow to 0xMarkets.
+- **Affiliates** — anyone who refers traders, from communities to individual creators.
 
-| Tier | Trader Discount | Affiliate Reward | Requirements |
-|------|----------------|-----------------|--------------|
-| 1 | 5% | 5% | None |
-| 2 | 10% | 10% | 15+ active users, $5M+ weekly volume |
-| 3 | 10% | 15% | 30+ active users, $25M+ weekly volume |
+If your referred users trade, you earn.
 
-## Key Details
+## How it works
 
-* Discounts and rebates apply to open/close fees only, not to funding or borrowing fees
-* Referral codes are created on-chain
-* Higher tiers require meeting weekly thresholds — tier status is evaluated on a rolling basis
+You earn a **share of the trading fees** paid by the users you refer. Every time one of your referred traders opens or closes a position, a percentage of the [trading fee](trading/fees.md) they pay goes to you.
 
-## Creating a Referral Code
+Your share depends on your **tier**. Tiers run from 5% to 30% of referred fees, in 5% steps:
 
-1. Go to the **Referrals** page
-2. Select the **Affiliates** tab
-3. Enter a code (alphanumeric characters and underscores, up to 20 characters)
-4. Confirm the on-chain transaction to register the code
+| Tier | Your share of referred fees |
+|---|---|
+| 1 | 5% |
+| 2 | 10% |
+| 3 | 15% |
+| 4 | 20% |
+| 5 | 25% |
+| 6 | 30% |
 
-Your referral link will be:
+The more your referred users trade, the higher your tier — and the larger your cut of every fee they pay.
 
-```
-https://app.0xmarkets.io/#/trade/?ref=YOUR_CODE
-```
+## Moving up the tiers
+
+You advance through the tiers in one of two ways:
+
+- **Volume-based.** As the trading volume from your referred users grows, you move up the ladder automatically.
+- **Manual override.** The team can place a partner at a specific tier directly.
+
+## At launch
+
+Exact volume thresholds, payout mechanics, and how to sign up will be finalized when the program goes live. Check back here, or watch the official 0xMarkets channels for the announcement.
+
+## Next
+
+- [Fees](trading/fees.md) — how trading fees are calculated, the fees your referrals share in

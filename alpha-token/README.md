@@ -1,45 +1,49 @@
-# ALPHA Token
+# Alpha Token
 
-ALPHA is the native token of the 0xMarkets Liquidity Provider, which runs on the Cartha Subnet (SN35) on Bittensor. It is emitted by the network each epoch and distributed to the participants who keep 0xMarkets running — miners providing liquidity, validators executing liquidations, and traders generating volume.
+Alpha is the native token of the **0xMarkets Liquidity Engine**, which runs as **Bittensor Subnet 35 (SN35)**. It is emitted by the network each epoch and distributed to the participants who keep 0xMarkets running — liquidity providers (miners) supplying USDC, validators supporting liquidations, and the protocol itself.
 
-ALPHA has two primary uses: it is a **yield-bearing asset** when locked into veALPHA, and it is the **unit of governance** that determines how the protocol allocates resources across markets.
-
-***
-
-## How ALPHA is Earned
-
-ALPHA emissions are distributed across the ecosystem each epoch:
-
-| Recipient         | Share | Description                                                      |
-| ----------------- | ----- | ---------------------------------------------------------------- |
-| LP Miners         | 31%   | Allocated by vault deposit score (time × amount × pool weight)   |
-| Validators        | 41%   | Rewards for liquidation execution and subnet maintenance         |
-| Incentive Pool    | 10%   | Trading leaderboards, IB rebates, airdrops, community programs   |
-| Owner / Protocol  | 18%   | Protocol development and operations                              |
-
-Miners earn their share passively — the longer and larger the USDC deposit, the greater the deposit score, and therefore the larger the ALPHA allocation.
+Alpha has two primary roles: it is a **reward-bearing asset** — holding it earns validator yield, and staking it earns a share of exchange trading fees — and it is the **unit of governance**, which veALPHA holders use to set how the protocol distributes its fee revenue. (veALPHA governance is rolling out progressively — see below.)
 
 ***
 
-## What You Can Do With ALPHA
+## How Alpha is earned
 
-**Lock for veALPHA** — the primary use case. Locking ALPHA gives you veALPHA, which entitles you to 40% of all trading fees paid in USDC, plus a vote on how ALPHA emissions are directed across markets. The longer you lock, the larger your share. See [Governance (veALPHA)](vealpha.md).
+Alpha emissions are distributed across the network each epoch as follows:
 
-**Hold** — early holders who accumulate ALPHA through mining receive a larger position before the platform scales, which translates directly into a larger share of future USDC fee rewards when they eventually lock.
+| Recipient | Share | What it's for |
+|---|---|---|
+| **Validators** | 41% | The validator emission share — accrues to Alpha holders who stake (the native **validator yield** earned simply for holding and staking Alpha). |
+| **Liquidity providers (miners)** | 31% | Allocated by **deposit score** (locked amount × time). The longer and larger the USDC deposit, the larger the Alpha allocation. |
+| **Subnet owner** | 18% | Protocol development and operations. |
+| **Incentive pool** | 10% | Flexible funding for ecosystem incentives (trading leaderboards, IB rebates, airdrops, community programs). |
 
-**Sell** — ALPHA is liquid and tradeable. The veALPHA mechanism creates a stablecoin-denominated value floor based on the trading fees the platform generates, providing a fundamental pricing anchor.
+The validator share is what makes simply **holding Alpha** productive: stake it and you earn that native yield, then stake on 0xMarkets to add a USDC share of trading fees on top. See [Staking & Governance (veALPHA)](vealpha.md).
 
 ***
 
-## Token Flow
+## What you can do with Alpha
 
-The diagram below shows how ALPHA emissions and trading fees flow through the system:
+**Stake for veALPHA** — the primary use case. Staking Alpha on 0xMarkets earns you a share of trading fees (paid in USDC) and mints you veALPHA, which carries a vote on how the exchange distributes those fees (LP pool weights coming next). The larger and longer your stake, the larger your share and your vote. See [Staking & Governance (veALPHA)](vealpha.md).
 
-<figure><img src="../.gitbook/assets/0xM_Tokenomics.png" alt=""><figcaption><p>ALPHA emission and fee distribution across the 0xMarkets ecosystem</p></figcaption></figure>
+**Hold** — accumulating Alpha early, through mining, builds a position before the platform scales, which translates into a larger share of future USDC fee rewards once you stake.
 
-Key flows:
-* **0xMarkets Liquidity Provider → LP Miners / Validators / Incentive Pool** via ALPHA emissions each epoch
-* **0xMarkets → LP Miners** 50% of trading fees in USDC
-* **0xMarkets → veALPHA stakers** 40% of trading fees in USDC
-* **0xMarkets → Insurance Pool** 5% liquidation fee
-* **veALPHA → 0xMarkets** governance over parameters and market weights
+**Trade** — Alpha is liquid and tradeable. The veALPHA mechanism is designed to anchor Alpha's value to the USDC trading fees the platform generates, giving the token a fundamental, fee-based reference point.
+
+***
+
+## How value flows
+
+The token economy has two distinct flows:
+
+- **Alpha emissions** — minted by the 0xMarkets Liquidity Engine (SN35) each epoch and distributed **41% validators, 31% miners, 18% subnet owner, 10% incentive pool**.
+- **Trading fees (USDC)** — paid by traders on the exchange and split **50% to the LP pool, 40% to the staking pool, 10% to treasury, 0% to Alpha buyback** (launch values, governance-adjustable within set floors).
+- **Liquidation fees** — routed **70% to the insurance pool, 30% to Alpha buyback** (intent; planned to come under governance later).
+- **Governance** — veALPHA holders set how trading fees are distributed across the LP pool, staking pool, and treasury (within floors), with LP pool weights as the next step.
+
+See [Fees & rewards](../how-it-works/fees-and-rewards.md) for the protocol-level fee detail and [Fees](../trading/fees.md) for what a trade costs.
+
+## Next
+
+- [Governance (veALPHA)](vealpha.md)
+- [Fees & rewards](../how-it-works/fees-and-rewards.md)
+- [Weekly epochs](../how-it-works/weekly-epochs.md)
