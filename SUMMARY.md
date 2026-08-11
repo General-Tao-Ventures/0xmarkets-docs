@@ -76,3 +76,4 @@
 ## More
 
 * [Contact](contact.md)
+* [Changelog](changelog.md)
