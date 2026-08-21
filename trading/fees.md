@@ -9,8 +9,8 @@ A trading fee is charged on your **position size**, both when you open and when 
 | Asset class | Fee (balancing trade) | Fee (imbalancing trade) |
 |---|---|---|
 | **FX** | 0.015% | 0.025% |
-| **Crypto** | 0.030% | 0.040% |
-| **Commodities** | 0.020% | 0.030% |
+| **Crypto** | 0.015% | 0.025% |
+| **Commodities** | 0.015% | 0.025% |
 
 **Why two rates?** Every market has long and short open interest. A trade that pushes the market further out of balance (e.g. adding to the already-heavier side) pays the higher rate; a trade that brings it *back* toward balance pays the lower rate. This nudges the book toward equilibrium and rewards traders who take the underweighted side. It's the same mechanism behind [price impact](price-impact-and-slippage.md).
 
